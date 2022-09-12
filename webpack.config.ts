@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import { buildWepbackConfig } from './config/build/buildWepbackConfig';
-import { BuildPath } from './config/build/types/config';
+import { BuildEnv, BuildPath } from './config/build/types/config';
 import path from 'path';
 
 const paths: BuildPath = {
@@ -9,13 +9,17 @@ const paths: BuildPath = {
     html: path.resolve(__dirname, 'public', 'index.html'),
 };
 
-const mode = 'development';
-const isDev = mode === 'development';
+export default (env: BuildEnv) => {
+    const mode = env.mode || 'development';
+    const isDev = mode === 'development';
+    const PORT = env.port || 3000;
 
-const config: webpack.Configuration = buildWepbackConfig({
-    mode,
-    paths,
-    isDev,
-});
+    const config: webpack.Configuration = buildWepbackConfig({
+        mode,
+        paths,
+        isDev,
+        port: PORT,
+    });
 
-export default config;
+    return config;
+}
