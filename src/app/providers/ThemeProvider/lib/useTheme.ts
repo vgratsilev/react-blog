@@ -1,12 +1,12 @@
 import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from './ThemeContext';
 import { useContext } from 'react';
 
-interface UseThemeResult {
+interface IUseThemeResult {
     toggleTheme: () => void;
     theme: Theme;
 }
 
-export function useTheme(): UseThemeResult {
+export function useTheme(): IUseThemeResult {
     const { theme, setTheme } = useContext(ThemeContext);
 
     const toggleTheme = () => {

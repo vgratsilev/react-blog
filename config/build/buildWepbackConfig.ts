@@ -2,10 +2,10 @@ import webpack from 'webpack';
 import { buildPlugins } from './buildPlugins';
 import { buildLoaders } from './buildLoaders';
 import { buildResolvers } from './buildResolvers';
-import { BuildOptions } from './types/config';
+import { IBuildOptions } from './types/config';
 import { buildDevServer } from './buildDevServer';
 
-export function buildWepbackConfig(options: BuildOptions): webpack.Configuration {
+export function buildWepbackConfig(options: IBuildOptions): webpack.Configuration {
     const { paths, mode, isDev } = options;
 
     return {
