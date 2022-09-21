@@ -1,5 +1,5 @@
 import webpack from 'webpack';
-import { buildWepbackConfig } from './config/build/buildWepbackConfig';
+import { buildWebpackConfig } from './config/build/buildWebpackConfig';
 import { IBuildEnv, IBuildPath } from './config/build/types/config';
 import path from 'path';
 
@@ -8,6 +8,7 @@ const paths: IBuildPath = {
     build: path.resolve(__dirname, 'build'),
     html: path.resolve(__dirname, 'public', 'index.html'),
     src: path.resolve(__dirname, 'src'),
+    assetDir: 'static',
 };
 
 export default (env: IBuildEnv) => {
@@ -15,7 +16,7 @@ export default (env: IBuildEnv) => {
     const isDev = mode === 'development';
     const PORT = env.port || 3000;
 
-    const config: webpack.Configuration = buildWepbackConfig({
+    const config: webpack.Configuration = buildWebpackConfig({
         mode,
         paths,
         isDev,

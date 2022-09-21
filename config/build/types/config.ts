@@ -5,6 +5,7 @@ export interface IBuildPath {
     build: string;
     html: string;
     src: string;
+    assetDir: string;
 }
 
 export interface IBuildEnv {

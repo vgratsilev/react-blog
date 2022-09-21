@@ -3,15 +3,22 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { IBuildOptions } from './types/config';
 
 export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
+    const svgUrlLoader = {
+        test: /\.svg$/i,
+        type: 'asset',
+        resourceQuery: /url/, // *.svg?url
+    };
+
     const svgLoader = {
-        test: /\.svg$/,
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
         use: ['@svgr/webpack'],
     };
 
     const fileLoader = {
         test: /\.(png|jpe?g|gif)$/i,
-        loader: 'file-loader',
-       
+        type: 'asset',
     };
 
     const cssLoader = {
@@ -38,6 +45,7 @@ export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
     };
 
     return [
+        svgUrlLoader,
         svgLoader,
         fileLoader,
         typeScriptLoader,
