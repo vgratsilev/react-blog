@@ -11,7 +11,7 @@ insert_final_newline = true
 max_line_length = 150
 trim_trailing_whitespace = true
 
-[*.{js,jsx,css,scss}]
+[*.{js,jsx,ts,tsx,css,scss}]
 quote_type = single
 
 [*.md]

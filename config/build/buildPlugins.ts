@@ -1,8 +1,10 @@
-import { DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, WebpackPluginInstance } from 'webpack';
+import {
+    DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, WebpackPluginInstance,
+} from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { IBuildOptions } from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { IBuildOptions } from './types/config';
 
 export function buildPlugins({ paths, isDev }: IBuildOptions): WebpackPluginInstance[] {
     const plugins = [
