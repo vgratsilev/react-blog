@@ -9,8 +9,19 @@ interface INavbarProps {
 export const Navbar = ({ className }: INavbarProps) => (
     <div className={classNames(cls.navbar, {}, [className])}>
         <div className={cls.links}>
-            <AppLink to={'/'} className={cls.mainLink} theme={AppLinkTheme.SECONDARY}>{'Main'}</AppLink>
-            <AppLink to={'/about'} theme={AppLinkTheme.SECONDARY}>{'About'}</AppLink>
+            <AppLink
+                to={'/'}
+                className={cls.mainLink}
+                theme={AppLinkTheme.SECONDARY}
+            >
+                {'Main'}
+            </AppLink>
+            <AppLink
+                to={'/about'}
+                theme={AppLinkTheme.SECONDARY}
+            >
+                {'About'}
+            </AppLink>
         </div>
     </div>
 );

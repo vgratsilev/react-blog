@@ -9,7 +9,9 @@ module.exports = {
         'plugin:react/recommended',
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
+        'prettier',
     ],
+    plugins: ['import', 'jsx-a11y', 'react', 'react-hooks', 'react-perf', '@typescript-eslint', 'prettier'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -26,7 +28,6 @@ module.exports = {
             },
         },
     },
-    plugins: ['react', '@typescript-eslint'],
     rules: {
         indent: ['error', 4],
         'react/jsx-indent': [2, 4],
@@ -53,6 +54,13 @@ module.exports = {
         'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
         'no-underscore-dangle': 'off',
         'react/jsx-curly-brace-presence': [2, 'always'],
+        'prettier/prettier': [
+            'error',
+            {
+                trailingComma: 'all',
+                singleAttributePerLine: true,
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,

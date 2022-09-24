@@ -30,7 +30,9 @@ export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
                 options: {
                     modules: {
                         auto: /\.module\.s?css$/i,
-                        localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
+                        localIdentName: isDev
+                            ? '[path][name]__[local]--[hash:base64:5]'
+                            : '[hash:base64:8]',
                     },
                 },
             },
@@ -64,12 +66,5 @@ export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
         },
     };
 
-    return [
-        svgUrlLoader,
-        svgLoader,
-        fileLoader,
-        babelLoader,
-        typeScriptLoader,
-        cssLoader,
-    ];
+    return [svgUrlLoader, svgLoader, fileLoader, babelLoader, typeScriptLoader, cssLoader];
 }
