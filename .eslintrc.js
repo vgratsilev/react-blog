@@ -54,6 +54,8 @@ module.exports = {
         'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
         'no-underscore-dangle': 'off',
         'react/jsx-curly-brace-presence': [2, 'always'],
+        'react-perf/jsx-no-new-object-as-prop': 'error',
+        'react-perf/jsx-no-new-array-as-prop': 'error',
         'prettier/prettier': [
             'error',
             {
