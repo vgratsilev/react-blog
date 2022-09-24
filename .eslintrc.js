@@ -9,9 +9,19 @@ module.exports = {
         'plugin:react/recommended',
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
+        'plugin:i18next/recommended',
         'prettier',
     ],
-    plugins: ['import', 'jsx-a11y', 'react', 'react-hooks', 'react-perf', '@typescript-eslint', 'prettier'],
+    plugins: [
+        'import',
+        'jsx-a11y',
+        'react',
+        'react-hooks',
+        'react-perf',
+        'i18next',
+        '@typescript-eslint',
+        'prettier',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -56,6 +66,7 @@ module.exports = {
         'react/jsx-curly-brace-presence': [2, 'always'],
         'react-perf/jsx-no-new-object-as-prop': 'error',
         'react-perf/jsx-no-new-array-as-prop': 'error',
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
         'prettier/prettier': [
             'error',
             {

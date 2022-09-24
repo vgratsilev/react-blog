@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./build/",
     "noImplicitAny": true,
     "module": "esnext",
     "target": "es5",
@@ -13,7 +13,7 @@
     "paths": {
       "*": [
         "./src/*"
-      ]
+      ],
     }
   },
   "ts-node": {
