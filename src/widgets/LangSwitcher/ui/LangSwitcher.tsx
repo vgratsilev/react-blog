@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import cls from 'shared/ui/AppLink/AppLink.module.scss';
 
 interface ILangSwitcherProps {
     className?: string;
