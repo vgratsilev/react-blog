@@ -1,4 +1,7 @@
 {
   "MainPage": "Главная",
-  "Translate": "Поменять язык"
+  "ReloadThisPage": "Перезагрузить страницу",
+  "SomethingWentWrong": "Что-то пошло не так...",
+  "Translate": "Поменять язык",
+  "throwError": "Вызвать ошибку"
 }

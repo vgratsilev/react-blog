@@ -25,7 +25,7 @@ export function buildPlugins({ paths, isDev }: IBuildOptions): WebpackPluginInst
     ];
 
     if (isDev) {
-        plugins.push(new ReactRefreshPlugin());
+        plugins.push(new ReactRefreshPlugin({ overlay: false }));
         plugins.push(new HotModuleReplacementPlugin());
     }
     return plugins;
