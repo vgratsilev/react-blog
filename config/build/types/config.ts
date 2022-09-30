@@ -1,4 +1,5 @@
 export type BuildMode = 'development' | 'production';
+type AnalyzerMode = 'server' | 'static' | 'json' | 'disabled';
 
 export interface IBuildPath {
     entry: string;
@@ -11,6 +12,7 @@ export interface IBuildPath {
 export interface IBuildEnv {
     mode: BuildMode;
     port: number;
+    analyzerMode: AnalyzerMode;
 }
 
 export interface IBuildOptions {
@@ -18,4 +20,5 @@ export interface IBuildOptions {
     paths: IBuildPath;
     isDev: boolean;
     port: number;
+    analyzerMode: AnalyzerMode;
 }
