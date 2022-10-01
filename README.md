@@ -14,5 +14,8 @@
   & [Stylelint](https://stylelint.io/)
 * Internationalization: [i18next](https://www.i18next.com/)
   * Extract plugin [babel-plugin-i18next-extract](https://i18next-extract.netlify.app/#/)
+* Testing:
+  * Jest (+ jest-dom)
+  * React Testing Library
 
 

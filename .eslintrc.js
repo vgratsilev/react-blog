@@ -67,7 +67,13 @@ module.exports = {
         'react/jsx-curly-brace-presence': [2, 'always'],
         'react-perf/jsx-no-new-object-as-prop': 'error',
         'react-perf/jsx-no-new-array-as-prop': 'error',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid', 'to'],
+            },
+        ],
         'prettier/prettier': [
             'error',
             {
