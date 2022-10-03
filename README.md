@@ -15,7 +15,8 @@
 * Internationalization: [i18next](https://www.i18next.com/)
   * Extract plugin [babel-plugin-i18next-extract](https://i18next-extract.netlify.app/#/)
 * Testing:
-  * Jest (+ jest-dom)
-  * React Testing Library
+  * [Jest](https://jestjs.io/) (+ [jest-dom](https://github.com/testing-library/jest-dom))
+  * [React Testing Library](https://testing-library.com/)
+* [Storybook](https://storybook.js.org/)
 
 

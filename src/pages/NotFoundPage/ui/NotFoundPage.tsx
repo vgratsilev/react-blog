@@ -8,9 +8,5 @@ interface INotFoundPageProps {
 
 export const NotFoundPage = ({ className }: INotFoundPageProps) => {
     const { t } = useTranslation('notFound');
-    return (
-        <div className={classNames(cls.notFoundPage, {}, [className])}>
-            {t('notFound:pageNotFound')}
-        </div>
-    );
+    return <div className={classNames(cls.notFoundPage, {}, [className])}>{t('pageNotFound')}</div>;
 };

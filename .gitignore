@@ -1,6 +1,8 @@
-#WebStorm
+#IDE
 .idea
 .vscode
+
+/extractedTranslations
 
 # dependencies
 /node_modules
