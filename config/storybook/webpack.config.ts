@@ -15,7 +15,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
     config.resolve.modules.push(paths.src);
     config.resolve.extensions.push('.ts', '.tsx');
 
-    // replace storybook svg loader with svgr
+    // replace storybook svg loader with SVGR
     // eslint-disable-next-line no-param-reassign
     config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
         if (/svg/.test(rule.test as string)) {
