@@ -3,5 +3,8 @@
   "ReloadThisPage": "Reload this page",
   "SomethingWentWrong": "Something went wrong...",
   "Translate": "Change language",
-  "throwError": "Throw error"
+  "throwError": "Throw error",
+  "Toggle": "Toggle",
+  "MainPageLink": "Main",
+  "AboutPageLink": "About"
 }

@@ -3,5 +3,8 @@
   "ReloadThisPage": "Перезагрузить страницу",
   "SomethingWentWrong": "Что-то пошло не так...",
   "Translate": "Поменять язык",
-  "throwError": "Вызвать ошибку"
+  "throwError": "Вызвать ошибку",
+  "Toggle": "Toggle",
+  "MainPageLink": "Главная",
+  "AboutPageLink": "О сайте"
 }
