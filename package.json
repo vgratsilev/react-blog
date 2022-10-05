@@ -19,7 +19,7 @@
     "analyzer:prod": "webpack --env stats=server mode=production",
     "analyzer:dev": "webpack --env analyzerMode=server mode=development",
     "storybook": "start-storybook -p 6006 -c ./config/storybook -s public",
-    "storybook:build": "build-storybook -c ./config/storybook"
+    "storybook:build": "build-storybook -c ./config/storybook -s public"
   },
   "keywords": [],
   "author": "vgratsilev",
