@@ -1,7 +1,6 @@
 import { Suspense } from 'react';
 import { Story } from '@storybook/react';
 import i18n from 'shared/config/i18n/i18nForStories';
-// import i18n from 'shared/config/i18n/i18nForTests';
 import { I18nextProvider } from 'react-i18next';
 
 export const i18nextDecorator = (story: () => Story) => (
