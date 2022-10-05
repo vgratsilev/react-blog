@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 // import ChainedBackend from 'i18next-chained-backend';
 // import HttpBackend from 'i18next-http-backend';
+import Backend from 'i18next-http-backend';
 // import resourcesToBackend from 'i18next-resources-to-backend';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -57,33 +58,39 @@ import { initReactI18next } from 'react-i18next';
 //         loadPath: 'public/locales/{{lng}}/{{ns}}.json',
 //     },
 
-i18n.use(initReactI18next).init({
-    lng: 'en',
-    debug: false,
-    interpolation: {
-        escapeValue: false, // not needed for react!!
-    },
-
-    resources: {
-        en: {
-            translation: {
-                MainPage: 'Main Page',
-                ReloadThisPage: 'Reload this page',
-                SomethingWentWrong: 'Something went wrong...',
-                Translate: 'Change language',
-                throwError: 'Throw error',
-                Toggle: 'Toggle',
-                MainPageLink: 'Main',
-                AboutPageLink: 'About',
-            },
-            about: {
-                AboutPage: 'About Page',
-            },
-            notFound: {
-                pageNotFound: 'Page not found!',
-            },
+i18n.use(Backend)
+    .use(initReactI18next)
+    .init({
+        lng: 'en',
+        debug: false,
+        interpolation: {
+            escapeValue: false, // not needed for react!!
         },
-    },
-});
+
+        backend: {
+            loadPath: '/locales/{{lng}}/{{ns}}.json',
+        },
+
+        // resources: {
+        //     en: {
+        //         translation: {
+        //             MainPage: 'Main Page',
+        //             ReloadThisPage: 'Reload this page',
+        //             SomethingWentWrong: 'Something went wrong...',
+        //             Translate: 'Change language',
+        //             throwError: 'Throw error',
+        //             Toggle: 'Toggle',
+        //             MainPageLink: 'Main',
+        //             AboutPageLink: 'About',
+        //         },
+        //         about: {
+        //             AboutPage: 'About Page',
+        //         },
+        //         notFound: {
+        //             pageNotFound: 'Page not found!',
+        //         },
+        //     },
+        // },
+    });
 
 export default i18n;
