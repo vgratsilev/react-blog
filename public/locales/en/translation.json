@@ -1,10 +1,9 @@
 {
+  "AboutPageLink": "About",
   "MainPage": "Main Page",
+  "MainPageLink": "Main",
   "ReloadThisPage": "Reload this page",
   "SomethingWentWrong": "Something went wrong...",
   "Translate": "Change language",
-  "throwError": "Throw error",
-  "Toggle": "Toggle",
-  "MainPageLink": "Main",
-  "AboutPageLink": "About"
+  "throwError": "Throw error"
 }

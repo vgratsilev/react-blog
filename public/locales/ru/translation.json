@@ -1,10 +1,9 @@
 {
+  "AboutPageLink": "О сайте",
   "MainPage": "Главная",
+  "MainPageLink": "Главная",
   "ReloadThisPage": "Перезагрузить страницу",
   "SomethingWentWrong": "Что-то пошло не так...",
   "Translate": "Поменять язык",
-  "throwError": "Вызвать ошибку",
-  "Toggle": "Toggle",
-  "MainPageLink": "Главная",
-  "AboutPageLink": "О сайте"
+  "throwError": "Вызвать ошибку"
 }
