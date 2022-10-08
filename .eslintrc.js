@@ -52,6 +52,8 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'off',
         'react/function-component-definition': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
         'no-shadow': 'off',
         'import/extensions': [
             'error',
@@ -75,6 +77,9 @@ module.exports = {
                 ignoreAttribute: ['data-testid', 'to'],
             },
         ],
+        'jsx-a11y/aria-role': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
         'prettier/prettier': [
             'error',
             {
@@ -87,6 +92,10 @@ module.exports = {
         {
             files: '**/src/**/*.test.{ts,tsx}',
             rules: { 'i18next/no-literal-string': 'off' },
+        },
+        {
+            files: '**/src/**/*.stories.{ts,tsx}',
+            rules: { 'max-len': 'off' },
         },
     ],
     globals: {
