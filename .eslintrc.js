@@ -80,6 +80,7 @@ module.exports = {
         'jsx-a11y/aria-role': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
+        'import/no-cycle': 'off',
         'prettier/prettier': [
             'error',
             {
@@ -96,6 +97,13 @@ module.exports = {
         {
             files: '**/src/**/*.stories.{ts,tsx}',
             rules: { 'max-len': 'off' },
+        },
+        {
+            files: '**/src/**/*Slice.{ts,tsx}',
+            rules: {
+                'no-param-reassign': 'off',
+                'no-plusplus': 'off',
+            },
         },
     ],
     globals: {
