@@ -7,5 +7,7 @@
   "Translate": "Поменять язык",
   "TranslateShort": "Ru",
   "throwError": "Вызвать ошибку",
-  "Login": "Войти"
+  "Login": "Войти",
+  "InputUsername": "Логин",
+  "InputPassword": "Пароль"
 }

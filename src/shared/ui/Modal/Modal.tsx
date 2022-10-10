@@ -11,11 +11,13 @@ interface IModalProps {
     children?: ReactNode;
     isOpen?: boolean;
     onClose?: () => void;
+    lazy?: boolean;
 }
 
 export const Modal = (props: IModalProps) => {
-    const { className, children, isOpen, onClose } = props;
+    const { className, children, isOpen, onClose, lazy } = props;
 
+    const [isMounted, setIsMounted] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
     const { theme } = useTheme();
@@ -24,6 +26,13 @@ export const Modal = (props: IModalProps) => {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };
+
+    useEffect(() => {
+        if (!isOpen) {
+            return;
+        }
+        setIsMounted(true);
+    }, [isOpen]);
 
     const closeHandler = useCallback(() => {
         if (onClose) {
@@ -58,6 +67,10 @@ export const Modal = (props: IModalProps) => {
     const onContentClick = (e: MouseEvent) => {
         e.stopPropagation();
     };
+
+    if (lazy && !isMounted) {
+        return null;
+    }
 
     return (
         <Portal>

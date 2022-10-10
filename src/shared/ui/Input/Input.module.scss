@@ -1,0 +1,24 @@
+.inputWrapper {
+    display: flex;
+}
+
+.label {
+    margin-right: 5px;
+    min-width: 100px;
+    width: 20%;
+}
+
+.input {
+    background: transparent;
+    min-width: 150px;
+    width: 80%;
+    color: var(--primary-color);
+
+    // border: none;
+    // outline: none;
+    // width: 100%;
+
+    &:focus {
+        outline: none;
+    }
+}

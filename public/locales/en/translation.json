@@ -7,5 +7,7 @@
   "Translate": "Change language",
   "TranslateShort": "En",
   "throwError": "Throw error",
-  "Login": "Login"
+  "Login": "Login",
+  "InputUsername": "Username",
+  "InputPassword": "Password"
 }
