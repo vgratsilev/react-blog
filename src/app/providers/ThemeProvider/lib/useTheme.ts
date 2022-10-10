@@ -11,12 +11,13 @@ export function useTheme(): IUseThemeResult {
 
     const toggleTheme = () => {
         let newTheme: Theme;
+        window.console.log(theme);
         switch (theme) {
             case Theme.LIGHT:
-                newTheme = Theme.LIGHT;
+                newTheme = Theme.DARK;
                 break;
             case Theme.DARK:
-                newTheme = Theme.DARK;
+                newTheme = Theme.LIGHT;
                 break;
             default:
                 newTheme = Theme.LIGHT;

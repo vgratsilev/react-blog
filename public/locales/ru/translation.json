@@ -6,5 +6,6 @@
   "SomethingWentWrong": "Что-то пошло не так...",
   "Translate": "Поменять язык",
   "TranslateShort": "Ru",
-  "throwError": "Вызвать ошибку"
+  "throwError": "Вызвать ошибку",
+  "Login": "Войти"
 }
