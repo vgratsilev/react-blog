@@ -19,6 +19,8 @@
   * [Jest](https://jestjs.io/) (+ [jest-dom](https://github.com/testing-library/jest-dom))
   * [React Testing Library](https://testing-library.com/)
 * [Storybook](https://storybook.js.org/)
-  * Visual regression test tool with html reporter: [REG CLI](https://github.com/reg-viz/reg-cli) 
+  * Visual regression test tool with html reporter: [REG CLI](https://github.com/reg-viz/reg-cli)
 
+### Backend:
 
+* Server: imitation with [json-server](https://github.com/typicode/json-server)
