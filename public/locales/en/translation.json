@@ -8,6 +8,9 @@
   "TranslateShort": "En",
   "throwError": "Throw error",
   "Login": "Login",
+  "Logout": "Logout",
   "InputUsername": "Username",
-  "InputPassword": "Password"
+  "InputPassword": "Password",
+  "LoginFormTitle": "Authorization",
+  "LoginErrorMessage": "Invalid username or password"
 }

@@ -8,6 +8,9 @@
   "TranslateShort": "Ru",
   "throwError": "Вызвать ошибку",
   "Login": "Войти",
+  "Logout": "Выйти",
   "InputUsername": "Логин",
-  "InputPassword": "Пароль"
+  "InputPassword": "Пароль",
+  "LoginFormTitle": "Авторизация",
+  "LoginErrorMessage": "Неправильный логин или пароль"
 }

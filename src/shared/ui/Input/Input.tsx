@@ -12,7 +12,7 @@ interface IInputProps extends InputHTMLElement {
     autofocus?: boolean;
 }
 
-const InputControl = (props: IInputProps) => {
+export const Input = memo((props: IInputProps) => {
     const { className, value, onChange, label, type = 'text', autofocus, ...otherProps } = props;
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -40,6 +40,4 @@ const InputControl = (props: IInputProps) => {
             />
         </div>
     );
-};
-
-export const Input = memo(InputControl);
+});

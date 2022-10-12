@@ -1,10 +1,10 @@
 import path from 'path';
-import webpack, { RuleSetRule } from 'webpack';
+import { Configuration, DefinePlugin, RuleSetRule } from 'webpack';
 import { IBuildPath } from '../build/types/config';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { buildSvgLoader } from '../build/loaders/buildSvgLoader';
 
-export default ({ config }: { config: webpack.Configuration }) => {
+export default ({ config }: { config: Configuration }) => {
     const paths: IBuildPath = {
         build: '',
         html: '',
@@ -29,5 +29,12 @@ export default ({ config }: { config: webpack.Configuration }) => {
     config.module.rules.push(buildSvgLoader());
 
     config.module.rules.push(buildCssLoader(true));
+
+    config.plugins.push(
+        new DefinePlugin({
+            __IS_DEV__: true,
+        }),
+    );
+
     return config;
 };
