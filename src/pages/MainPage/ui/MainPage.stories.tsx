@@ -11,6 +11,8 @@ export default {
     },
 } as ComponentMeta<typeof MainPage>;
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 const Template: ComponentStory<typeof MainPage> = (args) => <MainPage {...args} />;
 
 export const Light = Template.bind({});
