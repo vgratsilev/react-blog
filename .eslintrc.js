@@ -106,6 +106,12 @@ module.exports = {
                 'no-plusplus': 'off',
             },
         },
+        {
+            files: '**/config/**/*.ts',
+            rules: {
+                'no-param-reassign': 'off',
+            },
+        },
     ],
     globals: {
         __IS_DEV__: true,

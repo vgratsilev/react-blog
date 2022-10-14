@@ -10,13 +10,16 @@ export default ({ config }: { config: Configuration }) => {
         html: '',
         entry: '',
         assetDir: '',
-        src: path.resolve(__dirname, '..', '..', 'src'),
+        src: path.resolve(__dirname, '../../src'),
     };
     config.resolve.modules.push(paths.src);
+
+    // storybook fix node_modules were not found
+    config.resolve.modules = [path.resolve(__dirname, '../../src'), 'node_modules'];
+
     config.resolve.extensions.push('.ts', '.tsx');
 
     // replace storybook svg loader with SVGR
-    // eslint-disable-next-line no-param-reassign
     config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
         if (/svg/.test(rule.test as string)) {
             return {

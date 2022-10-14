@@ -17,7 +17,8 @@ export const parameters = {
 
 export const globalTypes = {
     locale: {
-        name: 'Locale',
+        title: 'Locale',
+        // name: 'Locale',
         description: 'Internationalization locale',
         toolbar: {
             icon: 'globe',
@@ -25,7 +26,7 @@ export const globalTypes = {
                 { value: 'en', title: 'English' },
                 { value: 'ru', title: 'Russian' },
             ],
-            showName: true,
+            // showName: true,
         },
     },
 };

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { Suspense, useEffect } from 'react';
 import { Story, StoryContext } from '@storybook/react';
-import i18n from 'shared/config/i18n/i18nForStories';
+import i18n from 'shared/config/i18n/i18n';
 import { I18nextProvider } from 'react-i18next';
 
 export const i18nextDecorator = (story: () => Story, context: StoryContext) => {
