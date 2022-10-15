@@ -4,7 +4,7 @@ import { Portal } from 'shared/ui/Portal/Portal';
 import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './Modal.module.scss';
 
-const ANIMATION_DELAY = 300;
+const ANIMATION_TIME = 300;
 
 interface IModalProps {
     className?: string;
@@ -40,7 +40,7 @@ export const Modal = (props: IModalProps) => {
             timerRef.current = setTimeout(() => {
                 onClose();
                 setIsClosing(false);
-            }, ANIMATION_DELAY);
+            }, ANIMATION_TIME);
         }
     }, [onClose]);
 
