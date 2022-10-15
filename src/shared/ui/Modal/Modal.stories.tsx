@@ -20,7 +20,7 @@ obcaecati odio odit omnis placeat porro quaerat, quasi qui quidem quisquam quod 
 sequi, similique, soluta ullam velit? Adipisci aperiam consectetur consequatur dolorem dolores
 eligendi eos explicabo minima minus nam natus neque nihil, perspiciatis, quibusdam sint veniam,
 veritatis. Alias, aut cum dicta dolores dolorum esse fugiat illo iusto nemo nihil nobis omnis
-perferendis quidem, suscipit tempore temporibus voluptates voluptatibus.`;
+perferendis quidem, suscipit tempore temporibus voluptates.`;
 
 export const Primary = Template.bind({});
 Primary.args = {
