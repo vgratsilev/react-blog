@@ -12,10 +12,7 @@ export default ({ config }: { config: Configuration }) => {
         assetDir: '',
         src: path.resolve(__dirname, '../../src'),
     };
-    config.resolve.modules.push(paths.src);
-
-    // storybook fix node_modules were not found
-    config.resolve.modules = [path.resolve(__dirname, '../../src'), 'node_modules'];
+    config.resolve.modules.unshift(paths.src);
 
     config.resolve.extensions.push('.ts', '.tsx');
 
