@@ -3,7 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 import { CSSTransitionClassNames } from 'react-transition-group/CSSTransition';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
-import animationStyles from './aniationStyles.module.scss';
+import animationStyles from './animationStyles.module.scss';
 import cls from './ModalLayout.module.scss';
 import { ANIMATION_TIME } from '../config/ModalConfig';
 
