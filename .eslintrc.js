@@ -82,6 +82,7 @@ module.exports = {
         'jsx-a11y/click-events-have-key-events': 'off',
         'import/no-cycle': 'off',
         'react/display-name': 'off',
+        'react/prop-types': 'off',
         'prettier/prettier': [
             'error',
             {
