@@ -10,8 +10,8 @@ interface ILoginByUsernameProps {
 }
 
 // enum LoginErrors {
-//     INCORRECT_DATA = '',
-//     SERVER_ERROR=
+//     INCORRECT_DATA = 1,
+//     SERVER_ERROR = 2,
 // }
 
 export const loginByUsername = createAsyncThunk<
