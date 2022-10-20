@@ -8,6 +8,7 @@ import {
     Reducer,
     ReducersMapObject,
 } from '@reduxjs/toolkit';
+import { IProfileSchema } from 'entities/Profile';
 
 export interface IStateSchema {
     counter: ICounterSchema;
@@ -15,6 +16,7 @@ export interface IStateSchema {
 
     // async reducers
     loginForm?: ILoginSchema;
+    profile?: IProfileSchema;
 }
 
 export type StateSchemaKey = keyof IStateSchema;
