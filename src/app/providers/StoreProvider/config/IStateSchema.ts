@@ -9,6 +9,8 @@ import {
     ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { IProfileSchema } from 'entities/Profile';
+import { AxiosInstance } from 'axios';
+import { NavigateOptions, To } from 'react-router-dom';
 
 export interface IStateSchema {
     counter: ICounterSchema;
@@ -30,4 +32,14 @@ export interface IReducerManager {
 
 export interface IReduxStoreWithManager extends EnhancedStore<IStateSchema> {
     reducerManager: IReducerManager;
+}
+
+export interface IThunkExtraArg {
+    api: AxiosInstance;
+    navigate: (to: To, options?: NavigateOptions) => void;
+}
+
+export interface IThunkConfig<T> {
+    rejectValue: T;
+    extra: IThunkExtraArg;
 }

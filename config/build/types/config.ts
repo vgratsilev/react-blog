@@ -13,6 +13,7 @@ export interface IBuildEnv {
     mode: BuildMode;
     port: number;
     analyzerMode: AnalyzerMode;
+    apiURL: string;
 }
 
 export interface IBuildOptions {
@@ -21,4 +22,5 @@ export interface IBuildOptions {
     isDev: boolean;
     port: number;
     analyzerMode: AnalyzerMode;
+    apiURL: string;
 }

@@ -12,6 +12,7 @@
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+    "lint:all": "npm run lint:ts && npm run lint:scss",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:unit:coverage": "jest --config ./config/jest/jest.config.ts --collectCoverage=true",
     "test:ui": "npx loki test --port 6006",
@@ -24,7 +25,7 @@
     "analyzer:dev": "webpack --env analyzerMode=server mode=development",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook",
-    "prepare": "husky install"
+    "test:all": "npm run test:unit && npm run storybook && npm run test:ui"
   },
   "keywords": [],
   "author": "vgratsilev",
