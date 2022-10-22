@@ -16,10 +16,8 @@ export default ({ config }: { config: Configuration }) => {
 
     config.resolve!.extensions!.push('.ts', '.tsx');
 
-    // replace storybook svg loader with SVGR
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    config.module!.rules = config!.module!.rules!.map((rule: RuleSetRule) => {
+    const rules = config.module!.rules as RuleSetRule[];
+    config.module!.rules = rules.map((rule: RuleSetRule) => {
         if (/svg/.test(rule.test as string)) {
             return {
                 ...rule,
