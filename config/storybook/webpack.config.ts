@@ -12,12 +12,14 @@ export default ({ config }: { config: Configuration }) => {
         assetDir: '',
         src: path.resolve(__dirname, '../../src'),
     };
-    config.resolve.modules.unshift(paths.src);
+    config.resolve!.modules!.unshift(paths.src);
 
-    config.resolve.extensions.push('.ts', '.tsx');
+    config.resolve!.extensions!.push('.ts', '.tsx');
 
     // replace storybook svg loader with SVGR
-    config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    config.module!.rules = config!.module!.rules!.map((rule: RuleSetRule) => {
         if (/svg/.test(rule.test as string)) {
             return {
                 ...rule,
@@ -26,11 +28,11 @@ export default ({ config }: { config: Configuration }) => {
         }
         return rule;
     });
-    config.module.rules.push(buildSvgLoader());
+    config.module!.rules.push(buildSvgLoader());
 
-    config.module.rules.push(buildCssLoader(true));
+    config.module!.rules.push(buildCssLoader(true));
 
-    config.plugins.push(
+    config.plugins!.push(
         new DefinePlugin({
             __IS_DEV__: true,
             __API__: JSON.stringify(''),

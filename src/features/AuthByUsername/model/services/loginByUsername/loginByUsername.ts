@@ -1,6 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { IUser, userActions } from 'entities/User';
-import i18n from 'shared/config/i18n/i18n';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
 import { IThunkConfig } from 'app/providers/StoreProvider';
 
@@ -26,11 +25,11 @@ export const loginByUsername = createAsyncThunk<IUser, ILoginByUsernameProps, IT
 
             localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
             dispatch(userActions.setAuthData(response.data));
-            extra.navigate('/about');
+            extra.navigate?.('/about');
             return response.data;
         } catch (e) {
-            window.console.log(e);
-            return rejectWithValue(i18n.t('LoginErrorMessage'));
+            // console.log(e);
+            return rejectWithValue('LoginErrorMessage');
         }
     },
 );

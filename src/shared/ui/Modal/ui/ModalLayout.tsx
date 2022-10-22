@@ -11,7 +11,7 @@ interface IModalLayoutProps {
     children: ReactNode;
     opened: boolean;
     onClose: () => void;
-    className: string;
+    className: string | undefined;
 }
 
 const overlayAnimation: CSSTransitionClassNames = {
@@ -31,8 +31,8 @@ const contentAnimation: CSSTransitionClassNames = {
 export const ModalLayout = (props: IModalLayoutProps) => {
     const { onClose, children, opened, className } = props;
 
-    const overlayRef = useRef();
-    const contentRef = useRef();
+    const overlayRef = useRef<HTMLDivElement>(null);
+    const contentRef = useRef<HTMLDivElement>(null);
 
     const { theme } = useTheme();
 

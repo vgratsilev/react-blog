@@ -1,3 +1,6 @@
 {
-  "ProfilePage": "Profile Page"
+  "ProfilePage": "Profile Page",
+  "FirstNameLabel": "Firstname",
+  "LastNameLabel": "Lastname",
+  "ChangeBtn": "Change"
 }

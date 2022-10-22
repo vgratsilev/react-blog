@@ -29,7 +29,7 @@ export const Button = memo((props: IButtonProps) => {
     const {
         children,
         className,
-        theme,
+        theme = ButtonTheme.OUTLINE,
         square,
         size = ButtonSize.M,
         disabled = false,

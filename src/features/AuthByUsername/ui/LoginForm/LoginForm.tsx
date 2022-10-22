@@ -57,7 +57,7 @@ const LoginForm = memo((props: ILoginFormProps) => {
                 <Text title={t('LoginFormTitle')} />
                 {error && (
                     <Text
-                        text={error}
+                        text={t(error)}
                         theme={TextTheme.ERROR}
                     />
                 )}

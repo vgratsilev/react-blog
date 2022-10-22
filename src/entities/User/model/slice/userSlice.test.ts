@@ -12,7 +12,7 @@ describe('userSlice', () => {
     test('initAuthData with not empty localStorage', () => {
         localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(authData));
 
-        state = { authData: { id: undefined, username: undefined } };
+        state = { authData: { id: '', username: '' } };
 
         expect(userReducer(state, userActions.initAuthData)).toEqual({ authData });
     });
@@ -24,7 +24,7 @@ describe('userSlice', () => {
     test('logout', () => {
         expect(userReducer(state, userActions.logout)).toEqual({ authData: undefined });
 
-        const userData = JSON.parse(localStorage.getItem(USER_LOCALSTORAGE_KEY));
+        const userData = localStorage.getItem(USER_LOCALSTORAGE_KEY);
         expect(userData).toBeNull();
     });
 

@@ -6,8 +6,8 @@ import { useMount } from './lib/useMount';
 interface IModalProps {
     className?: string;
     children?: ReactNode;
-    isOpen?: boolean;
-    onClose?: () => void;
+    isOpen: boolean;
+    onClose: () => void;
     lazy?: boolean;
 }
 

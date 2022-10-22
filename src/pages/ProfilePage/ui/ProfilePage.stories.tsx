@@ -12,8 +12,6 @@ export default {
     },
 } as ComponentMeta<typeof ProfilePage>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
 
 export const Light = Template.bind({});
