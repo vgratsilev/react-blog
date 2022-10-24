@@ -36,3 +36,18 @@ WithoutLabelDark.args = {
     value: '123123',
 };
 WithoutLabelDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const ReadonlyLight = Template.bind({});
+ReadonlyLight.args = {
+    label: 'Label text',
+    value: '123123',
+    readonly: true,
+};
+
+export const ReadonlyDark = Template.bind({});
+ReadonlyDark.args = {
+    label: 'Label text',
+    value: '123123',
+    readonly: true,
+};
+ReadonlyDark.decorators = [ThemeDecorator(Theme.DARK)];
