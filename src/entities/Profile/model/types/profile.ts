@@ -1,10 +1,10 @@
 import { Country, Currency } from 'shared/const/common';
 
 export interface IProfile {
-    firstname: string;
-    lastname: string;
-    username: string;
-    avatar: string;
+    firstname?: string;
+    lastname?: string;
+    username?: string;
+    avatar?: string;
     age?: number;
     currency?: Currency;
     country?: Country;
@@ -13,6 +13,7 @@ export interface IProfile {
 
 export interface IProfileSchema {
     data?: IProfile;
+    form?: IProfile;
     isLoading: boolean;
     error?: string;
     readonly: boolean;

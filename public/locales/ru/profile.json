@@ -2,5 +2,13 @@
   "ProfilePage": "Профиль",
   "FirstNameLabel": "Имя",
   "LastNameLabel": "Фамилия",
-  "ChangeBtn": "Изменить"
+  "UsernameLabel": "Имя пользователя",
+  "AgeLabel": "Возраст",
+  "CityLabel": "Город",
+  "AvatarLabel": "Аватар",
+  "ChangeBtn": "Изменить",
+  "CancelBtn": "Отменить",
+  "SaveBtn": "Сохранить",
+  "ProfileLoadingErrorTitle": "Ошибка при загрузке профиля",
+  "ProfileLoadingErrorText": "Попробуйте обновить страницу"
 }

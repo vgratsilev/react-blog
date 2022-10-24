@@ -4,12 +4,12 @@ import cls from './Input.module.scss';
 
 type InputHTMLElement = Omit<
     InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'onChange' | 'readOnly'
+    'value' | 'onChange' | 'readOnly' | 'onKeyDown'
 >;
 
 interface IInputProps extends InputHTMLElement {
     className?: string;
-    value?: string;
+    value?: string | number;
     onChange?: (value: string) => void;
     label?: string;
     autofocus?: boolean;
