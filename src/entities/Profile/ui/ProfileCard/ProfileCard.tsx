@@ -1,8 +1,12 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Input } from 'shared/ui/Input/Input';
 import { Loader } from 'shared/ui/Loader/Loader';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { Currency, CurrencySelect } from 'entities/Currency';
+import { Country } from 'entities/Country/model/types/country';
+import { CountrySelect } from 'entities/Country';
 import { IProfile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
 
@@ -18,7 +22,8 @@ interface IProfileCardProps {
     onChangeAge?: (value?: string) => void;
     onChangeCity?: (value?: string) => void;
     onChangeAvatar?: (value?: string) => void;
-    // onChangeCountry: (value?: string) => void;
+    onChangeCurrency?: (currency: Currency) => void;
+    onChangeCountry?: (country: Country) => void;
 }
 
 export const ProfileCard = (props: IProfileCardProps) => {
@@ -34,6 +39,8 @@ export const ProfileCard = (props: IProfileCardProps) => {
         onChangeAge,
         onChangeCity,
         onChangeAvatar,
+        onChangeCurrency,
+        onChangeCountry,
     } = props;
     const { t } = useTranslation('profile');
 
@@ -58,14 +65,21 @@ export const ProfileCard = (props: IProfileCardProps) => {
         );
     }
 
+    const mods: Mods = {
+        [cls.editing]: !readonly,
+    };
+
     return (
-        <div className={classNames(cls.profileCard, {}, [className])}>
-            <div>
+        <div className={classNames(cls.profileCard, mods, [className])}>
+            <div className={cls.data}>
                 {data?.avatar && (
-                    <img
-                        src={data?.avatar}
-                        alt={t('AvatarLabel')}
-                    />
+                    <div className={cls.avatarWrapper}>
+                        <Avatar
+                            src={data?.avatar}
+                            alt={t('AvatarLabel')}
+                            size={150}
+                        />
+                    </div>
                 )}
                 <Input
                     value={data?.firstname}
@@ -112,6 +126,19 @@ export const ProfileCard = (props: IProfileCardProps) => {
                     className={cls.input}
                     readonly={readonly}
                     onChange={onChangeAvatar}
+                />
+                <CurrencySelect
+                    className={cls.input}
+                    value={data?.currency}
+                    onChange={onChangeCurrency}
+                    readonly={readonly}
+                />
+
+                <CountrySelect
+                    className={cls.input}
+                    value={data?.country}
+                    onChange={onChangeCountry}
+                    readonly={readonly}
                 />
             </div>
         </div>
