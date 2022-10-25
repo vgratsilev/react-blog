@@ -13,5 +13,7 @@
   "InputUsername": "Логин",
   "InputPassword": "Пароль",
   "LoginFormTitle": "Авторизация",
-  "LoginErrorMessage": "Неправильный логин или пароль"
+  "LoginErrorMessage": "Неправильный логин или пароль",
+  "CurrencyLabel": "Валюта",
+  "CountryLabel": "Страна"
 }

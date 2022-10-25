@@ -13,5 +13,7 @@
   "InputUsername": "Username",
   "InputPassword": "Password",
   "LoginFormTitle": "Authorization",
-  "LoginErrorMessage": "Invalid username or password"
+  "LoginErrorMessage": "Invalid username or password",
+  "CurrencyLabel": "Currency",
+  "CountryLabel": "Country"
 }
