@@ -10,5 +10,10 @@
   "CancelBtn": "Cancel",
   "SaveBtn": "Save",
   "ProfileLoadingErrorTitle": "Profile loading error",
-  "ProfileLoadingErrorText": "Try to reload page"
+  "ProfileLoadingErrorText": "Try to reload page",
+  "ServerError": "Server error when saving changes",
+  "NoDataError": "Empty data",
+  "IncorrectCountryError": "Incorrect country",
+  "IncorrectAgeError": "Incorrect age",
+  "IncorrectUserDataError": "Firstname and Lastname are required"
 }
