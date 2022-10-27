@@ -16,6 +16,7 @@ export function buildPlugins({
     isDev,
     analyzerMode,
     apiURL,
+    project,
 }: IBuildOptions): WebpackPluginInstance[] {
     const plugins = [
         new ProgressPlugin(),
@@ -29,6 +30,7 @@ export function buildPlugins({
         new DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
             __API__: JSON.stringify(apiURL),
+            __PROJECT__: JSON.stringify(project),
         }),
     ];
 

@@ -23,4 +23,5 @@ export interface IBuildOptions {
     port: number;
     analyzerMode: AnalyzerMode;
     apiURL: string;
+    project: 'storybook' | 'frontend' | 'jest';
 }
