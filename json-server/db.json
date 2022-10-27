@@ -29,6 +29,8 @@
     "firstname": "Vadim",
     "lastname": "Gratsilev",
     "username": "admin",
-    "avatar": "https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png"
+    "avatar": "https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png",
+    "country": "Russia",
+    "age": 30
   }
 }
