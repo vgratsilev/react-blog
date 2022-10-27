@@ -22,10 +22,6 @@ const profileSlice = createSlice({
             state.form = state.data;
             state.validateErrors = undefined;
         },
-        saveEdit: (state) => {
-            state.readonly = true;
-            state.data = state.form;
-        },
         updateProfile: (state, action: PayloadAction<IProfile>) => {
             state.form = {
                 ...state.form,
