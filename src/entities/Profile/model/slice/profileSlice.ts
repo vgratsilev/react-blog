@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IProfile, IProfileSchema } from '../types/profile';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
-import { fetchProfileData } from '../services/fetchProdileData/fetchProfileData';
+import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData';
 
 const initialState: IProfileSchema = {
     readonly: true,
