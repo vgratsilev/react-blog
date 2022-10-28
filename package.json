@@ -23,9 +23,11 @@
     "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
     "analyzer:prod": "webpack --env stats=server mode=production",
     "analyzer:dev": "webpack --env analyzerMode=server mode=development",
-    "storybook": "start-storybook -p 6006 -c ./config/storybook",
+    "start:storybook": "start-storybook -p 6006 -c ./config/storybook",
+    "start:storybook:static": "npx http-server ./storybook-static",
+    "test:ui:static": "npx loki test --host 172.22.208.1 --port 8080",
     "storybook:build": "build-storybook -c ./config/storybook",
-    "test:all": "npm run test:unit && npm run storybook && npm run test:ui"
+    "test:all": "npm run test:unit && npm run start:storybook && npm run test:ui"
   },
   "keywords": [],
   "author": "vgratsilev",

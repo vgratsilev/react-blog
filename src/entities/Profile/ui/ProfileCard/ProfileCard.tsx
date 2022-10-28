@@ -121,7 +121,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
                     onChange={onChangeCity}
                 />
                 <Input
-                    value={data?.avatar}
+                    value={__PROJECT__ !== 'storybook' ? data?.avatar : 'stub'}
                     label={t('AvatarLabel')}
                     className={cls.input}
                     readonly={readonly}
