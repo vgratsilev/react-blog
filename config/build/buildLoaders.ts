@@ -13,7 +13,7 @@ export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
     const fileLoader = buildFileLoader();
     const cssLoader = buildCssLoader(isDev);
     const typeScriptLoader = buildTypescriptLoader();
-    const babelLoader = buildBabelLoader();
+    const babelLoader = buildBabelLoader(isDev);
 
     return [svgUrlLoader, svgLoader, fileLoader, babelLoader, typeScriptLoader, cssLoader];
 }
