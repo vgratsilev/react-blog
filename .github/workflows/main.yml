@@ -9,7 +9,7 @@ on:
 permissions:
   contents: write
 jobs:
-  Build, Lint, Test, Deploy:
+  Build-Lint-Test-Deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
