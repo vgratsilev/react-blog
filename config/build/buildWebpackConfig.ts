@@ -16,6 +16,7 @@ export function buildWebpackConfig(options: IBuildOptions): webpack.Configuratio
             path: paths.build,
             clean: true,
             assetModuleFilename: `${paths.assetDir}/[hash][ext][query]`,
+            publicPath: '/',
         },
         plugins: buildPlugins(options),
         module: {

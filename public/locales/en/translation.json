@@ -1,8 +1,9 @@
 {
   "AboutPageLink": "About",
   "ProfilePageLink": "Profile",
-  "MainPage": "Main Page",
   "MainPageLink": "Main",
+  "ArticlesPageLink": "Articles",
+  "MainPage": "Main Page",
   "ReloadThisPage": "Reload this page",
   "SomethingWentWrong": "Something went wrong...",
   "Translate": "Change language",

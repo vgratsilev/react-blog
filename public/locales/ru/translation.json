@@ -1,8 +1,9 @@
 {
   "AboutPageLink": "О сайте",
   "ProfilePageLink": "Профиль",
-  "MainPage": "Главная",
   "MainPageLink": "Главная",
+  "ArticlesPageLink": "Статьи",
+  "MainPage": "Главная",
   "ReloadThisPage": "Перезагрузить страницу",
   "SomethingWentWrong": "Что-то пошло не так...",
   "Translate": "Поменять язык",
