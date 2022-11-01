@@ -11,18 +11,69 @@
       "userId": "1"
     }
   ],
+  "articles": [
+    {
+      "id": "1",
+      "title": "Title 1",
+      "subtitle": "Subtitle 1",
+      "img": "https://cdn2.hexlet.io/store/derivatives/4aa834c7741fe4045ae3e5ecf6179654/fill_webp-850-400.webp",
+      "views": 420,
+      "created_dt": "31.10.2022",
+      "type": [
+        "IT",
+        "JS"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "text",
+          "title": "block title",
+          "paragraphs": [
+            "paragraph 1",
+            "paragraph 2",
+            "paragraph 3"
+          ]
+        },
+        {
+          "id": "1",
+          "type": "code",
+          "code": "put some code here"
+        },
+        {
+          "id": "1",
+          "type": "image",
+          "src": "https://res.cloudinary.com/practicaldev/image/fetch/s--ZDtqrBOj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/damiancipolat/js_vs_memes/blob/master/doc/js_thanks.png%3Fraw%3Dtrue",
+          "title": "Just JS"
+        }
+      ]
+    }
+  ],
   "comments": [
     {
       "id": "1",
       "body": "some comment",
-      "postId": "1"
+      "articleId": "1",
+      "userID": 1
+    },
+    {
+      "id": "2",
+      "body": "very usefully!",
+      "articleId": "1",
+      "userID": 2
     }
   ],
   "users": [
     {
       "id": "1",
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "456",
+      "role": "user"
     }
   ],
   "profile": {

@@ -1,4 +1,5 @@
 {
   "ArticlesPage": "Статьи",
-  "ArticleDetailsPage": "Какая-то статья"
+  "ArticleNotFound": "Статья не найдена!",
+  "ArticleDetailsLoadingError": "Произошла ошибка при загрузке статьи"
 }
