@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Text, TextAlign, TextTheme } from './Text';
+import { Text, TextAlign, TextSize, TextTheme } from './Text';
 
 export default {
     title: 'shared/Text',
@@ -82,4 +82,32 @@ TextAlignRight.args = {
     title: 'Title',
     text: 'Text',
     align: TextAlign.RIGHT,
+};
+
+export const TextSizeS = Template.bind({});
+TextSizeS.args = {
+    title: 'Title',
+    text: 'Text',
+    size: TextSize.S,
+};
+
+export const TextSizeM = Template.bind({});
+TextSizeM.args = {
+    title: 'Title',
+    text: 'Text',
+    size: TextSize.M,
+};
+
+export const TextSizeL = Template.bind({});
+TextSizeL.args = {
+    title: 'Title',
+    text: 'Text',
+    size: TextSize.L,
+};
+
+export const TextSizeXL = Template.bind({});
+TextSizeXL.args = {
+    title: 'Title',
+    text: 'Text',
+    size: TextSize.XL,
 };
