@@ -7,12 +7,17 @@ import cls from './ArticleDetailsPage.module.scss';
 
 interface IArticleDetailsPageProps {
     className?: string;
+    testId?: string;
 }
 
 const ArticleDetailsPage = (props: IArticleDetailsPageProps) => {
-    const { className } = props;
+    const { className, testId } = props;
     const { t } = useTranslation('article');
-    const { id } = useParams<{ id: string }>();
+    let { id } = useParams<{ id: string }>();
+
+    if (!id && __PROJECT__ === 'storybook') {
+        id = testId;
+    }
 
     if (!id) {
         return (

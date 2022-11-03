@@ -1,23 +1,19 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { IArticle } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
-import ArticleDetailsPage from './ArticleDetailsPage';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { ArticleBlockType, ArticleType, IArticle } from 'entities/Article/model/types/article';
+import { ArticleDetails } from './ArticleDetails';
 
 export default {
-    title: 'pages/ArticleDetailsPage',
-    component: ArticleDetailsPage,
+    title: 'entities/ArticleDetails',
+    component: ArticleDetails,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    args: { testId: '1' },
-} as ComponentMeta<typeof ArticleDetailsPage>;
+} as ComponentMeta<typeof ArticleDetails>;
 
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
-    <ArticleDetailsPage {...args} />
-);
+const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />;
 
 const article: IArticle = {
     id: '1',
@@ -70,4 +66,22 @@ Dark.decorators = [
         },
     }),
     ThemeDecorator(Theme.DARK),
+];
+
+export const IsLoading = Template.bind({});
+IsLoading.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            isLoading: true,
+        },
+    }),
+];
+
+export const WithError = Template.bind({});
+WithError.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            error: 'Error',
+        },
+    }),
 ];

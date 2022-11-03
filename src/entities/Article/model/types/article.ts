@@ -25,6 +25,7 @@ export interface IArticleImageBlock extends IArticleBlockBase {
     type: ArticleBlockType.IMAGE;
     src: string;
     title: string;
+    alt: string;
 }
 
 export interface IArticleTextBlock extends IArticleBlockBase {
