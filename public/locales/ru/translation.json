@@ -16,5 +16,6 @@
   "LoginFormTitle": "Авторизация",
   "LoginErrorMessage": "Неправильный логин или пароль",
   "CurrencyLabel": "Валюта",
-  "CountryLabel": "Страна"
+  "CountryLabel": "Страна",
+  "NoCommentsMessage": "Комментарии отсутствуют"
 }

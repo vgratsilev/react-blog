@@ -1,5 +1,6 @@
 {
   "ArticlesPage": "Статьи",
   "ArticleNotFound": "Статья не найдена!",
-  "ArticleDetailsLoadingError": "Произошла ошибка при загрузке статьи"
+  "ArticleDetailsLoadingError": "Произошла ошибка при загрузке статьи",
+  "CommentsBlockTitle": "Комментарии"
 }

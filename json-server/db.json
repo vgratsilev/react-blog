@@ -52,15 +52,21 @@
   "comments": [
     {
       "id": "1",
-      "body": "some comment",
+      "text": "some comment",
       "articleId": "1",
-      "userID": 1
+      "userId": 1
     },
     {
       "id": "2",
-      "body": "very usefully!",
+      "text": "very usefully!",
       "articleId": "1",
-      "userID": 2
+      "userId": 2
+    },
+    {
+      "id": "3",
+      "text": "wow!",
+      "articleId": "1",
+      "userId": 1
     }
   ],
   "users": [
@@ -68,7 +74,8 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "admin"
+      "role": "admin",
+      "avatar": "https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png"
     },
     {
       "id": "2",

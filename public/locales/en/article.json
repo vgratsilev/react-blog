@@ -1,5 +1,6 @@
 {
   "ArticlesPage": "Articles",
   "ArticleNotFound": "Article not found!",
-  "ArticleDetailsLoadingError": "Something went wrong when loading the article"
+  "ArticleDetailsLoadingError": "Something went wrong when loading the article",
+  "CommentsBlockTitle": "Comments"
 }

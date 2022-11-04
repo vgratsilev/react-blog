@@ -16,5 +16,6 @@
   "LoginFormTitle": "Authorization",
   "LoginErrorMessage": "Invalid username or password",
   "CurrencyLabel": "Currency",
-  "CountryLabel": "Country"
+  "CountryLabel": "Country",
+  "NoCommentsMessage": "No comments"
 }
