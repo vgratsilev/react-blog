@@ -181,7 +181,10 @@ export default {
     // timers: "real",
 
     // A map from regular expressions to paths to transformers
-    // transform: undefined,
+    transform: {
+        '^.+\\.tsx?$': 'babel-jest',
+        '.+\\.(css|styl|less|sass|scss|png|jpg|svg|ttf|woff|woff2)$': 'jest-transform-stub',
+    },
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [
