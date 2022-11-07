@@ -23,7 +23,7 @@ AvatarBig.args = {
     size: 250,
 };
 
-export const AvatarAltText = Template.bind({});
-AvatarAltText.args = {
+export const DefaultAvatar = Template.bind({});
+DefaultAvatar.args = {
     alt: 'No image',
 };

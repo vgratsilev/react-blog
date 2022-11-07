@@ -4,6 +4,8 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { IArticle } from 'entities/Article';
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
+import { IArticleDetailsCommentSchema } from 'pages/ArticleDetailsPage';
+import AvatarTest from 'shared/assets/tests/storybookAvatar.png';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
@@ -53,12 +55,32 @@ const article: IArticle = {
     ],
 };
 
+const comments: IArticleDetailsCommentSchema = {
+    isLoading: false,
+    error: undefined,
+    ids: ['1', '2', '3'],
+    entities: {
+        '1': {
+            id: '1',
+            text: 'comment 1',
+            user: { id: '1', username: 'Admin', avatar: AvatarTest },
+        },
+        '2': { id: '2', text: 'comment 2', user: { id: '2', username: 'John' } },
+        '3': {
+            id: '3',
+            text: 'comment 3',
+            user: { id: '1', username: 'Admin', avatar: AvatarTest },
+        },
+    },
+};
+
 export const Light = Template.bind({});
 Light.decorators = [
     StoreDecorator({
         articleDetails: {
             data: article,
         },
+        articleDetailsComments: comments,
     }),
 ];
 
@@ -68,6 +90,7 @@ Dark.decorators = [
         articleDetails: {
             data: article,
         },
+        articleDetailsComments: comments,
     }),
     ThemeDecorator(Theme.DARK),
 ];
