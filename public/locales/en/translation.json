@@ -17,5 +17,7 @@
   "LoginErrorMessage": "Invalid username or password",
   "CurrencyLabel": "Currency",
   "CountryLabel": "Country",
-  "NoCommentsMessage": "No comments"
+  "NoCommentsMessage": "No comments",
+  "InputNewCommentLabel": "Type comment",
+  "InputNewCommentSendBtn": "Send"
 }

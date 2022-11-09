@@ -15,13 +15,15 @@ import {
     profileReducer,
     ValidateProfileError,
 } from 'entities/Profile';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useParams } from 'react-router-dom';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -30,12 +32,16 @@ const reducers: ReducersList = {
 
 interface IProfilePageProps {
     className?: string;
+    testId?: string;
 }
 
-const ProfilePage = ({ className }: IProfilePageProps) => {
+const ProfilePage = (props: IProfilePageProps) => {
+    const { className, testId } = props;
     const { t } = useTranslation('profile');
 
     const dispatch = useAppDispatch();
+
+    let { id } = useParams<{ id: string }>();
 
     const formData = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileIsLoading);
@@ -51,11 +57,15 @@ const ProfilePage = ({ className }: IProfilePageProps) => {
         [ValidateProfileError.INCORRECT_USER_DATA]: t('IncorrectUserDataError'),
     };
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData());
+    if (!id && __PROJECT__ === 'storybook') {
+        id = testId;
+    }
+
+    useInitialEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id));
         }
-    }, [dispatch]);
+    });
 
     const onChangeFirstname = useCallback(
         (value?: string) => {

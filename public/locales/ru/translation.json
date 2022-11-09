@@ -17,5 +17,7 @@
   "LoginErrorMessage": "Неправильный логин или пароль",
   "CurrencyLabel": "Валюта",
   "CountryLabel": "Страна",
-  "NoCommentsMessage": "Комментарии отсутствуют"
+  "NoCommentsMessage": "Комментарии отсутствуют",
+  "InputNewCommentLabel": "Введите текст комментария",
+  "InputNewCommentSendBtn": "Отправить"
 }

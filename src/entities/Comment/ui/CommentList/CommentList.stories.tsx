@@ -6,7 +6,7 @@ import { IComment } from 'entities/Comment';
 import { CommentList } from './CommentList';
 
 export default {
-    title: 'shared/CommentList',
+    title: 'entities/Comment/CommentList',
     component: CommentList,
     argTypes: {
         backgroundColor: { control: 'color' },
