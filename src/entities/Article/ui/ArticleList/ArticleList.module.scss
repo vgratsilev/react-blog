@@ -1,0 +1,17 @@
+.LIST {
+    .card {
+        margin-bottom: 30px;
+    }
+}
+
+.TILE {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .card {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 30px;
+    }
+}

@@ -17,6 +17,7 @@
       "title": "Title 1",
       "subtitle": "Subtitle 1",
       "img": "https://cdn2.hexlet.io/store/derivatives/4aa834c7741fe4045ae3e5ecf6179654/fill_webp-850-400.webp",
+      "userId": "1",
       "views": 420,
       "created_dt": "31.10.2022",
       "type": [

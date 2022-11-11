@@ -2,5 +2,7 @@
   "ArticlesPage": "Статьи",
   "ArticleNotFound": "Статья не найдена!",
   "ArticleDetailsLoadingError": "Произошла ошибка при загрузке статьи",
-  "CommentsBlockTitle": "Комментарии"
+  "CommentsBlockTitle": "Комментарии",
+  "BackToArticleListBtn": "Назад к списку статей",
+  "ContinueReadingBtn": "Продолжить чтение..."
 }

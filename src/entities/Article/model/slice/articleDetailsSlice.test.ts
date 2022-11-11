@@ -7,6 +7,10 @@ const data: IArticle = {
     id: '1',
     title: 'test title',
     subtitle: 'test subtitle',
+    user: {
+        id: '1',
+        username: 'admin',
+    },
     views: 555,
     type: [ArticleType.IT],
     created_dt: '04.11.2022',

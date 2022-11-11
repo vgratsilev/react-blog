@@ -6,7 +6,7 @@ import { ArticleBlockType, ArticleType, IArticle } from 'entities/Article/model/
 import { ArticleDetails } from './ArticleDetails';
 
 export default {
-    title: 'entities/ArticleDetails',
+    title: 'entities/Article/ArticleDetails',
     component: ArticleDetails,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -20,6 +20,10 @@ const article: IArticle = {
     title: 'Title 1',
     subtitle: 'Subtitle 1',
     img: 'https://cdn2.hexlet.io/store/derivatives/4aa834c7741fe4045ae3e5ecf6179654/fill_webp-850-400.webp',
+    user: {
+        id: '1',
+        username: 'admin',
+    },
     views: 420,
     created_dt: '31.10.2022',
     type: [ArticleType.IT, ArticleType.JS],

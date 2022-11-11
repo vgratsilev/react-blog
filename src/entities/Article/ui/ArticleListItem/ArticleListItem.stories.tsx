@@ -1,27 +1,18 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { IArticle } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
-import { IArticleDetailsCommentSchema } from 'pages/ArticleDetailsPage';
-import AvatarTest from 'shared/assets/tests/storybookAvatar.png';
-import ArticleDetailsPage from './ArticleDetailsPage';
+import { ArticleView, IArticle } from '../../model/types/article';
+import { ArticleListItem } from './ArticleListItem';
 
 export default {
-    title: 'pages/ArticleDetailsPage',
-    component: ArticleDetailsPage,
+    title: 'entities/Article/ArticleListItem',
+    component: ArticleListItem,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    args: { testId: '1' },
-} as ComponentMeta<typeof ArticleDetailsPage>;
+} as ComponentMeta<typeof ArticleListItem>;
 
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
-    <ArticleDetailsPage {...args} />
-);
-
-const article: IArticle = {
+const article = {
     id: '1',
     title: 'Title 1',
     subtitle: 'Subtitle 1',
@@ -29,14 +20,15 @@ const article: IArticle = {
     user: {
         id: '1',
         username: 'admin',
+        avatar: 'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png',
     },
     views: 420,
     created_dt: '31.10.2022',
-    type: [ArticleType.IT, ArticleType.JS],
+    type: ['IT', 'JS'],
     blocks: [
         {
             id: '1',
-            type: ArticleBlockType.TEXT,
+            type: 'text',
             title: 'block title',
             paragraphs: [
                 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio illo ipsum itaque laborum, omnis possimus? Alias aperiam eius est facere necessitatibus nisi nobis nulla, numquam, porro quam tenetur veritatis vero voluptatum. Commodi distinctio dolor eligendi esse facere ipsum labore laborum libero minima omnis placeat quam recusandae, repellat sed sit voluptas!',
@@ -46,55 +38,34 @@ const article: IArticle = {
         },
         {
             id: '2',
-            type: ArticleBlockType.CODE,
+            type: 'code',
             code: 'put some code here',
         },
         {
             id: '3',
-            type: ArticleBlockType.IMAGE,
+            type: 'image',
             src: 'https://res.cloudinary.com/practicaldev/image/fetch/s--ZDtqrBOj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/damiancipolat/js_vs_memes/blob/master/doc/js_thanks.png%3Fraw%3Dtrue',
             alt: 'js image',
             title: 'Just JS',
         },
     ],
-};
+} as IArticle;
 
-const comments: IArticleDetailsCommentSchema = {
-    isLoading: false,
-    error: undefined,
-    ids: ['1', '2', '3'],
-    entities: {
-        '1': {
-            id: '1',
-            text: 'comment 1',
-            user: { id: '1', username: 'Admin', avatar: AvatarTest },
-        },
-        '2': { id: '2', text: 'comment 2', user: { id: '2', username: 'John' } },
-        '3': {
-            id: '3',
-            text: 'comment 3',
-            user: { id: '1', username: 'Admin', avatar: AvatarTest },
-        },
-    },
-};
+const listProps = { article, view: ArticleView.LIST };
+const tileProps = { article, view: ArticleView.TILE };
 
-export const Light = Template.bind({});
-Light.decorators = [
-    StoreDecorator({
-        articleDetails: {
-            data: article,
-        },
-        articleDetailsComments: comments,
-    }),
-];
+const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
 
-export const Dark = Template.bind({});
-Dark.decorators = [
-    StoreDecorator({
-        articleDetails: {
-            data: article,
-        },
-        articleDetailsComments: comments,
-    }),
-    ThemeDecorator(Theme.DARK),
-];
+export const ListLight = Template.bind({});
+ListLight.args = listProps;
+
+export const ListDark = Template.bind({});
+ListDark.args = listProps;
+ListDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const TileLight = Template.bind({});
+TileLight.args = tileProps;
+
+export const TileDark = Template.bind({});
+TileDark.args = tileProps;
+TileDark.decorators = [ThemeDecorator(Theme.DARK)];

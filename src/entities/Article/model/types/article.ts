@@ -1,8 +1,15 @@
+import { IUser } from 'entities/User';
+
 export enum ArticleType {
     IT = 'IT',
     JS = 'JS',
     SCIENCE = 'SCIENCE',
     ECONOMICS = 'ECONOMICS',
+}
+
+export enum ArticleView {
+    LIST = 'LIST',
+    TILE = 'TILE',
 }
 
 export enum ArticleBlockType {
@@ -41,6 +48,7 @@ export interface IArticle {
     title: string;
     subtitle: string;
     img: string;
+    user: IUser;
     views: number;
     created_dt: string;
     type: ArticleType[];
