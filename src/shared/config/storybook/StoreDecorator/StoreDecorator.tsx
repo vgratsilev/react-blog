@@ -7,6 +7,7 @@ import { profileReducer } from 'entities/Profile';
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
 import { articleDetailsCommentReducer } from 'pages/ArticleDetailsPage/module/slice/articleDetailsCommentSlice';
 import { addCommentFormReducer } from 'features/addCommentForm';
+import { articlesPageReducer } from 'pages/ArticlesPage/model/slice/articlesPageSlice';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
@@ -14,6 +15,7 @@ const defaultAsyncReducers: ReducersList = {
     articleDetails: articleDetailsReducer,
     articleDetailsComments: articleDetailsCommentReducer,
     addCommentForm: addCommentFormReducer,
+    articlesPage: articlesPageReducer,
 };
 
 export const StoreDecorator =
