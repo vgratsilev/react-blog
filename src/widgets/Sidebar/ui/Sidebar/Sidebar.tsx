@@ -34,7 +34,7 @@ export const Sidebar = memo(({ className }: ISidebarProps) => {
     );
 
     return (
-        <div
+        <menu
             data-testid={'sidebar'}
             className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
@@ -56,6 +56,6 @@ export const Sidebar = memo(({ className }: ISidebarProps) => {
                     theme={ButtonTheme.CLEAR_INVERTED}
                 />
             </div>
-        </div>
+        </menu>
     );
 });

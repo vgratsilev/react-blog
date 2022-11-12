@@ -4,5 +4,7 @@
   "ArticleDetailsLoadingError": "Произошла ошибка при загрузке статьи",
   "CommentsBlockTitle": "Комментарии",
   "BackToArticleListBtn": "Назад к списку статей",
-  "ContinueReadingBtn": "Продолжить чтение..."
+  "ContinueReadingBtn": "Продолжить чтение...",
+  "ArticlesLoadingErrorTitle": "Ошибка при загрузке списка статей",
+  "ArticlesLoadingErrorText": "Попробуйте обновить страницу"
 }

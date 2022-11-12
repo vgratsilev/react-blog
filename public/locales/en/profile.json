@@ -10,7 +10,7 @@
   "CancelBtn": "Cancel",
   "SaveBtn": "Save",
   "ProfileLoadingErrorTitle": "Profile loading error",
-  "ProfileLoadingErrorText": "Try to reload page",
+  "ProfileLoadingErrorText": "Please try to reload page",
   "ServerError": "Server error when saving changes",
   "NoDataError": "Empty data",
   "IncorrectCountryError": "Incorrect country",

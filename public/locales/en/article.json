@@ -4,5 +4,7 @@
   "ArticleDetailsLoadingError": "Something went wrong when loading the article",
   "CommentsBlockTitle": "Comments",
   "BackToArticleListBtn": "Back to articles list",
-  "ContinueReadingBtn": "Continue reading..."
+  "ContinueReadingBtn": "Continue reading...",
+  "ArticlesLoadingErrorTitle": "Articles loading error",
+  "ArticlesLoadingErrorText": "Please try to reload page"
 }

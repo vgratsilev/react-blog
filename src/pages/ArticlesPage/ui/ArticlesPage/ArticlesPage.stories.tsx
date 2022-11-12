@@ -54,6 +54,9 @@ const articles: IArticlesPageSchema = {
     isLoading: false,
     error: undefined,
     view: ArticleView.TILE,
+    page: 1,
+    hasMore: true,
+    limit: 9,
     ids: ['1', '2', '3'],
     entities: {
         '1': {
@@ -172,4 +175,16 @@ TileViewDarkIsLoading.decorators = [
         },
     }),
     ThemeDecorator(Theme.DARK),
+];
+
+export const LoadingError = Template.bind({});
+LoadingError.args = {};
+LoadingError.decorators = [
+    StoreDecorator({
+        articlesPage: {
+            ids: [],
+            entities: {},
+            error: 'test',
+        },
+    }),
 ];
