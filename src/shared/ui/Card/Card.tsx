@@ -1,4 +1,4 @@
-import { HTMLAttributes, memo, ReactNode } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Card.module.scss';
 
@@ -7,7 +7,7 @@ interface ICardProps extends HTMLAttributes<HTMLDivElement> {
     children: ReactNode;
 }
 
-export const Card = memo((props: ICardProps) => {
+export const Card = (props: ICardProps) => {
     const { className, children, ...otherProps } = props;
     return (
         <div
@@ -17,4 +17,4 @@ export const Card = memo((props: ICardProps) => {
             {children}
         </div>
     );
-});
+};
