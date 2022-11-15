@@ -10,7 +10,7 @@ import {
 } from '@reduxjs/toolkit';
 import { IProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
-import { NavigateOptions, To } from 'react-router-dom';
+// import { NavigateOptions, To } from 'react-router-dom';
 import { IArticleDetailsSchema } from 'entities/Article';
 import { IArticleDetailsCommentSchema } from 'pages/ArticleDetailsPage';
 import { IAddCommentFormSchema } from 'features/addCommentForm';
@@ -31,6 +31,8 @@ export interface IStateSchema {
 
 export type StateSchemaKey = keyof IStateSchema;
 
+// export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>;
+
 export interface IReducerManager {
     getReducerMap: () => ReducersMapObject<IStateSchema>;
     reduce: (state: IStateSchema, action: AnyAction) => CombinedState<IStateSchema>;
@@ -44,7 +46,7 @@ export interface IReduxStoreWithManager extends EnhancedStore<IStateSchema> {
 
 export interface IThunkExtraArg {
     api: AxiosInstance;
-    navigate?: (to: To, options?: NavigateOptions) => void;
+    // navigate?: (to: To, options?: NavigateOptions) => void;
 }
 
 export interface IThunkConfig<T> {

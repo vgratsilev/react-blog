@@ -7,6 +7,7 @@ import {
     getArticlesPageNum,
     getArticlesPageHasMore,
     getArticlesPageLimit,
+    getArticlesPageIsInited,
 } from './articlesPageSelectors';
 
 describe('getArticlesPageError', () => {
@@ -96,5 +97,20 @@ describe('getArticlesPageLimit', () => {
     test('should work with empty state', () => {
         const state: DeepPartial<IStateSchema> = {};
         expect(getArticlesPageLimit(state as IStateSchema)).toBe(9);
+    });
+});
+
+describe('getArticlesPageIsInited', () => {
+    test('should return isInited', () => {
+        const state: DeepPartial<IStateSchema> = {
+            articlesPage: { isInited: true },
+        };
+
+        expect(getArticlesPageIsInited(state as IStateSchema)).toBeTruthy();
+    });
+
+    test('should work with empty state', () => {
+        const state: DeepPartial<IStateSchema> = {};
+        expect(getArticlesPageIsInited(state as IStateSchema)).toBeFalsy();
     });
 });

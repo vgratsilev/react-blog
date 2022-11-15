@@ -51,6 +51,7 @@ const article = {
 } as IArticle;
 
 const articles: IArticlesPageSchema = {
+    isInited: false,
     isLoading: false,
     error: undefined,
     view: ArticleView.TILE,
