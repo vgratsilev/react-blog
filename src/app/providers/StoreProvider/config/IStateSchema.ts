@@ -15,10 +15,12 @@ import { IArticleDetailsSchema } from 'entities/Article';
 import { IArticleDetailsCommentSchema } from 'pages/ArticleDetailsPage';
 import { IAddCommentFormSchema } from 'features/addCommentForm';
 import { IArticlesPageSchema } from 'pages/ArticlesPage';
+import { IRestoreScrollSchema } from 'features/restoreScroll';
 
 export interface IStateSchema {
     counter: ICounterSchema;
     user: IUserSchema;
+    restoreScroll: IRestoreScrollSchema;
 
     // async reducers
     loginForm?: ILoginSchema;
