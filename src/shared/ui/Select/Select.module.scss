@@ -4,8 +4,13 @@
 
 .label {
     margin-right: 5px;
-    min-width: 100px;
+    min-width: 115px;
     width: 20%;
+
+    &.labelNoWidth {
+        min-width: unset;
+        width: unset;
+    }
 }
 
 .select {
