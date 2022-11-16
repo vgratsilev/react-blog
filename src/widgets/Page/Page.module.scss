@@ -4,6 +4,7 @@
     height: calc(100vh - var(--navbar-height));
     overflow-y: auto;
     width: calc(100% - var(--sidebar-width-collapsed));
+    min-width: 380px;
 }
 
 .trigger {
