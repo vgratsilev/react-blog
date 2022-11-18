@@ -4,11 +4,12 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import AvatarTest from 'shared/assets/tests/storybookAvatar.png';
 import { IArticlesPageSchema } from 'pages/ArticlesPage';
-import { ArticleView, IArticle } from 'entities/Article';
+import { ArticleType, ArticleView, IArticle } from 'entities/Article';
+import { ArticleSortField } from 'entities/Article/model/types/article';
 import ArticlesPage from './ArticlesPage';
 
 export default {
-    title: 'pages/ArticlePage',
+    title: 'pages/ArticlesPage/ArticlesPage',
     component: ArticlesPage,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -55,6 +56,7 @@ const articles: IArticlesPageSchema = {
     isLoading: false,
     error: undefined,
     view: ArticleView.TILE,
+    type: ArticleType.ALL,
     page: 1,
     hasMore: true,
     limit: 9,
@@ -78,6 +80,9 @@ const articles: IArticlesPageSchema = {
             user: { id: '1', username: 'Admin', avatar: AvatarTest },
         },
     },
+    order: 'asc',
+    search: '',
+    sort: ArticleSortField.CREATED,
 };
 
 const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage {...args} />;

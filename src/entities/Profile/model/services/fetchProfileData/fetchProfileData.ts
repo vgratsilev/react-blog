@@ -15,7 +15,7 @@ export const fetchProfileData = createAsyncThunk<IProfile, string, IThunkConfig<
 
             return response.data;
         } catch (e) {
-            window.console.log(e);
+            // window.console.log(e);
             return rejectWithValue('error');
         }
     },

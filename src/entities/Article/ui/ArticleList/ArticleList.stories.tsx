@@ -81,3 +81,6 @@ TileDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const TileIsLoading = Template.bind({});
 TileIsLoading.args = { ...tileProps, isLoading: true };
+
+export const NoArticles = Template.bind({});
+NoArticles.args = { articles: [], isLoading: false };

@@ -6,5 +6,18 @@
   "BackToArticleListBtn": "Back to articles list",
   "ContinueReadingBtn": "Continue reading...",
   "ArticlesLoadingErrorTitle": "Articles loading error",
-  "ArticlesLoadingErrorText": "Please try to reload page"
+  "ArticlesLoadingErrorText": "Please try to reload page",
+  "SortByLabel": "Sort by",
+  "SearchLabel": "Search",
+  "SortDirectionLabel": "by",
+  "SortDirectionAsc": "asc",
+  "SortDirectionDesc": "desc",
+  "SortFieldCreated": "creation date",
+  "SortFieldViews": "views",
+  "SortFieldTitle": "title",
+  "AllTabItemText": "All",
+  "ITTabItemText": "IT",
+  "JSTabItemText": "JS",
+  "FoodTabItemText": "Food",
+  "NoArticlesFoundText": "Articles not found"
 }

@@ -123,14 +123,14 @@
     },
     {
       "id": "4",
-      "title": "GO Lang 2",
-      "subtitle": "Subtitle 4",
-      "img": "https://what-about-technology.ru/wp-content/uploads/2021/08/golang.png",
+      "title": "About food",
+      "subtitle": "Pizza with pineapples",
+      "img": "https://d18lkz4dllo6v2.cloudfront.net/cumulus_uploads/entry/2019-02-04/pineapple%20pizza.jpg",
       "userId": "1",
       "views": 4,
-      "created_dt": "12.11.2022",
+      "created_dt": "25.06.2019",
       "type": [
-        "IT"
+        "FOOD"
       ],
       "blocks": [
         {
@@ -161,14 +161,14 @@
     },
     {
       "id": "6",
-      "title": "GO Lang 4",
-      "subtitle": "Subtitle 4",
-      "img": "https://what-about-technology.ru/wp-content/uploads/2021/08/golang.png",
+      "title": "Shawerma as lifegoal",
+      "subtitle": "Taste em all!",
+      "img": "https://eda.yandex/images/3806315/497c18402b05eb6c73d5248d22ab7eb9-1100x825.jpg",
       "userId": "1",
-      "views": 4,
-      "created_dt": "12.11.2022",
+      "views": 666,
+      "created_dt": "12.11.2020",
       "type": [
-        "IT"
+        "FOOD"
       ],
       "blocks": [
         {
@@ -184,7 +184,7 @@
       "subtitle": "Subtitle 4",
       "img": "https://what-about-technology.ru/wp-content/uploads/2021/08/golang.png",
       "userId": "1",
-      "views": 4,
+      "views": 43,
       "created_dt": "12.11.2022",
       "type": [
         "IT"
@@ -203,7 +203,7 @@
       "subtitle": "Subtitle 4",
       "img": "https://what-about-technology.ru/wp-content/uploads/2021/08/golang.png",
       "userId": "1",
-      "views": 4,
+      "views": 14,
       "created_dt": "12.11.2022",
       "type": [
         "IT"
@@ -222,8 +222,8 @@
       "subtitle": "Subtitle 4",
       "img": "https://what-about-technology.ru/wp-content/uploads/2021/08/golang.png",
       "userId": "1",
-      "views": 4,
-      "created_dt": "12.11.2022",
+      "views": 27,
+      "created_dt": "05.06.2022",
       "type": [
         "IT"
       ],
@@ -241,8 +241,8 @@
       "subtitle": "Subtitle 4",
       "img": "https://what-about-technology.ru/wp-content/uploads/2021/08/golang.png",
       "userId": "1",
-      "views": 4,
-      "created_dt": "12.11.2022",
+      "views": 4555,
+      "created_dt": "01.03.2021",
       "type": [
         "IT"
       ],

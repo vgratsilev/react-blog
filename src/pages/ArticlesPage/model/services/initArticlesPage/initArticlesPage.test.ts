@@ -18,10 +18,12 @@ describe('initArticlesPage.test', () => {
             },
         });
 
-        await thunk.callThunk();
+        const searchParams = new URLSearchParams();
+
+        await thunk.callThunk(searchParams);
 
         expect(thunk.dispatch).toBeCalledTimes(4); // pending, fulfilled, setPage, fetchArticlesList
-        expect(fetchArticlesList).toBeCalledWith({ page: 1 });
+        expect(fetchArticlesList).toBeCalledWith({});
     });
 
     test('when inited', async () => {
@@ -37,7 +39,9 @@ describe('initArticlesPage.test', () => {
             },
         });
 
-        await thunk.callThunk();
+        const searchParams = new URLSearchParams();
+
+        await thunk.callThunk(searchParams);
 
         expect(thunk.dispatch).toBeCalledTimes(2); // pending, fulfilled
         expect(fetchArticlesList).not.toHaveBeenCalled();

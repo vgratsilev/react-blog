@@ -6,5 +6,18 @@
   "BackToArticleListBtn": "Назад к списку статей",
   "ContinueReadingBtn": "Продолжить чтение...",
   "ArticlesLoadingErrorTitle": "Ошибка при загрузке списка статей",
-  "ArticlesLoadingErrorText": "Попробуйте обновить страницу"
+  "ArticlesLoadingErrorText": "Попробуйте обновить страницу",
+  "SortByLabel": "Сортировать по",
+  "SearchLabel": "Поиск",
+  "SortDirectionLabel": "по",
+  "SortDirectionAsc": "возрастанию",
+  "SortDirectionDesc": "убыванию",
+  "SortFieldCreated": "дате создания",
+  "SortFieldViews": "просмотрам",
+  "SortFieldTitle": "заголовку",
+  "AllTabItemText": "Все",
+  "ITTabItemText": "IT",
+  "JSTabItemText": "JS",
+  "FoodTabItemText": "Еда",
+  "NoArticlesFoundText": "Статьи не найдены"
 }

@@ -1,5 +1,5 @@
 import { IStateSchema } from 'app/providers/StoreProvider';
-import { ArticleView } from 'entities/Article';
+import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article';
 import {
     getArticlesPageIsLoading,
     getArticlesPageView,
@@ -8,6 +8,10 @@ import {
     getArticlesPageHasMore,
     getArticlesPageLimit,
     getArticlesPageIsInited,
+    getArticlesPageSort,
+    getArticlesPageOrder,
+    getArticlesPageSearch,
+    getArticlesPageType,
 } from './articlesPageSelectors';
 
 describe('getArticlesPageError', () => {
@@ -112,5 +116,65 @@ describe('getArticlesPageIsInited', () => {
     test('should work with empty state', () => {
         const state: DeepPartial<IStateSchema> = {};
         expect(getArticlesPageIsInited(state as IStateSchema)).toBeFalsy();
+    });
+});
+
+describe('getArticlesPageSort', () => {
+    test('should return sort', () => {
+        const state: DeepPartial<IStateSchema> = {
+            articlesPage: { sort: ArticleSortField.TITLE },
+        };
+
+        expect(getArticlesPageSort(state as IStateSchema)).toBe(ArticleSortField.TITLE);
+    });
+
+    test('should work with empty state', () => {
+        const state: DeepPartial<IStateSchema> = {};
+        expect(getArticlesPageSort(state as IStateSchema)).toBe(ArticleSortField.CREATED);
+    });
+});
+
+describe('getArticlesPageOrder', () => {
+    test('should return order', () => {
+        const state: DeepPartial<IStateSchema> = {
+            articlesPage: { order: 'desc' },
+        };
+
+        expect(getArticlesPageOrder(state as IStateSchema)).toBe('desc');
+    });
+
+    test('should work with empty state', () => {
+        const state: DeepPartial<IStateSchema> = {};
+        expect(getArticlesPageOrder(state as IStateSchema)).toBe('asc');
+    });
+});
+
+describe('getArticlesPageSearch', () => {
+    test('should return search', () => {
+        const state: DeepPartial<IStateSchema> = {
+            articlesPage: { search: 'test' },
+        };
+
+        expect(getArticlesPageSearch(state as IStateSchema)).toBe('test');
+    });
+
+    test('should work with empty state', () => {
+        const state: DeepPartial<IStateSchema> = {};
+        expect(getArticlesPageSearch(state as IStateSchema)).toBe('');
+    });
+});
+
+describe('getArticlesPageType', () => {
+    test('should return type', () => {
+        const state: DeepPartial<IStateSchema> = {
+            articlesPage: { type: ArticleType.FOOD },
+        };
+
+        expect(getArticlesPageType(state as IStateSchema)).toBe(ArticleType.FOOD);
+    });
+
+    test('should work with empty state', () => {
+        const state: DeepPartial<IStateSchema> = {};
+        expect(getArticlesPageType(state as IStateSchema)).toBe(ArticleType.ALL);
     });
 });
