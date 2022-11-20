@@ -12,7 +12,10 @@ import { IProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 // import { NavigateOptions, To } from 'react-router-dom';
 import { IArticleDetailsSchema } from 'entities/Article';
-import { IArticleDetailsCommentSchema } from 'pages/ArticleDetailsPage';
+import {
+    IArticleDetailsCommentSchema,
+    IArticleDetailsRecommendationsSchema,
+} from 'pages/ArticleDetailsPage';
 import { IAddCommentFormSchema } from 'features/addCommentForm';
 import { IArticlesPageSchema } from 'pages/ArticlesPage';
 import { IRestoreScrollSchema } from 'features/restoreScroll';
@@ -27,6 +30,7 @@ export interface IStateSchema {
     profile?: IProfileSchema;
     articleDetails?: IArticleDetailsSchema;
     articleDetailsComments?: IArticleDetailsCommentSchema;
+    articleDetailsRecommendations?: IArticleDetailsRecommendationsSchema;
     addCommentForm?: IAddCommentFormSchema;
     articlesPage?: IArticlesPageSchema;
 }
