@@ -103,6 +103,7 @@ const ArticleDetailsPage = (props: IArticleDetailsPageProps) => {
                     isLoading={recommendationsIsLoading}
                     view={ArticleView.TILE}
                     className={cls.recommendations}
+                    target={'_blank'}
                 />
                 <Text
                     size={TextSize.L}

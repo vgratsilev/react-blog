@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
@@ -11,6 +11,7 @@ interface IArticleListProps {
     className?: string;
     articles: IArticle[];
     isLoading?: boolean;
+    target?: HTMLAttributeAnchorTarget;
     view?: ArticleView;
 }
 
@@ -25,7 +26,7 @@ const getSkeletons = (view: ArticleView) =>
     ));
 
 export const ArticleList = memo((props: IArticleListProps) => {
-    const { className, articles, isLoading, view = ArticleView.LIST } = props;
+    const { className, articles, isLoading, target, view = ArticleView.LIST } = props;
     const { t } = useTranslation('article');
 
     const renderArticle = useCallback(
@@ -35,9 +36,10 @@ export const ArticleList = memo((props: IArticleListProps) => {
                 article={article}
                 view={view}
                 className={cls.card}
+                target={target}
             />
         ),
-        [view],
+        [target, view],
     );
 
     if (!isLoading && !articles.length) {
