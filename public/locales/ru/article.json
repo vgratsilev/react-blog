@@ -19,5 +19,6 @@
   "ITTabItemText": "IT",
   "JSTabItemText": "JS",
   "FoodTabItemText": "Еда",
-  "NoArticlesFoundText": "Статьи не найдены"
+  "NoArticlesFoundText": "Статьи не найдены",
+  "RecommendationsBlockTitle": "Рекомендуем статьи"
 }
