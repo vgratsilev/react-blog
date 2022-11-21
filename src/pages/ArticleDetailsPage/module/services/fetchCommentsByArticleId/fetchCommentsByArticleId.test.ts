@@ -16,7 +16,9 @@ const data: IArticleDetailsCommentSchema = {
 describe('fetchArticleById.test', () => {
     test('success', async () => {
         const thunk = new TestAsyncThunk(fetchCommentsByArticleId, {
-            articleDetailsComments: data,
+            articleDetailsPage: {
+                comments: data,
+            },
         });
         thunk.api.get.mockReturnValue(Promise.resolve({ data }));
         const result = await thunk.callThunk('1');
@@ -28,7 +30,9 @@ describe('fetchArticleById.test', () => {
 
     test('error', async () => {
         const thunk = new TestAsyncThunk(fetchCommentsByArticleId, {
-            articleDetailsComments: data,
+            articleDetailsPage: {
+                comments: data,
+            },
         });
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
         const result = await thunk.callThunk('1');

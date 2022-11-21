@@ -84,7 +84,9 @@ Light.decorators = [
         articleDetails: {
             data: article,
         },
-        articleDetailsComments: comments,
+        articleDetailsPage: {
+            comments,
+        },
     }),
 ];
 
@@ -94,7 +96,9 @@ Dark.decorators = [
         articleDetails: {
             data: article,
         },
-        articleDetailsComments: comments,
+        articleDetailsPage: {
+            comments,
+        },
     }),
     ThemeDecorator(Theme.DARK),
 ];

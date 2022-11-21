@@ -20,16 +20,17 @@ import { getArticleRecommendationsIsLoading } from '../../module/selectors/recom
 import { fetchCommentsByArticleId } from '../../module/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { addCommentForArticle } from '../../module/services/addCommentForArticle/addCommentForArticle';
 import {
-    articleDetailsCommentReducer,
+    // articleDetailsCommentsReducer,
     getArticleComments,
 } from '../../module/slice/articleDetailsCommentSlice';
 import cls from './ArticleDetailsPage.module.scss';
 import { getArticleCommentsIsLoading } from '../../module/selectors/comments';
 import {
-    articleDetailsRecommendationsReducer,
+    // articleDetailsRecommendationsReducer,
     getArticleRecommendations,
 } from '../../module/slice/articleDetailsRecommendationsSlice';
 import { fetchArticleRecommendations } from '../../module/services/fetchArticleRecommendations/fetchArticleRecommendations';
+import { articleDetailsPageReducer } from '../../module/slice';
 
 interface IArticleDetailsPageProps {
     className?: string;
@@ -37,8 +38,9 @@ interface IArticleDetailsPageProps {
 }
 
 const reducers: ReducersList = {
-    articleDetailsComments: articleDetailsCommentReducer,
-    articleDetailsRecommendations: articleDetailsRecommendationsReducer,
+    // articleDetailsComments: articleDetailsCommentsReducer,
+    // articleDetailsRecommendations: articleDetailsRecommendationsReducer,
+    articleDetailsPage: articleDetailsPageReducer,
 };
 
 const ArticleDetailsPage = (props: IArticleDetailsPageProps) => {

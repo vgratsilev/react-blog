@@ -12,13 +12,14 @@ import { IProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 // import { NavigateOptions, To } from 'react-router-dom';
 import { IArticleDetailsSchema } from 'entities/Article';
-import {
-    IArticleDetailsCommentSchema,
-    IArticleDetailsRecommendationsSchema,
-} from 'pages/ArticleDetailsPage';
+// import {
+//     IArticleDetailsCommentSchema,
+//     IArticleDetailsRecommendationsSchema,
+// } from 'pages/ArticleDetailsPage';
 import { IAddCommentFormSchema } from 'features/addCommentForm';
 import { IArticlesPageSchema } from 'pages/ArticlesPage';
 import { IRestoreScrollSchema } from 'features/restoreScroll';
+import { IArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 
 export interface IStateSchema {
     counter: ICounterSchema;
@@ -29,10 +30,11 @@ export interface IStateSchema {
     loginForm?: ILoginSchema;
     profile?: IProfileSchema;
     articleDetails?: IArticleDetailsSchema;
-    articleDetailsComments?: IArticleDetailsCommentSchema;
-    articleDetailsRecommendations?: IArticleDetailsRecommendationsSchema;
+    // articleDetailsComments?: IArticleDetailsCommentSchema;
+    // articleDetailsRecommendations?: IArticleDetailsRecommendationsSchema;
     addCommentForm?: IAddCommentFormSchema;
     articlesPage?: IArticlesPageSchema;
+    articleDetailsPage?: IArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof IStateSchema;

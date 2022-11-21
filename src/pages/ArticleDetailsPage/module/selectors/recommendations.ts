@@ -1,7 +1,7 @@
 import { IStateSchema } from 'app/providers/StoreProvider';
 
 export const getArticleRecommendationsIsLoading = (state: IStateSchema) =>
-    state.articleDetailsRecommendations?.isLoading || false;
+    state.articleDetailsPage?.recommendations?.isLoading || false;
 
 export const getArticleRecommendationsError = (state: IStateSchema) =>
-    state.articleDetailsRecommendations?.error;
+    state.articleDetailsPage?.recommendations?.error;

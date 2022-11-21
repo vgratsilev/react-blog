@@ -1,7 +1,7 @@
 import { IComment } from 'entities/Comment';
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { IArticleDetailsCommentSchema } from '../types/IArticleDetailsCommentSchema';
-import { articleDetailsCommentReducer } from './articleDetailsCommentSlice';
+import { articleDetailsCommentsReducer } from './articleDetailsCommentSlice';
 
 const data: IArticleDetailsCommentSchema = {
     isLoading: false,
@@ -21,7 +21,7 @@ describe('articleDetailsCommentSlice.test', () => {
             error: undefined,
         };
         expect(
-            articleDetailsCommentReducer(
+            articleDetailsCommentsReducer(
                 state as IArticleDetailsCommentSchema,
                 fetchCommentsByArticleId.pending,
             ),
@@ -51,7 +51,7 @@ describe('articleDetailsCommentSlice.test', () => {
         ];
 
         expect(
-            articleDetailsCommentReducer(
+            articleDetailsCommentsReducer(
                 state as IArticleDetailsCommentSchema,
                 fetchCommentsByArticleId.fulfilled(comments, '1', ''),
             ),

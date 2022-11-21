@@ -5,15 +5,17 @@ import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicM
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { profileReducer } from 'entities/Profile';
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
-import { articleDetailsCommentReducer } from 'pages/ArticleDetailsPage/module/slice/articleDetailsCommentSlice';
 import { addCommentFormReducer } from 'features/addCommentForm';
 import { articlesPageReducer } from 'pages/ArticlesPage/model/slice/articlesPageSlice';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/module/slice';
+// import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/module/slice/articleDetailsCommentSlice';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
-    articleDetailsComments: articleDetailsCommentReducer,
+    // articleDetailsComments: articleDetailsCommentsReducer,
+    articleDetailsPage: articleDetailsPageReducer,
     addCommentForm: addCommentFormReducer,
     articlesPage: articlesPageReducer,
 };

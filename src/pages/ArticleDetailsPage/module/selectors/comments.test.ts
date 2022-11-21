@@ -4,7 +4,9 @@ import { getArticleCommentsIsLoading, getArticleCommentsError } from './comments
 describe('getArticleCommentsError', () => {
     test('should return error', () => {
         const state: DeepPartial<IStateSchema> = {
-            articleDetailsComments: { error: '123' },
+            articleDetailsPage: {
+                comments: { error: '123' },
+            },
         };
 
         expect(getArticleCommentsError(state as IStateSchema)).toEqual('123');
@@ -19,7 +21,9 @@ describe('getArticleCommentsError', () => {
 describe('getArticleCommentsIsLoading', () => {
     test('should return isLoading', () => {
         const state: DeepPartial<IStateSchema> = {
-            articleDetailsComments: { isLoading: true },
+            articleDetailsPage: {
+                comments: { isLoading: true },
+            },
         };
 
         expect(getArticleCommentsIsLoading(state as IStateSchema)).toEqual(true);
