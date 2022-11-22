@@ -7,6 +7,8 @@ export interface IBuildPath {
     html: string;
     src: string;
     assetDir: string;
+    locales: string;
+    buildLocales: string;
 }
 
 export interface IBuildEnv {
