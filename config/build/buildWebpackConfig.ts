@@ -16,7 +16,7 @@ export function buildWebpackConfig(options: IBuildOptions): webpack.Configuratio
             path: paths.build,
             clean: true,
             assetModuleFilename: `${paths.assetDir}/[hash][ext][query]`,
-            publicPath: isDev ? '/' : '/react-blog',
+            publicPath: isDev ? '/' : '/react-blog/',
         },
         plugins: buildPlugins(options),
         module: {
