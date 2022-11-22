@@ -9,6 +9,7 @@ export interface IArticleEditPageProps {
     className?: string;
 }
 
+// TODO add functionality to edit/create articles
 export const ArticleEditPage = memo((props: IArticleEditPageProps) => {
     const { className } = props;
     const { t } = useTranslation('articleEdit');

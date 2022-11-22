@@ -26,3 +26,6 @@ Circle.args = { borderRadius: '50%', width: 100, height: 100 };
 export const CircleDark = Template.bind({});
 CircleDark.args = { borderRadius: '50%', width: 100, height: 100 };
 CircleDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const WithoutAnimation = Template.bind({});
+WithoutAnimation.args = { width: '100%', height: 200, noAnimation: true };

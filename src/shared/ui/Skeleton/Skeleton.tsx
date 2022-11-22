@@ -1,5 +1,5 @@
 import { CSSProperties, memo, useMemo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Skeleton.module.scss';
 
 interface ISkeletonProps {
@@ -7,10 +7,11 @@ interface ISkeletonProps {
     height?: string | number;
     width?: string | number;
     borderRadius?: string;
+    noAnimation?: boolean;
 }
 
 export const Skeleton = memo((props: ISkeletonProps) => {
-    const { className, height, width, borderRadius } = props;
+    const { className, height, width, borderRadius, noAnimation = false } = props;
 
     const styles: CSSProperties = useMemo(
         () => ({
@@ -21,9 +22,13 @@ export const Skeleton = memo((props: ISkeletonProps) => {
         [borderRadius, height, width],
     );
 
+    const mods: Mods = {
+        [cls.noAnimation]: noAnimation,
+    };
+
     return (
         <div
-            className={classNames(cls.skeleton, {}, [className])}
+            className={classNames(cls.skeleton, mods, [className])}
             style={styles}
         />
     );
