@@ -20,5 +20,6 @@
   "JSTabItemText": "JS",
   "FoodTabItemText": "Food",
   "NoArticlesFoundText": "Articles not found",
-  "RecommendationsBlockTitle": "Recommended articles"
+  "RecommendationsBlockTitle": "Recommended articles",
+  "EditArticleBtn": "Edit"
 }

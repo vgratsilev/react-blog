@@ -1,4 +1,5 @@
 {
+  "AppName": "Blog App",
   "AboutPageLink": "О сайте",
   "ProfilePageLink": "Профиль",
   "MainPageLink": "Главная",
@@ -19,5 +20,6 @@
   "CountryLabel": "Страна",
   "NoCommentsMessage": "Комментарии отсутствуют",
   "InputNewCommentLabel": "Введите текст комментария",
-  "InputNewCommentSendBtn": "Отправить"
+  "InputNewCommentSendBtn": "Отправить",
+  "CreateNewArticleLink": "Создать новую статью"
 }

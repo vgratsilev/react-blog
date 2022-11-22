@@ -1,4 +1,5 @@
 {
+  "AppName": "Blog App",
   "AboutPageLink": "About",
   "ProfilePageLink": "Profile",
   "MainPageLink": "Main",
@@ -19,5 +20,6 @@
   "CountryLabel": "Country",
   "NoCommentsMessage": "No comments",
   "InputNewCommentLabel": "Type comment",
-  "InputNewCommentSendBtn": "Send"
+  "InputNewCommentSendBtn": "Send",
+  "CreateNewArticleLink": "Create new article"
 }
