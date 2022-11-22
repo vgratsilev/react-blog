@@ -9,7 +9,7 @@ import 'app/styles/index.scss';
 import App from './app/App';
 
 render(
-    <BrowserRouter>
+    <BrowserRouter basename={__IS_DEV__ ? '/' : '/react-blog'}>
         <StoreProvider>
             <ErrorBoundary>
                 <ThemeProvider>
