@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import AvatarTest from 'shared/assets/tests/storybookAvatar.png';
-import { IComment } from 'entities/Comment';
+import { IComment } from '../../model/types/comment';
 import { CommentList } from './CommentList';
 
 export default {

@@ -1,5 +1,6 @@
-import { IUser, userActions, userReducer, IUserSchema } from 'entities/User';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
+import { IUser, IUserSchema } from '../types/user';
+import { userActions, userReducer } from './userSlice';
 
 describe('userSlice', () => {
     const authData: IUser = { id: '1', username: 'test' };

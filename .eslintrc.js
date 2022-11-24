@@ -22,6 +22,7 @@ module.exports = {
         'react-perf',
         'i18next',
         '@typescript-eslint',
+        'fsd-import',
         'prettier',
     ],
     parser: '@typescript-eslint/parser',
@@ -101,6 +102,7 @@ module.exports = {
                 },
             },
         ],
+        'fsd-import/fsd-relative-path': 'error',
     },
     overrides: [
         {

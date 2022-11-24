@@ -1,5 +1,5 @@
-import { Portal } from 'shared/ui/Portal/Portal';
 import { ReactNode } from 'react';
+import { Portal } from '../Portal/Portal';
 import { ModalLayout } from './ui/ModalLayout';
 import { useMount } from './lib/useMount';
 

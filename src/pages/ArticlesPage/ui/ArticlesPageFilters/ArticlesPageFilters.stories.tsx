@@ -2,8 +2,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { IArticlesPageSchema } from 'pages/ArticlesPage';
 import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article';
+import { IArticlesPageSchema } from '../../model/types/articlesPageSchema';
 import { ArticlesPageFilters } from './ArticlesPageFilters';
 
 export default {

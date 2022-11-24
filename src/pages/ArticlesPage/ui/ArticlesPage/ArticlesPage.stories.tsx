@@ -3,9 +3,9 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import AvatarTest from 'shared/assets/tests/storybookAvatar.png';
-import { IArticlesPageSchema } from 'pages/ArticlesPage';
 import { ArticleType, ArticleView, IArticle } from 'entities/Article';
 import { ArticleSortField } from 'entities/Article/model/types/article';
+import { IArticlesPageSchema } from '../../model/types/articlesPageSchema';
 import ArticlesPage from './ArticlesPage';
 
 export default {

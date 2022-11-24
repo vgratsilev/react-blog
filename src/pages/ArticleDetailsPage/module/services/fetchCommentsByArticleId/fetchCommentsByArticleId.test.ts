@@ -1,5 +1,5 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
-import { IArticleDetailsCommentSchema } from 'pages/ArticleDetailsPage';
+import { IArticleDetailsCommentSchema } from '../../types/IArticleDetailsCommentSchema';
 import { fetchCommentsByArticleId } from './fetchCommentsByArticleId';
 
 const data: IArticleDetailsCommentSchema = {

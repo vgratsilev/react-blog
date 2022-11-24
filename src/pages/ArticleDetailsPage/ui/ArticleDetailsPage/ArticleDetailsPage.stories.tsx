@@ -4,8 +4,8 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { IArticle } from 'entities/Article';
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
-import { IArticleDetailsCommentSchema } from 'pages/ArticleDetailsPage';
 import AvatarTest from 'shared/assets/tests/storybookAvatar.png';
+import { IArticleDetailsCommentSchema } from '../../module/types/IArticleDetailsCommentSchema';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
