@@ -12,7 +12,7 @@ import {
 import { memo, useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
-import cls from './ProfilePageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack';
 
 interface IProfilePageHeaderProps {
     className?: string;
@@ -43,21 +43,24 @@ export const ProfilePageHeader = memo((props: IProfilePageHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.profilePageHeader, {}, [className])}>
+        <HStack
+            maxWidth
+            justify={'between'}
+            className={classNames('', {}, [className])}
+        >
             <Text title={t('ProfilePage')} />
             {canEdit && (
-                <div className={cls.btnWrapper}>
+                <>
                     {readonly && (
                         <Button
                             theme={ButtonTheme.OUTLINE}
-                            className={cls.editBtn}
                             onClick={onEdit}
                         >
                             {t('ChangeBtn')}
                         </Button>
                     )}
                     {!readonly && (
-                        <>
+                        <HStack gap={'8'}>
                             <Button
                                 theme={ButtonTheme.OUTLINE}
                                 onClick={onSaveEdit}
@@ -66,15 +69,14 @@ export const ProfilePageHeader = memo((props: IProfilePageHeaderProps) => {
                             </Button>
                             <Button
                                 theme={ButtonTheme.OUTLINE_RED}
-                                className={cls.cancelBtn}
                                 onClick={onCancelEdit}
                             >
                                 {t('CancelBtn')}
                             </Button>
-                        </>
+                        </HStack>
                     )}
-                </div>
+                </>
             )}
-        </div>
+        </HStack>
     );
 });

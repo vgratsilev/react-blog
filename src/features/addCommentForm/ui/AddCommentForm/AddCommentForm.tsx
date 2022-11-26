@@ -9,6 +9,7 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { HStack } from 'shared/ui/Stack';
 import {
     addCommentFormActions,
     addCommentFormReducer,
@@ -50,7 +51,12 @@ export const AddCommentForm = memo((props: IAddCommentFormProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.addCommentForm, {}, [className])}>
+            <HStack
+                maxWidth
+                justify={'between'}
+                align={'center'}
+                className={classNames(cls.addCommentForm, {}, [className])}
+            >
                 <Input
                     className={cls.input}
                     label={t('InputNewCommentLabel')}
@@ -58,7 +64,7 @@ export const AddCommentForm = memo((props: IAddCommentFormProps) => {
                     onChange={onCommentTextChange}
                 />
                 <Button onClick={onSendHandler}>{t('InputNewCommentSendBtn')}</Button>
-            </div>
+            </HStack>
         </DynamicModuleLoader>
     );
 });

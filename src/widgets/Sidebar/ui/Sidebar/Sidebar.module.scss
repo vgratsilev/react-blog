@@ -13,8 +13,6 @@
     justify-content: center;
     width: 100%;
     gap: 5px;
-
-    // flex-wrap: wrap;
 }
 
 .collapseBtn {
@@ -27,9 +25,6 @@
 .linksContainer {
     margin-top: 20px;
     margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 .collapsed {

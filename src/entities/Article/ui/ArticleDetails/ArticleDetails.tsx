@@ -14,6 +14,7 @@ import EyeIcon from 'shared/assets/icons/eye.svg';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { HStack, VStack } from 'shared/ui/Stack';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
@@ -82,7 +83,10 @@ export const ArticleDetails = memo((props: IArticleDetailsProps) => {
     let content;
     if (isLoading) {
         content = (
-            <>
+            <VStack
+                gap={'16'}
+                maxWidth
+            >
                 <Skeleton
                     className={cls.avatar}
                     width={200}
@@ -90,26 +94,22 @@ export const ArticleDetails = memo((props: IArticleDetailsProps) => {
                     borderRadius={'50%'}
                 />
                 <Skeleton
-                    className={cls.title}
                     width={300}
                     height={32}
                 />
                 <Skeleton
-                    className={cls.skeleton}
                     width={600}
                     height={24}
                 />
                 <Skeleton
-                    className={cls.skeleton}
                     width={'100%'}
                     height={200}
                 />
                 <Skeleton
-                    className={cls.skeleton}
                     width={'100%'}
                     height={200}
                 />
-            </>
+            </VStack>
         );
     } else if (error) {
         content = (
@@ -122,33 +122,34 @@ export const ArticleDetails = memo((props: IArticleDetailsProps) => {
     } else {
         content = (
             <>
-                <div className={cls.avatarWrapper}>
+                <HStack
+                    maxWidth
+                    justify={'center'}
+                >
                     <Avatar
                         size={200}
                         src={article?.img}
                         className={cls.avatar}
                     />
-                </div>
-                <Text
-                    className={cls.title}
-                    title={article?.title}
-                    text={article?.subtitle}
-                    size={TextSize.L}
-                />
-                <div className={cls.articleInfo}>
-                    <Icon
-                        Svg={EyeIcon}
-                        className={cls.icon}
+                </HStack>
+                <VStack
+                    gap={'4'}
+                    maxWidth
+                >
+                    <Text
+                        title={article?.title}
+                        text={article?.subtitle}
+                        size={TextSize.L}
                     />
-                    <Text text={String(article?.views)} />
-                </div>
-                <div className={cls.articleInfo}>
-                    <Icon
-                        Svg={CalendarIcon}
-                        className={cls.icon}
-                    />
-                    <Text text={article?.created_dt} />
-                </div>
+                    <HStack gap={'8'}>
+                        <Icon Svg={EyeIcon} />
+                        <Text text={String(article?.views)} />
+                    </HStack>
+                    <HStack gap={'8'}>
+                        <Icon Svg={CalendarIcon} />
+                        <Text text={article?.created_dt} />
+                    </HStack>
+                </VStack>
                 {article?.blocks.map(renderBlock)}
             </>
         );
@@ -156,7 +157,13 @@ export const ArticleDetails = memo((props: IArticleDetailsProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.articleDetails, {}, [className])}>{content}</div>
+            <VStack
+                gap={'16'}
+                maxWidth
+                className={classNames(cls.articleDetails, {}, [className])}
+            >
+                {content}
+            </VStack>
         </DynamicModuleLoader>
     );
 });
