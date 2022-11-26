@@ -59,6 +59,7 @@ const ArticlesPage = (props: IArticlePageProps) => {
                     align={TextAlign.CENTER}
                     title={t('ArticlesLoadingErrorTitle')}
                     text={t('ArticlesLoadingErrorText')}
+                    TitleTag={'h1'}
                 />
             </Page>
         );

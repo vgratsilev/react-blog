@@ -91,6 +91,7 @@ const ArticleDetailsPage = (props: IArticleDetailsPageProps) => {
                         size={TextSize.L}
                         className={cls.recommendationsTitle}
                         title={t('RecommendationsBlockTitle')}
+                        TitleTag={'h2'}
                     />
                     <ArticleList
                         articles={recommendations}
@@ -103,6 +104,7 @@ const ArticleDetailsPage = (props: IArticleDetailsPageProps) => {
                         size={TextSize.L}
                         className={cls.commentTitle}
                         title={t('CommentsBlockTitle')}
+                        TitleTag={'h2'}
                     />
                     <AddCommentForm onSendComment={onSendComment} />
                     <CommentList

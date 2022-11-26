@@ -16,6 +16,7 @@ export default {
             <Text
                 title={'test title'}
                 text={'test text'}
+                TitleTag={'h2'}
             />
         ),
     },

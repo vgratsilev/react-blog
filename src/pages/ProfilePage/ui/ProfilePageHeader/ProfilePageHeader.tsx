@@ -48,7 +48,10 @@ export const ProfilePageHeader = memo((props: IProfilePageHeaderProps) => {
             justify={'between'}
             className={classNames('', {}, [className])}
         >
-            <Text title={t('ProfilePage')} />
+            <Text
+                title={t('ProfilePage')}
+                TitleTag={'h1'}
+            />
             {canEdit && (
                 <>
                     {readonly && (

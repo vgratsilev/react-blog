@@ -117,6 +117,7 @@ export const ArticleDetails = memo((props: IArticleDetailsProps) => {
                 align={TextAlign.CENTER}
                 theme={TextTheme.ERROR}
                 title={t('ArticleDetailsLoadingError')}
+                TitleTag={'h1'}
             />
         );
     } else {
@@ -140,6 +141,7 @@ export const ArticleDetails = memo((props: IArticleDetailsProps) => {
                         title={article?.title}
                         text={article?.subtitle}
                         size={TextSize.L}
+                        TitleTag={'h2'}
                     />
                     <HStack gap={'8'}>
                         <Icon Svg={EyeIcon} />

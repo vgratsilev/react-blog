@@ -39,6 +39,7 @@ export const Navbar = memo(({ className }: INavbarProps) => {
                     className={cls.appName}
                     theme={TextTheme.INVERTED}
                     title={t('AppName')}
+                    TitleTag={'h1'}
                 />
                 <AppLink
                     to={RoutePath.article_create}

@@ -40,6 +40,7 @@ export interface IFlexProps {
     direction?: FlexDirection;
     gap?: FlexGap;
     maxWidth?: boolean;
+    Tag?: keyof HTMLElementTagNameMap;
 }
 
 export const Flex = (props: IFlexProps) => {
@@ -51,6 +52,7 @@ export const Flex = (props: IFlexProps) => {
         justify = 'start',
         align = 'center',
         direction = 'row',
+        Tag = 'div',
     } = props;
 
     const classes = [
@@ -65,5 +67,5 @@ export const Flex = (props: IFlexProps) => {
         [cls.maxWidth]: maxWidth,
     };
 
-    return <div className={classNames(cls.flex, mods, classes)}>{children}</div>;
+    return <Tag className={classNames(cls.flex, mods, classes)}>{children}</Tag>;
 };

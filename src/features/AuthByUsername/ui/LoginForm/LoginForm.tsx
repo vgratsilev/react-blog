@@ -54,7 +54,10 @@ const LoginForm = memo((props: ILoginFormProps) => {
     return (
         <DynamicModuleLoader reducers={initialReducers}>
             <div className={classNames(cls.loginForm, {}, [className])}>
-                <Text title={t('LoginFormTitle')} />
+                <Text
+                    title={t('LoginFormTitle')}
+                    TitleTag={'h1'}
+                />
                 {error && (
                     <Text
                         text={t(error)}

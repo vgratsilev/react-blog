@@ -35,7 +35,7 @@ export const Sidebar = memo(({ className }: ISidebarProps) => {
     );
 
     return (
-        <menu
+        <section
             data-testid={'sidebar'}
             className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
@@ -50,6 +50,7 @@ export const Sidebar = memo(({ className }: ISidebarProps) => {
                 {collapsed ? '>' : '<'}
             </Button>
             <VStack
+                Tag={'nav'}
                 className={cls.linksContainer}
                 gap={'8'}
             >
@@ -62,6 +63,6 @@ export const Sidebar = memo(({ className }: ISidebarProps) => {
                     theme={ButtonTheme.CLEAR_INVERTED}
                 />
             </div>
-        </menu>
+        </section>
     );
 });

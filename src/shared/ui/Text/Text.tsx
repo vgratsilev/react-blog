@@ -21,6 +21,8 @@ export enum TextSize {
     XL = 'size_XL',
 }
 
+type TitleTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'p';
+
 interface ITextProps {
     className?: string;
     title?: string;
@@ -28,6 +30,7 @@ interface ITextProps {
     theme?: TextTheme;
     align?: TextAlign;
     size?: TextSize;
+    TitleTag?: TitleTagType;
 }
 
 export const Text = memo((props: ITextProps) => {
@@ -38,6 +41,7 @@ export const Text = memo((props: ITextProps) => {
         theme = TextTheme.PRIMARY,
         align = TextAlign.LEFT,
         size = TextSize.M,
+        TitleTag = 'p',
     } = props;
 
     return (
@@ -49,7 +53,7 @@ export const Text = memo((props: ITextProps) => {
                 cls[size],
             ])}
         >
-            {title && <p className={cls.title}>{title}</p>}
+            {title && <TitleTag className={cls.title}>{title}</TitleTag>}
             {text && <p className={cls.text}>{text}</p>}
         </div>
     );

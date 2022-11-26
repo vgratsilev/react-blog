@@ -48,6 +48,7 @@ export const ArticleList = memo((props: IArticleListProps) => {
                 <Text
                     title={t('NoArticlesFoundText')}
                     size={TextSize.L}
+                    TitleTag={'h1'}
                 />
             </div>
         );

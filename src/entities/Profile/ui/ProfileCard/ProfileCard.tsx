@@ -68,6 +68,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
                     align={TextAlign.CENTER}
                     title={t('ProfileLoadingErrorTitle')}
                     text={t('ProfileLoadingErrorText')}
+                    TitleTag={'h1'}
                 />
             </VStack>
         );

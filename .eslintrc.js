@@ -83,6 +83,8 @@ module.exports = {
                     'align',
                     'justify',
                     'gap',
+                    'TitleTag',
+                    'Tag',
                 ],
             },
         ],

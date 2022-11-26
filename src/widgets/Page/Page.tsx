@@ -46,7 +46,7 @@ export const Page = (props: IPageProps) => {
     }, 500);
 
     return (
-        <section
+        <main
             ref={wrapperRef}
             className={classNames(cls.page, {}, [className])}
             onScroll={onScrollHandler}
@@ -58,6 +58,6 @@ export const Page = (props: IPageProps) => {
                     ref={triggerRef}
                 />
             ) : null}
-        </section>
+        </main>
     );
 };

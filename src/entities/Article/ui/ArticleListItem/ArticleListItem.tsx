@@ -74,6 +74,7 @@ export const ArticleListItem = memo((props: IArticleListItemProps) => {
                     <Text
                         title={article.title}
                         className={cls.title}
+                        TitleTag={'h3'}
                     />
                     {types}
                     <img

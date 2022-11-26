@@ -18,6 +18,7 @@ export const ArticleTextBlockComponent = memo((props: IArticleTextBlockComponent
                 <Text
                     title={block.title}
                     className={cls.title}
+                    TitleTag={'h2'}
                 />
             )}
             {block.paragraphs.map((paragraph, index) => (
