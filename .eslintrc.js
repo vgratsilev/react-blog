@@ -75,7 +75,15 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to', 'target'],
+                ignoreAttribute: [
+                    'data-testid',
+                    'to',
+                    'target',
+                    'direction',
+                    'align',
+                    'justify',
+                    'gap',
+                ],
             },
         ],
         'jsx-a11y/aria-role': 'off',
@@ -111,7 +119,10 @@ module.exports = {
         },
         {
             files: '**/src/**/*.stories.{ts,tsx}',
-            rules: { 'max-len': 'off' },
+            rules: {
+                'max-len': 'off',
+                'i18next/no-literal-string': 'off',
+            },
         },
         {
             files: '**/src/**/*Slice.{ts,tsx}',
