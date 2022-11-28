@@ -85,6 +85,7 @@ module.exports = {
                     'gap',
                     'TitleTag',
                     'Tag',
+                    'as',
                 ],
             },
         ],
