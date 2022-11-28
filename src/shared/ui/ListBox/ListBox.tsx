@@ -4,6 +4,8 @@ import { Listbox as HListBox } from '@headlessui/react';
 import { Button } from '../Button/Button';
 import cls from './ListBox.module.scss';
 
+type DropDownDirection = 'top' | 'bottom';
+
 export interface IListBoxItem {
     value: string;
     content: ReactNode;
@@ -18,10 +20,23 @@ interface IListBoxProps {
     defaultValue?: string;
     onChange: <T extends string>(value: T) => void;
     readonly?: boolean;
+    direction?: DropDownDirection;
 }
 
 export const ListBox = memo((props: IListBoxProps) => {
-    const { className, label, items, value, defaultValue, onChange, readonly } = props;
+    const {
+        className,
+        label,
+        items,
+        value,
+        defaultValue,
+        onChange,
+        readonly,
+        direction = 'bottom',
+    } = props;
+
+    const optionsClasses = [cls[direction]];
+
     return (
         <HListBox
             as={'div'}
@@ -36,7 +51,7 @@ export const ListBox = memo((props: IListBoxProps) => {
                     {value ?? defaultValue}
                 </Button>
             </HListBox.Button>
-            <HListBox.Options className={cls.options}>
+            <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
                 {items?.map((item: IListBoxItem) => (
                     <HListBox.Option
                         key={item.value}

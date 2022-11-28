@@ -21,5 +21,7 @@
   "NoCommentsMessage": "No comments",
   "InputNewCommentLabel": "Type comment",
   "InputNewCommentSendBtn": "Send",
-  "CreateNewArticleLink": "Create new article"
+  "CreateNewArticleLink": "Create new article",
+  "SelectCountryDefaultValue": "Select country",
+  "SelectCurrencyDefaultValue": "select currency"
 }

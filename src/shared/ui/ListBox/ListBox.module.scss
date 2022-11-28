@@ -18,7 +18,11 @@
     background: var(--listbox-bg);
     border-radius: 12px;
     box-shadow: 4px 4px 8px var(--listbox-bg);
-    width: 100%;
+    left: max(20%, 115px);
+
+    &.top {
+        bottom: 100%;
+    }
 }
 
 .item {
