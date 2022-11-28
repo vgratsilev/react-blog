@@ -45,13 +45,15 @@ export const ListBox = memo((props: IListBoxProps) => {
             onChange={onChange}
             disabled={readonly}
         >
-            <HListBox.Label className={cls.label}>{label}</HListBox.Label>
+            {label && <HListBox.Label className={cls.label}>{label}</HListBox.Label>}
             <HListBox.Button className={cls.button}>
                 <Button className={classNames('', { [cls.innerButtonDisabled]: readonly })}>
                     {value ?? defaultValue}
                 </Button>
             </HListBox.Button>
-            <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
+            <HListBox.Options
+                className={classNames(cls.options, { [cls.noLabel]: !label }, optionsClasses)}
+            >
                 {items?.map((item: IListBoxItem) => (
                     <HListBox.Option
                         key={item.value}

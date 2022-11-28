@@ -23,6 +23,14 @@
     &.top {
         bottom: 100%;
     }
+
+    &.bottom {
+        top: 100%;
+    }
+}
+
+.noLabel {
+    left: unset;
 }
 
 .item {
