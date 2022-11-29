@@ -3,8 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Listbox as HListBox } from '@headlessui/react';
 import { Button } from '../Button/Button';
 import cls from './ListBox.module.scss';
-
-type DropDownDirection = 'top' | 'bottom';
+import { DropDownDirection } from '../../types/ui';
 
 export interface IListBoxItem {
     value: string;
@@ -23,6 +22,13 @@ interface IListBoxProps {
     direction?: DropDownDirection;
 }
 
+const mapDirectionClass: Record<DropDownDirection, string> = {
+    'bottom left': cls.optionsBottomLeft,
+    'bottom right': cls.optionsBottomRight,
+    'top left': cls.optionsTopLeft,
+    'top right': cls.optionsTopRight,
+};
+
 export const ListBox = memo((props: IListBoxProps) => {
     const {
         className,
@@ -32,10 +38,10 @@ export const ListBox = memo((props: IListBoxProps) => {
         defaultValue,
         onChange,
         readonly,
-        direction = 'bottom',
+        direction = 'bottom right',
     } = props;
 
-    const optionsClasses = [cls[direction]];
+    const optionsClasses = [mapDirectionClass[direction]];
 
     return (
         <HListBox
@@ -46,8 +52,8 @@ export const ListBox = memo((props: IListBoxProps) => {
             disabled={readonly}
         >
             {label && <HListBox.Label className={cls.label}>{label}</HListBox.Label>}
-            <HListBox.Button className={cls.button}>
-                <Button className={classNames('', { [cls.innerButtonDisabled]: readonly })}>
+            <HListBox.Button as={Fragment}>
+                <Button className={classNames(cls.button, { [cls.innerButtonDisabled]: readonly })}>
                     {value ?? defaultValue}
                 </Button>
             </HListBox.Button>

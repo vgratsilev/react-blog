@@ -5,11 +5,14 @@
 }
 
 .button {
-    background: none;
-    border: none;
-    outline: none;
-    padding: 0;
-    margin: 0;
+    &.innerButtonDisabled {
+        opacity: 0.7;
+        cursor: default;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
 
 .options {
@@ -19,18 +22,38 @@
     border-radius: 12px;
     box-shadow: 4px 4px 8px var(--listbox-bg);
     left: max(20%, 115px);
+    width: max-content;
 
-    &.top {
-        bottom: 100%;
-    }
-
-    &.bottom {
+    &.optionsBottomLeft {
         top: 100%;
-    }
-}
+        right: 0;
 
-.noLabel {
-    left: unset;
+        &:not(.noLabel) {
+            left: max(20%, 115px);
+        }
+    }
+
+    &.optionsBottomRight {
+        top: 100%;
+
+        &.noLabel {
+            left: 0;
+        }
+    }
+
+    &.optionsTopLeft {
+        bottom: 100%;
+        right: 0;
+    }
+
+    &.optionsTopRight {
+        bottom: 100%;
+        left: 0;
+    }
+
+    &.noLabel {
+        left: unset;
+    }
 }
 
 .item {
@@ -43,13 +66,6 @@
 
 .disabled {
     opacity: 0.7;
-}
-
-.innerButtonDisabled {
-    &:hover {
-        opacity: unset;
-        cursor: default;
-    }
 }
 
 .label {
