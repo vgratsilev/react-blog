@@ -1,13 +1,16 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { memo, useCallback, useState } from 'react';
+import { memo, useCallback, useMemo, useState } from 'react';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { HStack } from 'shared/ui/Stack';
 import cls from './Navbar.module.scss';
 
 interface INavbarProps {
@@ -32,6 +35,24 @@ export const Navbar = memo(({ className }: INavbarProps) => {
         dispatch(userActions.logout());
     }, [dispatch]);
 
+    const dropdownItems = useMemo(() => {
+        if (authData) {
+            return [
+                {
+                    id: '1',
+                    content: t('Logout'),
+                    onClick: onLogout,
+                },
+                {
+                    id: '2',
+                    content: t('ProfilePageLink'),
+                    href: RoutePath.profile + authData.id,
+                },
+            ];
+        }
+        return [];
+    }, [authData, onLogout, t]);
+
     if (authData) {
         return (
             <header className={classNames(cls.navbar, {}, [className])}>
@@ -47,13 +68,25 @@ export const Navbar = memo(({ className }: INavbarProps) => {
                 >
                     {t('CreateNewArticleLink')}
                 </AppLink>
-                <Button
-                    theme={ButtonTheme.CLEAR_INVERTED}
-                    className={cls.links}
-                    onClick={onLogout}
-                >
-                    {`${t('Logout')}, ${authData.username}`}
-                </Button>
+                <Dropdown
+                    className={cls.dropdown}
+                    direction={'bottom left'}
+                    items={dropdownItems}
+                    trigger={
+                        <HStack>
+                            <Avatar
+                                size={30}
+                                src={authData.avatar}
+                            />
+                            <Text
+                                theme={TextTheme.INVERTED}
+                                size={TextSize.S}
+                                title={authData.username}
+                                className={cls.loginName}
+                            />
+                        </HStack>
+                    }
+                />
             </header>
         );
     }
