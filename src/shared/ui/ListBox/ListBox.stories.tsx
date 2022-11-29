@@ -12,7 +12,6 @@ export default {
 } as ComponentMeta<typeof ListBox>;
 
 const shiftDecorator = (Story: Story) => (
-    // eslint-disable-next-line react-perf/jsx-no-new-object-as-prop
     <div style={{ padding: 200, display: 'inline-block' }}>
         <Story />
     </div>

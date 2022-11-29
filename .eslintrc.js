@@ -86,6 +86,7 @@ module.exports = {
                     'TitleTag',
                     'Tag',
                     'as',
+                    'refName',
                 ],
             },
         ],
@@ -125,6 +126,7 @@ module.exports = {
             rules: {
                 'max-len': 'off',
                 'i18next/no-literal-string': 'off',
+                'react-perf/jsx-no-new-object-as-prop': 'off',
             },
         },
         {
