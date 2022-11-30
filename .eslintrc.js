@@ -142,6 +142,15 @@ module.exports = {
                 'no-param-reassign': 'off',
             },
         },
+        {
+            files: '**/scripts/**/*.js',
+            rules: {
+                '@typescript-eslint/no-var-requires': 'off',
+                'import/extensions': 'off',
+                'import/no-unresolved': 'off',
+                'no-console': 'off',
+            },
+        },
     ],
     globals: {
         __IS_DEV__: true,
