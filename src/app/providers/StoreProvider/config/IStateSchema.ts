@@ -20,11 +20,13 @@ import { IAddCommentFormSchema } from 'features/addCommentForm';
 import { IArticlesPageSchema } from 'pages/ArticlesPage';
 import { IRestoreScrollSchema } from 'features/restoreScroll';
 import { IArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
+import { rtkApi } from 'shared/api/rtkApi';
 
 export interface IStateSchema {
     counter: ICounterSchema;
     user: IUserSchema;
     restoreScroll: IRestoreScrollSchema;
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
     // async reducers
     loginForm?: ILoginSchema;
