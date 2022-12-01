@@ -8,7 +8,6 @@ import {
     Reducer,
     ReducersMapObject,
 } from '@reduxjs/toolkit';
-import { IProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 // import { NavigateOptions, To } from 'react-router-dom';
 import { IArticleDetailsSchema } from 'entities/Article';
@@ -21,6 +20,7 @@ import { IArticlesPageSchema } from 'pages/ArticlesPage';
 import { IRestoreScrollSchema } from 'features/restoreScroll';
 import { IArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { rtkApi } from 'shared/api/rtkApi';
+import { IProfileSchema } from 'features/editableProfileCard';
 
 export interface IStateSchema {
     counter: ICounterSchema;

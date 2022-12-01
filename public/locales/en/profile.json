@@ -15,5 +15,6 @@
   "NoDataError": "Empty data",
   "IncorrectCountryError": "Incorrect country",
   "IncorrectAgeError": "Incorrect age",
-  "IncorrectUserDataError": "Firstname and Lastname are required"
+  "IncorrectUserDataError": "Firstname and Lastname are required",
+  "ProfileNotFoundErrorText": "Profile not found"
 }
