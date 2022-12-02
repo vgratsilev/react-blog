@@ -102,6 +102,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
                 className={cls.input}
                 readonly={readonly}
                 onChange={onChangeFirstname}
+                data-testid={'ProfileCard.firstname'}
             />
             <Input
                 value={data?.lastname}
@@ -109,6 +110,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
                 className={cls.input}
                 readonly={readonly}
                 onChange={onChangeLastname}
+                data-testid={'ProfileCard.lastname'}
             />
             <Input
                 value={data?.username}
@@ -116,6 +118,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
                 className={cls.input}
                 readonly={readonly}
                 onChange={onChangeUsername}
+                data-testid={'ProfileCard.username'}
             />
             <Input
                 value={data?.age}
@@ -127,6 +130,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
                 max={150}
                 step={1}
                 onChange={onChangeAge}
+                data-testid={'ProfileCard.age'}
             />
             <Input
                 value={data?.city}
@@ -134,6 +138,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
                 className={cls.input}
                 readonly={readonly}
                 onChange={onChangeCity}
+                data-testid={'ProfileCard.city'}
             />
             <Input
                 value={__PROJECT__ !== 'storybook' ? data?.avatar : 'stub'}
@@ -141,6 +146,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
                 className={cls.input}
                 readonly={readonly}
                 onChange={onChangeAvatar}
+                data-testid={'ProfileCard.avatar'}
             />
             <CurrencySelect
                 className={cls.input}

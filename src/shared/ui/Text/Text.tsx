@@ -31,6 +31,8 @@ interface ITextProps {
     align?: TextAlign;
     size?: TextSize;
     TitleTag?: TitleTagType;
+
+    'data-testid'?: string;
 }
 
 export const Text = memo((props: ITextProps) => {
@@ -42,6 +44,7 @@ export const Text = memo((props: ITextProps) => {
         align = TextAlign.LEFT,
         size = TextSize.M,
         TitleTag = 'p',
+        'data-testid': dataTestId = 'Text',
     } = props;
 
     return (
@@ -53,8 +56,22 @@ export const Text = memo((props: ITextProps) => {
                 cls[size],
             ])}
         >
-            {title && <TitleTag className={cls.title}>{title}</TitleTag>}
-            {text && <p className={cls.text}>{text}</p>}
+            {title && (
+                <TitleTag
+                    className={cls.title}
+                    data-testid={`${dataTestId}.Title`}
+                >
+                    {title}
+                </TitleTag>
+            )}
+            {text && (
+                <p
+                    className={cls.text}
+                    data-testid={`${dataTestId}.Text`}
+                >
+                    {text}
+                </p>
+            )}
         </div>
     );
 });

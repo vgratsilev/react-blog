@@ -15,7 +15,7 @@ export const ArticleRecommendationsList = memo((props: IArticleRecommendationsLi
     const { t } = useTranslation('article');
     const { data: articles, isLoading, error } = useGetArticleRecommendationsListQuery(3);
 
-    if (isLoading || error) {
+    if (isLoading || error || !articles) {
         return null;
         // TODO return spinner if loading, return error message if error
     }
