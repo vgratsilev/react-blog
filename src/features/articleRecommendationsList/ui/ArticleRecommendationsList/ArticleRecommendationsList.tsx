@@ -23,6 +23,7 @@ export const ArticleRecommendationsList = memo((props: IArticleRecommendationsLi
     return (
         <VStack
             gap={'8'}
+            maxWidth
             className={classNames('', {}, [className])}
         >
             <Text
