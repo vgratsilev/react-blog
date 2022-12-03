@@ -19,7 +19,7 @@
     position: absolute;
     right: -40px;
     bottom: 40px;
-    z-index: 1;
+    z-index: var(--sidebar-collapse-btn-z-index);
 }
 
 .linksContainer {
