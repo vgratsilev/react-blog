@@ -2,6 +2,7 @@
   "AppName": "Blog App",
   "AboutPageLink": "About",
   "ProfilePageLink": "Profile",
+  "AdminPanelLink": "Admin Panel",
   "MainPageLink": "Main",
   "ArticlesPageLink": "Articles",
   "MainPage": "Main Page",

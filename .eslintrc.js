@@ -42,7 +42,7 @@ module.exports = {
         },
     },
     rules: {
-        indent: ['error', 4, { SwitchCase: 1 }],
+        indent: ['off', 4, { SwitchCase: 1 }],
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
         'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
