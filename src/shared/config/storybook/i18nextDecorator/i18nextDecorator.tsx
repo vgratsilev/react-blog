@@ -4,7 +4,7 @@ import { Story, StoryContext } from '@storybook/react';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../../i18n/i18n';
 
-export const i18nextDecorator = (story: () => Story, context: StoryContext) => {
+export const i18nextDecorator = (StoryComponent: Story, context: StoryContext) => {
     const {
         globals: { locale },
     } = context;
@@ -15,7 +15,9 @@ export const i18nextDecorator = (story: () => Story, context: StoryContext) => {
 
     return (
         <Suspense fallback={<div>{''}</div>}>
-            <I18nextProvider i18n={i18n}>{story()}</I18nextProvider>
+            <I18nextProvider i18n={i18n}>
+                <StoryComponent />
+            </I18nextProvider>
         </Suspense>
     );
 };

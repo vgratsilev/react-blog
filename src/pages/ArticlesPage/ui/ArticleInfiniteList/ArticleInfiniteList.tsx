@@ -14,6 +14,7 @@ interface IArticleInfiniteListProps {
     className?: string;
 }
 
+// TODO add infinite list with react-virtuoso
 export const ArticleInfiniteList = memo((props: IArticleInfiniteListProps) => {
     const { className } = props;
     const { t } = useTranslation('article');

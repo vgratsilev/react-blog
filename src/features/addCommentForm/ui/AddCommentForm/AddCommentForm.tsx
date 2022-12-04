@@ -38,7 +38,7 @@ export const AddCommentForm = memo((props: IAddCommentFormProps) => {
     const dispatch = useAppDispatch();
 
     const onCommentTextChange = useCallback(
-        (value) => {
+        (value: string) => {
             dispatch(addCommentFormActions.setText(value.trim()));
         },
         [dispatch],
