@@ -1,5 +1,6 @@
 import { IStateSchema } from 'app/providers/StoreProvider';
-import { ArticleBlockType, ArticleType, IArticle } from '../../types/article';
+import { ArticleBlockType, ArticleType } from '../../consts/articleConsts';
+import { IArticle } from '../../types/article';
 import {
     getArticleDetailsData,
     getArticleDetailsError,

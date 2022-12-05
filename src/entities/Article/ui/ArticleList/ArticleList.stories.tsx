@@ -1,7 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { ArticleView, IArticle } from '../../model/types/article';
+import { ArticleView } from '../../model/consts/articleConsts';
+import { IArticle } from '../../model/types/article';
 import { ArticleList } from './ArticleList';
 
 export default {

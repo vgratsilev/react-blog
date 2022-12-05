@@ -1,4 +1,4 @@
-export { IRestoreScrollSchema } from './model/types/restoreScrollSchema';
+export type { IRestoreScrollSchema } from './model/types/restoreScrollSchema';
 
 export { getRestoreScrollByPath } from './model/selectors/restoreScroll';
 
