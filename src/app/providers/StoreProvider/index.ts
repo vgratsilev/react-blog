@@ -1,7 +1,4 @@
-import { StoreProvider } from './ui/StoreProvider';
-import { createReduxStore, AppDispatch } from './config/store';
-import type { IStateSchema, IReduxStoreWithManager, IThunkConfig } from './config/IStateSchema';
-
-export type { IStateSchema, IReduxStoreWithManager, IThunkConfig, AppDispatch };
-
-export { StoreProvider, createReduxStore };
+export type { IStateSchema, IReduxStoreWithManager, IThunkConfig } from './config/IStateSchema';
+export type { AppDispatch } from './config/store';
+export { StoreProvider } from './ui/StoreProvider';
+export { createReduxStore } from './config/store';
