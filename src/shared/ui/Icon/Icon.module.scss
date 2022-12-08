@@ -2,3 +2,7 @@
     fill: var(--primary-color);
     display: flex;
 }
+
+.inverted {
+    fill: var(--inverted-primary-color);
+}
