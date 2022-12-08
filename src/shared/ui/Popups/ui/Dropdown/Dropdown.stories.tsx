@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta, Story } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Button } from '../Button/Button';
+import { Button } from '../../../Button/Button';
 import { Dropdown, IDropdownItem } from './Dropdown';
 
 const items: IDropdownItem[] = [

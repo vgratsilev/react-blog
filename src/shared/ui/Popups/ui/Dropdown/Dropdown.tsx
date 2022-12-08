@@ -2,8 +2,10 @@ import { Fragment, memo, ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Menu } from '@headlessui/react';
 import { DropDownDirection } from 'shared/types/ui';
-import { AppLink } from '../AppLink/AppLink';
+import { AppLink } from '../../../AppLink/AppLink';
 import cls from './Dropdown.module.scss';
+import popupCls from '../../styles/popup.module.scss';
+import { mapDirectionClass } from '../../styles/consts';
 
 export interface IDropdownItem {
     id: string;
@@ -20,13 +22,6 @@ interface IDropdownProps {
     direction?: DropDownDirection;
 }
 
-const mapDirectionClass: Record<DropDownDirection, string> = {
-    'bottom left': cls.optionsBottomLeft,
-    'bottom right': cls.optionsBottomRight,
-    'top left': cls.optionsTopLeft,
-    'top right': cls.optionsTopRight,
-};
-
 export const Dropdown = memo((props: IDropdownProps) => {
     const { className, items, trigger, direction = 'bottom right' } = props;
 
@@ -35,16 +30,16 @@ export const Dropdown = memo((props: IDropdownProps) => {
     return (
         <Menu
             as={'div'}
-            className={classNames(cls.dropdown, {}, [className])}
+            className={classNames(popupCls.popup, {}, [className])}
         >
-            <Menu.Button className={cls.btn}>{trigger}</Menu.Button>
+            <Menu.Button className={popupCls.trigger}>{trigger}</Menu.Button>
             <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
                 {items.map((menuItem) => {
                     const content = ({ active }: { active: boolean }) => (
                         <button
                             type={'button'}
                             onClick={menuItem.onClick}
-                            className={classNames(cls.item, { [cls.active]: active })}
+                            className={classNames(cls.item, { [popupCls.active]: active })}
                             disabled={menuItem.disabled}
                         >
                             {menuItem.content}
