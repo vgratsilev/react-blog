@@ -87,6 +87,7 @@ module.exports = {
                     'Tag',
                     'as',
                     'refName',
+                    'borderRadius',
                 ],
             },
         ],
