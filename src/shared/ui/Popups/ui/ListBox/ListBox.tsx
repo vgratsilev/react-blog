@@ -50,7 +50,7 @@ export const ListBox = memo((props: IListBoxProps) => {
             disabled={readonly}
         >
             {label && <HListBox.Label className={cls.label}>{label}</HListBox.Label>}
-            <HListBox.Button as={Fragment}>
+            <HListBox.Button as={'div'}>
                 <Button className={classNames(cls.button, { [cls.innerButtonDisabled]: readonly })}>
                     {value ?? defaultValue}
                 </Button>

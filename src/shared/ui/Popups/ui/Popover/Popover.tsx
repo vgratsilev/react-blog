@@ -20,7 +20,12 @@ export const Popover = (props: IPopoverProps) => {
 
     return (
         <HPopover className={classNames('', {}, [className, popupCls.popup])}>
-            <HPopover.Button className={popupCls.trigger}>{trigger}</HPopover.Button>
+            <HPopover.Button
+                className={popupCls.trigger}
+                as={'div'}
+            >
+                {trigger}
+            </HPopover.Button>
             <HPopover.Panel className={classNames(cls.panel, {}, panelClasses)}>
                 {children}
             </HPopover.Panel>
