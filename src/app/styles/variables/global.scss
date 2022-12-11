@@ -23,7 +23,7 @@
     --sidebar-width-collapsed: 80px;
 
     // z-indexes
-    --modal-z-index: 10;
+    --modal-z-index: 105;
     --dropdown-menu-z-index: 10;
     --listbox-options-z-index: 10;
     --popover-panel-z-index: 10;
@@ -31,6 +31,7 @@
     --modal-layout-overlay-z-index: 2;
     --modal-layout-content-z-index: 3;
     --sidebar-collapse-btn-z-index: 100;
+    --overlay-z-index: -1;
 
     // Colors
     --overlay-color: rgba(0 0 0 / 60%);
