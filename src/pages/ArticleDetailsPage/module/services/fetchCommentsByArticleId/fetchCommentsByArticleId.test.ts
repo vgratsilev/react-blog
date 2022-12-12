@@ -1,4 +1,4 @@
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { IArticleDetailsCommentSchema } from '../../types/IArticleDetailsCommentSchema';
 import { fetchCommentsByArticleId } from './fetchCommentsByArticleId';
 

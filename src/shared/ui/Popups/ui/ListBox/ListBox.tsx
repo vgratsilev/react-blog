@@ -1,5 +1,5 @@
 import { Fragment, memo, ReactNode } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Listbox as HListBox } from '@headlessui/react';
 import { Button } from '../../../Button/Button';
 import cls from './ListBox.module.scss';

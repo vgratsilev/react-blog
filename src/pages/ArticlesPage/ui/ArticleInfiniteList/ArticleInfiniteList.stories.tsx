@@ -1,9 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import AvatarTest from 'shared/assets/tests/storybookAvatar.png';
-import { ArticleSortField, ArticleType, ArticleView, IArticle } from 'entities/Article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import AvatarTest from '@/shared/assets/tests/storybookAvatar.png';
+import { ArticleSortField, ArticleType, ArticleView, IArticle } from '@/entities/Article';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { IArticlesPageSchema } from '../../model/types/articlesPageSchema';
 import { ArticleInfiniteList } from './ArticleInfiniteList';
 

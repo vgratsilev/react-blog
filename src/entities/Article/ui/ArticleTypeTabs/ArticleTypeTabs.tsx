@@ -3,9 +3,9 @@
 // after refactor whole page
 
 import { memo, useCallback, useMemo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { ITabItem, Tabs } from 'shared/ui/Tabs/Tabs';
+import { ITabItem, Tabs } from '@/shared/ui/Tabs/Tabs';
 import { ArticleType } from '../../model/consts/articleConsts';
 
 interface IArticleTypeTabsProps {

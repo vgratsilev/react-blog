@@ -1,4 +1,4 @@
-import { USER_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
+import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localStorage';
 import { IUser, IUserSchema } from '../types/user';
 import { userActions, userReducer } from './userSlice';
 

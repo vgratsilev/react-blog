@@ -1,6 +1,6 @@
-import { ICounterSchema } from 'entities/Counter';
-import { IUserSchema } from 'entities/User';
-import { ILoginSchema } from 'features/AuthByUsername';
+import { ICounterSchema } from '@/entities/Counter';
+import { IUserSchema } from '@/entities/User';
+import { ILoginSchema } from '@/features/AuthByUsername';
 import {
     AnyAction,
     CombinedState,
@@ -10,17 +10,17 @@ import {
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 // import { NavigateOptions, To } from 'react-router-dom';
-import { IArticleDetailsSchema } from 'entities/Article';
+import { IArticleDetailsSchema } from '@/entities/Article';
 // import {
 //     IArticleDetailsCommentSchema,
 //     IArticleDetailsRecommendationsSchema,
 // } from 'pages/ArticleDetailsPage';
-import { IAddCommentFormSchema } from 'features/addCommentForm';
-import { IArticlesPageSchema } from 'pages/ArticlesPage';
-import { IRestoreScrollSchema } from 'features/restoreScroll';
-import { IArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
-import { rtkApi } from 'shared/api/rtkApi';
-import { IProfileSchema } from 'features/editableProfileCard';
+import { IAddCommentFormSchema } from '@/features/addCommentForm';
+import { IArticlesPageSchema } from '@/pages/ArticlesPage';
+import { IRestoreScrollSchema } from '@/features/restoreScroll';
+import { IArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
+import { rtkApi } from '@/shared/api/rtkApi';
+import { IProfileSchema } from '@/features/editableProfileCard';
 
 export interface IStateSchema {
     counter: ICounterSchema;

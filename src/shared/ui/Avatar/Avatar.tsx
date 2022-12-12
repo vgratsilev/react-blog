@@ -1,6 +1,6 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { CSSProperties, memo, useMemo } from 'react';
-import EmptyAvatar from 'shared/assets/img/empty-avatar.png';
+import EmptyAvatar from '@/shared/assets/img/empty-avatar.png';
 import cls from './Avatar.module.scss';
 
 interface IAvatarProps {

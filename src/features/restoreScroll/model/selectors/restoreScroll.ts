@@ -1,4 +1,4 @@
-import { IStateSchema } from 'app/providers/StoreProvider';
+import { IStateSchema } from '@/app/providers/StoreProvider';
 import { createSelector } from '@reduxjs/toolkit';
 
 export const getRestoreScroll = (state: IStateSchema) => state.restoreScroll.scroll;

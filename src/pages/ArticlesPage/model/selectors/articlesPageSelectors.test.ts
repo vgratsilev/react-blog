@@ -1,5 +1,5 @@
-import { IStateSchema } from 'app/providers/StoreProvider';
-import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article';
+import { IStateSchema } from '@/app/providers/StoreProvider';
+import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
 import {
     getArticlesPageIsLoading,
     getArticlesPageView,
