@@ -7,7 +7,6 @@ import { NotificationList } from '@/entities/Notification';
 import { Popover } from '@/shared/ui/Popups';
 import { Drawer } from '@/shared/ui/Drawer/Drawer';
 import { isMobileDevice } from '@/shared/lib/utils/isMobileDevice/isMobileDevice';
-import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
 import cls from './NotificationButton.module.scss';
 
 interface INotificationButtonProps {
@@ -42,14 +41,12 @@ export const NotificationButton = memo((props: INotificationButtonProps) => {
             {isMobileDevice() ? (
                 <>
                     {trigger}
-                    <AnimationProvider>
-                        <Drawer
-                            isOpen={isOpened}
-                            onClose={onCloseDrawer}
-                        >
-                            <NotificationList />
-                        </Drawer>
-                    </AnimationProvider>
+                    <Drawer
+                        isOpen={isOpened}
+                        onClose={onCloseDrawer}
+                    >
+                        <NotificationList />
+                    </Drawer>
                 </>
             ) : (
                 <Popover
