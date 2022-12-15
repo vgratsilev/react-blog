@@ -41,6 +41,7 @@ export const ArticleListItem = memo((props: IArticleListItemProps) => {
             <Icon
                 Svg={EyeIcon}
                 className={cls.viewIcon}
+                secondary
             />
         </>
     );
