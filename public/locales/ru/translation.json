@@ -24,5 +24,6 @@
   "InputNewCommentSendBtn": "Отправить",
   "CreateNewArticleLink": "Создать новую статью",
   "SelectCountryDefaultValue": "Выбирете страну",
-  "SelectCurrencyDefaultValue": "Выбирете валюту"
+  "SelectCurrencyDefaultValue": "Выбирете валюту",
+  "StarRatingEditBtnText": "Изменить"
 }

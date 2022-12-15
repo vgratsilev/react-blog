@@ -1,5 +1,9 @@
+.starRating {
+    display: flex;
+    align-items: flex-start;
+}
+
 .starIcon {
-    fill: none;
     cursor: pointer;
 }
 

@@ -24,5 +24,6 @@
   "InputNewCommentSendBtn": "Send",
   "CreateNewArticleLink": "Create new article",
   "SelectCountryDefaultValue": "Select country",
-  "SelectCurrencyDefaultValue": "select currency"
+  "SelectCurrencyDefaultValue": "select currency",
+  "StarRatingEditBtnText": "Edit"
 }

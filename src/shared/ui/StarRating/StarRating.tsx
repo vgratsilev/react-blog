@@ -1,20 +1,24 @@
-import { memo, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Icon } from '@/shared/ui/Icon/Icon';
 import StarIcon from '@/shared/assets/icons/star.svg';
+import { useTranslation } from 'react-i18next';
 import cls from './StarRating.module.scss';
+import { Button, ButtonTheme } from '../Button/Button';
 
 interface IStarRatingProps {
     className?: string;
     onSelect?: (starsCount: number) => void;
     size?: number;
     selectedStars?: number;
+    showEditBtn?: boolean;
 }
 
 const stars = [1, 2, 3, 4, 5];
 
 export const StarRating = memo((props: IStarRatingProps) => {
-    const { className, onSelect, size = 30, selectedStars = 0 } = props;
+    const { className, onSelect, size = 30, selectedStars = 0, showEditBtn = true } = props;
+    const { t } = useTranslation();
     const [currentStarsCount, setCurrentStarsCount] = useState(0);
     const [isSelected, setIsSelected] = useState(Boolean(selectedStars));
 
@@ -24,7 +28,7 @@ export const StarRating = memo((props: IStarRatingProps) => {
         }
     };
 
-    const onLeave = () => () => {
+    const onLeave = () => {
         if (!isSelected) {
             setCurrentStarsCount(0);
         }
@@ -38,8 +42,13 @@ export const StarRating = memo((props: IStarRatingProps) => {
         }
     };
 
+    const onEditButtonClick = useCallback(() => {
+        setIsSelected(false);
+        setCurrentStarsCount(0);
+    }, []);
+
     return (
-        <div className={classNames('', {}, [className])}>
+        <div className={classNames(cls.starRating, {}, [className])}>
             {stars.map((starNumber) => (
                 <Icon
                     key={starNumber}
@@ -47,21 +56,29 @@ export const StarRating = memo((props: IStarRatingProps) => {
                     className={classNames(
                         cls.starIcon,
                         {
-                            // [cls.hovered]: currentStarsCount >= starNumber,
+                            [cls.hovered]: currentStarsCount >= starNumber,
                             [cls.selected]: isSelected,
                         },
                         [
-                            // cls.normal,
-                            currentStarsCount >= starNumber ? cls.hovered : cls.normal,
+                            cls.normal,
+                            // currentStarsCount >= starNumber ? cls.hovered : cls.normal
                         ],
                     )}
                     width={size}
                     height={size}
-                    onMouseEnter={onHover(starNumber)}
                     onMouseLeave={onLeave}
+                    onMouseEnter={onHover(starNumber)}
                     onClick={onClick(starNumber)}
                 />
             ))}
+            {showEditBtn && (
+                <Button
+                    theme={ButtonTheme.CLEAR}
+                    onClick={onEditButtonClick}
+                >
+                    {t('StarRatingEditBtnText')}
+                </Button>
+            )}
         </div>
     );
 });
