@@ -25,5 +25,8 @@
   "CreateNewArticleLink": "Create new article",
   "SelectCountryDefaultValue": "Select country",
   "SelectCurrencyDefaultValue": "select currency",
-  "StarRatingEditBtnText": "Edit"
+  "StarRatingEditBtnText": "Edit",
+  "FeedbackLabel": "How did you like this article?",
+  "FeedbackCloseBtnText": "Close",
+  "FeedbackSendBtnText": "Send"
 }

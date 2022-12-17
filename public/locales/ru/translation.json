@@ -25,5 +25,8 @@
   "CreateNewArticleLink": "Создать новую статью",
   "SelectCountryDefaultValue": "Выбирете страну",
   "SelectCurrencyDefaultValue": "Выбирете валюту",
-  "StarRatingEditBtnText": "Изменить"
+  "StarRatingEditBtnText": "Изменить,",
+  "FeedbackLabel": "Как вам статья?",
+  "FeedbackCloseBtnText": "Закрыть",
+  "FeedbackSendBtnText": "Отправить"
 }

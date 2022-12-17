@@ -1,6 +1,6 @@
 .starRating {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .starIcon {
@@ -17,4 +17,8 @@
 
 .selected {
     cursor: auto;
+}
+
+.edtBtn {
+    margin-left: 10px;
 }

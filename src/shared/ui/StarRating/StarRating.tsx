@@ -19,7 +19,7 @@ const stars = [1, 2, 3, 4, 5];
 export const StarRating = memo((props: IStarRatingProps) => {
     const { className, onSelect, size = 30, selectedStars = 0, showEditBtn = true } = props;
     const { t } = useTranslation();
-    const [currentStarsCount, setCurrentStarsCount] = useState(0);
+    const [currentStarsCount, setCurrentStarsCount] = useState(selectedStars);
     const [isSelected, setIsSelected] = useState(Boolean(selectedStars));
 
     const onHover = (starsCount: number) => () => {
@@ -75,6 +75,7 @@ export const StarRating = memo((props: IStarRatingProps) => {
                 <Button
                     theme={ButtonTheme.CLEAR}
                     onClick={onEditButtonClick}
+                    className={cls.edtBtn}
                 >
                     {t('StarRatingEditBtnText')}
                 </Button>
