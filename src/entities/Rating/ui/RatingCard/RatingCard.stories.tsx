@@ -4,7 +4,7 @@ import { Theme } from '@/app/providers/ThemeProvider';
 import { RatingCard } from './RatingCard';
 
 export default {
-    title: 'entities/RatingCard',
+    title: 'entities/Rating',
     component: RatingCard,
     argTypes: {
         backgroundColor: { control: 'color' },

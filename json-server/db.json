@@ -399,5 +399,35 @@
       "country": "USA",
       "age": 23
     }
+  ],
+  "articleRatings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "good, i like it",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 5,
+      "feedback": "very good",
+      "userId": "3",
+      "articleId": "1"
+    },
+    {
+      "id": "3",
+      "rate": 2,
+      "feedback": "too difficult",
+      "userId": "2",
+      "articleId": "1"
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "rate": 5,
+      "feedback": "Shawerma is tasty",
+      "id": "pxqNNlp"
+    }
   ]
 }

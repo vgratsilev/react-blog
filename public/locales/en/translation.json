@@ -28,5 +28,6 @@
   "StarRatingEditBtnText": "Edit",
   "FeedbackLabel": "How did you like this article?",
   "FeedbackCloseBtnText": "Close",
-  "FeedbackSendBtnText": "Send"
+  "FeedbackSendBtnText": "Send",
+  "FeedbackSetDefaultTitle": "Thanks for rate!"
 }

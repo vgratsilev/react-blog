@@ -11,14 +11,15 @@ interface ICardProps extends HTMLAttributes<HTMLDivElement> {
     className?: string;
     children: ReactNode;
     theme?: CardTheme;
+    maxWidth?: boolean;
 }
 
 export const Card = (props: ICardProps) => {
-    const { className, children, theme = CardTheme.NORMAL, ...otherProps } = props;
+    const { className, children, maxWidth, theme = CardTheme.NORMAL, ...otherProps } = props;
     return (
         <div
             {...otherProps}
-            className={classNames(cls.card, {}, [className, cls[theme]])}
+            className={classNames(cls.card, { [cls.maxWidth]: maxWidth }, [className, cls[theme]])}
         >
             {children}
         </div>

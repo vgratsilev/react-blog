@@ -10,6 +10,7 @@ import {
 import { Page } from '@/widgets/Page/Page';
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
+import { ArticleRating } from '@/features/articleRating';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import cls from './ArticleDetailsPage.module.scss';
 import { articleDetailsPageReducer } from '../../module/slice';
@@ -50,6 +51,7 @@ const ArticleDetailsPage = (props: IArticleDetailsPageProps) => {
                 >
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
+                    <ArticleRating articleId={id} />
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>

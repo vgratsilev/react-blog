@@ -28,5 +28,6 @@
   "StarRatingEditBtnText": "Изменить,",
   "FeedbackLabel": "Как вам статья?",
   "FeedbackCloseBtnText": "Закрыть",
-  "FeedbackSendBtnText": "Отправить"
+  "FeedbackSendBtnText": "Отправить",
+  "FeedbackSetDefaultTitle": "Спасибо за оценку!"
 }

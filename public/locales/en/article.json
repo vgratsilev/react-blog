@@ -21,5 +21,7 @@
   "FoodTabItemText": "Food",
   "NoArticlesFoundText": "Articles not found",
   "RecommendationsBlockTitle": "Recommended articles",
-  "EditArticleBtn": "Edit"
+  "EditArticleBtn": "Edit",
+  "RateArticleTitle": "Rate article",
+  "FeedbackArticleTitle": "Send a feedback about article, it's improve future article's quality"
 }
