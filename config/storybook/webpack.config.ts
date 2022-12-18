@@ -17,7 +17,10 @@ export default ({ config }: { config: Configuration }) => {
     config.resolve!.modules!.unshift(paths.src);
 
     config.resolve!.extensions!.push('.ts', '.tsx');
-    config!.resolve!.alias = { '@': path.resolve(__dirname, '..', '..', 'src') };
+    config!.resolve!.alias = {
+        ...config!.resolve!.alias,
+        '@': path.resolve(__dirname, '..', '..', 'src'),
+    };
 
     const rules = config.module!.rules as RuleSetRule[];
     config.module!.rules = rules.map((rule: RuleSetRule) => {

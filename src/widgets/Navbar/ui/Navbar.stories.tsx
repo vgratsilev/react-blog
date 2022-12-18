@@ -6,7 +6,7 @@ import TestAvatar from '@/shared/assets/tests/storybookAvatar.png';
 import { Navbar } from './Navbar';
 
 export default {
-    title: 'widget/Navbar',
+    title: 'widgets/Navbar',
     component: Navbar,
     argTypes: {
         backgroundColor: { control: 'color' },
