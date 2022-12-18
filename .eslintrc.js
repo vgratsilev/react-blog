@@ -122,7 +122,7 @@ module.exports = {
                 },
             },
         ],
-        'fsd-import/fsd-relative-path': 'error',
+        'fsd-import/fsd-relative-path': ['error', { alias: '@' }],
     },
     overrides: [
         {
