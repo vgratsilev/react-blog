@@ -123,6 +123,13 @@ module.exports = {
             },
         ],
         'fsd-import/fsd-relative-path': ['error', { alias: '@' }],
+        'fsd-import/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            },
+        ],
     },
     overrides: [
         {

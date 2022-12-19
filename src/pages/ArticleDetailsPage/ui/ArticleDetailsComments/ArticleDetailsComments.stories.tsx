@@ -3,7 +3,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { Theme } from '@/app/providers/ThemeProvider';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import AvatarTest from '@/shared/assets/tests/storybookAvatar.png';
-import { IArticleDetailsCommentSchema } from '../../module/types/IArticleDetailsCommentSchema';
+import { IArticleDetailsCommentSchema } from '../../model/types/IArticleDetailsCommentSchema';
 import { ArticleDetailsComments } from './ArticleDetailsComments';
 
 export default {

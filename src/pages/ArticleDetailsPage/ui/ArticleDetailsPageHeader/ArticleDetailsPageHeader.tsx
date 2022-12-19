@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getArticleDetailsData } from '@/entities/Article';
 import { HStack } from '@/shared/ui/Stack';
-import { getCanEditArticle } from '../../module/selectors/articles';
+import { getCanEditArticle } from '../../model/selectors/articles';
 
 interface IArticleDetailsPageHeaderProps {
     className?: string;

@@ -2,10 +2,9 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Theme } from '@/app/providers/ThemeProvider';
-import { ArticleType, IArticle } from '@/entities/Article';
+import { ArticleType, IArticle, ArticleBlockType } from '@/entities/Article';
 import AvatarTest from '@/shared/assets/tests/storybookAvatar.png';
-import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts';
-import { IArticleDetailsCommentSchema } from '../../module/types/IArticleDetailsCommentSchema';
+import { IArticleDetailsCommentSchema } from '../../model/types/IArticleDetailsCommentSchema';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
