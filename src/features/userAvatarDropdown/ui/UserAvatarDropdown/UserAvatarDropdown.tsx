@@ -6,8 +6,8 @@ import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Text, TextSize, TextTheme } from '@/shared/ui/Text/Text';
 import { Dropdown } from '@/shared/ui/Popups';
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/User';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { useDispatch, useSelector } from 'react-redux';
+import { RoutePath } from '@/shared/const/router';
 import cls from './UserAvatarDropdown.module.scss';
 
 interface IUserAvatarDropdownProps {
