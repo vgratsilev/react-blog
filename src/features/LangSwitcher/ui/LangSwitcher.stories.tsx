@@ -1,10 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
+import { Theme } from '@/shared/const/theme';
 import { LangSwitcher } from './LangSwitcher';
 
 export default {
-    title: 'widgets/LangSwitcher',
+    title: 'features/LangSwitcher',
     component: LangSwitcher,
     argTypes: {
         backgroundColor: { control: 'color' },

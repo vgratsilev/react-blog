@@ -130,6 +130,13 @@ module.exports = {
                 testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
             },
         ],
+        'fsd-import/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
     },
     overrides: [
         {

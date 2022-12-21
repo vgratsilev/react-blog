@@ -7,7 +7,7 @@ import { Currency } from '@/entities/Currency';
 import AvatarImg from '@/shared/assets/tests/storybookAvatar.png';
 import { IStateSchema } from '@/app/providers/StoreProvider';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
+import { Theme } from '@/shared/const/theme';
 import { EditableProfileCard } from './EditableProfileCard';
 
 export default {

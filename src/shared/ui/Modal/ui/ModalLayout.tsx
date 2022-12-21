@@ -2,7 +2,7 @@ import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { CSSTransitionClassNames } from 'react-transition-group/CSSTransition';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { useTheme } from '@/app/providers/ThemeProvider';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import animationStyles from './animationStyles.module.scss';
 import cls from './ModalLayout.module.scss';
 import { ANIMATION_TIME } from '../config/ModalConfig';

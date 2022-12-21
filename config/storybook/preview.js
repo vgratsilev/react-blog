@@ -1,7 +1,7 @@
 import { addDecorator } from '@storybook/react';
+import { Theme } from '../../src/app/providers/ThemeProvider';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '../../src/app/providers/ThemeProvider';
 import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator/RouterDecorator';
 import { i18nextDecorator } from '../../src/shared/config/storybook/i18nextDecorator/i18nextDecorator';
 import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator';
