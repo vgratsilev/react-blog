@@ -7,6 +7,7 @@ Learning project.
 ### Tools:
 
 * Bundler: [Webpack](https://webpack.js.org/)
+  * and [Vite](https://vitejs.dev/) for dev bundle.
 * JavaScript Compiler: [Babel](https://babeljs.io/)
   * Check Circular Dependency
     with [circular-dependency-plugin](https://github.com/aackerman/circular-dependency-plugin)
@@ -34,6 +35,9 @@ Learning project.
   * Mock storybook API requests
     with [storybook-addon-mock](https://github.com/nutboltu/storybook-addon-mock)
 * Some components based on [Headless UI kit](https://headlessui.com/)
+* [use-gesture](https://github.com/pmndrs/use-gesture) is a library that lets you bind
+  richer mouse and touch events to any component or
+  view. Worked with an animation library [react-spring](https://github.com/pmndrs/react-spring)
 
 ### Backend:
 
@@ -49,6 +53,7 @@ Learning project.
   plugin: [eslint-plugin-fsd-import](https://www.npmjs.com/package/eslint-plugin-fsd-import)
 * Code splitting
 * Async reducers, async thunk
+* Custom refactoring tools with [ts-morph](https://ts-morph.com/)
 
 #### Project
 
