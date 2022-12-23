@@ -1,13 +1,13 @@
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { classNames, TMods } from '@/shared/lib/classNames/classNames';
 import { ChangeEvent, InputHTMLAttributes, memo, useEffect, useRef } from 'react';
 import cls from './Input.module.scss';
 
-type InputHTMLElement = Omit<
+type TInputHTMLElement = Omit<
     InputHTMLAttributes<HTMLInputElement>,
     'value' | 'onChange' | 'readOnly' | 'onKeyDown'
 >;
 
-interface IInputProps extends InputHTMLElement {
+interface IInputProps extends TInputHTMLElement {
     className?: string;
     value?: string | number;
     onChange?: (value: string) => void;
@@ -40,7 +40,7 @@ export const Input = memo((props: IInputProps) => {
         onChange?.(e.target.value);
     };
 
-    const mods: Mods = {
+    const mods: TMods = {
         [cls.readonly]: readonly,
     };
 

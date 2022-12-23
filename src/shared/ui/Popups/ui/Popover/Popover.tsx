@@ -4,12 +4,12 @@ import { Popover as HPopover } from '@headlessui/react';
 import { mapDirectionClass } from '../../styles/consts';
 import cls from './Popover.module.scss';
 import popupCls from '../../styles/popup.module.scss';
-import { DropDownDirection } from '../../../../types/ui';
+import { TDropDownDirection } from '../../../../types/ui';
 
 interface IPopoverProps {
     className?: string;
     trigger: ReactNode;
-    direction?: DropDownDirection;
+    direction?: TDropDownDirection;
     children: ReactNode;
 }
 

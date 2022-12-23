@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     DynamicModuleLoader,
-    ReducersList,
+    TReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { HStack } from '@/shared/ui/Stack';
 import {
@@ -25,7 +25,7 @@ export interface IAddCommentFormProps {
     onSendComment: (text: string) => void;
 }
 
-const reducers: ReducersList = {
+const reducers: TReducersList = {
     addCommentForm: addCommentFormReducer,
 };
 

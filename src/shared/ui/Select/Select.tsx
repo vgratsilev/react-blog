@@ -1,4 +1,4 @@
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { classNames, TMods } from '@/shared/lib/classNames/classNames';
 import { ChangeEvent, useMemo, memo } from 'react';
 import cls from './Select.module.scss';
 
@@ -33,7 +33,7 @@ export const Select = typedMemo(<T extends string>(props: ISelectProps<T>) => {
             )),
         [options],
     );
-    const mods: Mods = {
+    const mods: TMods = {
         [cls.readonly]: readonly,
     };
 

@@ -4,7 +4,7 @@ import { Listbox as HListBox } from '@headlessui/react';
 import { Button } from '../../../Button/Button';
 import cls from './ListBox.module.scss';
 import popupCls from '../../styles/popup.module.scss';
-import { DropDownDirection } from '../../../../types/ui';
+import { TDropDownDirection } from '../../../../types/ui';
 import { mapDirectionClass } from '../../styles/consts';
 
 export interface IListBoxItem {
@@ -21,7 +21,7 @@ interface IListBoxProps {
     defaultValue?: string;
     onChange: <T extends string>(value: T) => void;
     readonly?: boolean;
-    direction?: DropDownDirection;
+    direction?: TDropDownDirection;
 }
 
 export const ListBox = memo((props: IListBoxProps) => {

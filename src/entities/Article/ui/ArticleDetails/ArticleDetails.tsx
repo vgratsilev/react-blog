@@ -1,7 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
-    ReducersList,
+    TReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { memo, useCallback } from 'react';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -24,7 +24,7 @@ import {
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import cls from './ArticleDetails.module.scss';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
-import { ArticleBlock } from '../../model/types/article';
+import { TArticleBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
@@ -34,7 +34,7 @@ interface IArticleDetailsProps {
     id: string;
 }
 
-const reducers: ReducersList = {
+const reducers: TReducersList = {
     articleDetails: articleDetailsReducer,
 };
 
@@ -50,7 +50,7 @@ export const ArticleDetails = memo((props: IArticleDetailsProps) => {
         dispatch(fetchArticleById(id));
     });
 
-    const renderBlock = useCallback((block: ArticleBlock) => {
+    const renderBlock = useCallback((block: TArticleBlock) => {
         switch (block.type) {
             case ArticleBlockType.TEXT:
                 return (

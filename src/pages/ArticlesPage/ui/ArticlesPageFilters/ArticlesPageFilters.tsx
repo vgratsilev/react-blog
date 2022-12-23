@@ -13,7 +13,7 @@ import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/shared/ui/Card';
 import { Input } from '@/shared/ui/Input';
-import { SortOrder } from '@/shared/types';
+import { TSortOrder } from '@/shared/types';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
@@ -65,7 +65,7 @@ export const ArticlesPageFilters = memo((props: IArticlesPageFiltersProps) => {
     );
 
     const onChangeOrder = useCallback(
-        (newOrder: SortOrder) => {
+        (newOrder: TSortOrder) => {
             dispatch(articlesPageActions.setOrder(newOrder));
             dispatch(articlesPageActions.setPage(1));
             fetchData();

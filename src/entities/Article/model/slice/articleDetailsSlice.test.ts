@@ -28,7 +28,7 @@ const data: IArticle = {
 
 describe('articleDetailsSlice.test', () => {
     test('test fetchArticleById pending', () => {
-        const state: DeepPartial<IArticleDetailsSchema> = {
+        const state: TDeepPartial<IArticleDetailsSchema> = {
             isLoading: false,
             error: undefined,
         };
@@ -41,7 +41,7 @@ describe('articleDetailsSlice.test', () => {
     });
 
     test('test fetchArticleById fulfilled', () => {
-        const state: DeepPartial<IArticleDetailsSchema> = {
+        const state: TDeepPartial<IArticleDetailsSchema> = {
             isLoading: true,
         };
         expect(

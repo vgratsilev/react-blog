@@ -5,7 +5,7 @@ import { ArticleDetails } from '@/entities/Article';
 import { useParams } from 'react-router-dom';
 import {
     DynamicModuleLoader,
-    ReducersList,
+    TReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { Page } from '@/widgets/Page';
 import { VStack } from '@/shared/ui/Stack';
@@ -21,7 +21,7 @@ interface IArticleDetailsPageProps {
     testId?: string;
 }
 
-const reducers: ReducersList = {
+const reducers: TReducersList = {
     articleDetailsPage: articleDetailsPageReducer,
 };
 

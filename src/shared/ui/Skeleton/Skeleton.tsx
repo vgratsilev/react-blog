@@ -1,5 +1,5 @@
 import { CSSProperties, memo, useMemo } from 'react';
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { classNames, TMods } from '@/shared/lib/classNames/classNames';
 import cls from './Skeleton.module.scss';
 
 interface ISkeletonProps {
@@ -22,7 +22,7 @@ export const Skeleton = memo((props: ISkeletonProps) => {
         [borderRadius, height, width],
     );
 
-    const mods: Mods = {
+    const mods: TMods = {
         [cls.noAnimation]: noAnimation,
     };
 

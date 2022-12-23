@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import {
     DynamicModuleLoader,
-    ReducersList,
+    TReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -20,7 +20,7 @@ interface IArticlePageProps {
     className?: string;
 }
 
-const reducers: ReducersList = {
+const reducers: TReducersList = {
     articlesPage: articlesPageReducer,
 };
 

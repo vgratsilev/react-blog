@@ -2,30 +2,30 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { ReactNode } from 'react';
 import cls from './Flex.module.scss';
 
-export type FlexJustify = 'start' | 'center' | 'end' | 'between';
-export type FlexAlign = 'start' | 'center' | 'end';
-export type FlexDirection = 'row' | 'column';
-export type FlexGap = '4' | '8' | '16' | '32';
+export type TFlexJustify = 'start' | 'center' | 'end' | 'between';
+export type TFlexAlign = 'start' | 'center' | 'end';
+export type TFlexDirection = 'row' | 'column';
+export type TFlexGap = '4' | '8' | '16' | '32';
 
-const justifyClasses: Record<FlexJustify, string> = {
+const justifyClasses: Record<TFlexJustify, string> = {
     start: cls.justifyStart,
     center: cls.justifyCenter,
     end: cls.justifyEnd,
     between: cls.justifyBetween,
 };
 
-const alignClasses: Record<FlexAlign, string> = {
+const alignClasses: Record<TFlexAlign, string> = {
     start: cls.alignStart,
     center: cls.alignCenter,
     end: cls.alignEnd,
 };
 
-const directionsClasses: Record<FlexDirection, string> = {
+const directionsClasses: Record<TFlexDirection, string> = {
     row: cls.directionRow,
     column: cls.directionColumn,
 };
 
-const gapClasses: Record<FlexGap, string> = {
+const gapClasses: Record<TFlexGap, string> = {
     4: cls.gap4,
     8: cls.gap8,
     16: cls.gap16,
@@ -35,10 +35,10 @@ const gapClasses: Record<FlexGap, string> = {
 export interface IFlexProps {
     className?: string;
     children: ReactNode;
-    justify?: FlexJustify;
-    align?: FlexAlign;
-    direction?: FlexDirection;
-    gap?: FlexGap;
+    justify?: TFlexJustify;
+    align?: TFlexAlign;
+    direction?: TFlexDirection;
+    gap?: TFlexGap;
     maxWidth?: boolean;
     Tag?: keyof HTMLElementTagNameMap;
 }

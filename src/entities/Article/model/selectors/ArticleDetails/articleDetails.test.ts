@@ -31,7 +31,7 @@ describe('getArticleDetailsData', () => {
             ],
         };
 
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articleDetails: { data },
         };
 
@@ -39,14 +39,14 @@ describe('getArticleDetailsData', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticleDetailsData(state as IStateSchema)).toEqual(undefined);
     });
 });
 
 describe('getArticleDetailsError', () => {
     test('should return error', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articleDetails: { error: '123' },
         };
 
@@ -54,14 +54,14 @@ describe('getArticleDetailsError', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticleDetailsError(state as IStateSchema)).toEqual(undefined);
     });
 });
 
 describe('getArticleDetailsIsLoading', () => {
     test('should return isLoading', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articleDetails: { isLoading: true },
         };
 
@@ -69,7 +69,7 @@ describe('getArticleDetailsIsLoading', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticleDetailsIsLoading(state as IStateSchema)).toEqual(false);
     });
 });

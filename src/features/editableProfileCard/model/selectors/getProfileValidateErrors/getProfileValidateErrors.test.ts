@@ -9,7 +9,7 @@ describe('getProfileValidateErrors', () => {
             ValidateProfileError.INCORRECT_AGE,
         ];
 
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             profile: { validateErrors: errors },
         };
 
@@ -17,7 +17,7 @@ describe('getProfileValidateErrors', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getProfileValidateErrors(state as IStateSchema)).toEqual(undefined);
     });
 });

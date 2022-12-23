@@ -1,4 +1,4 @@
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { classNames, TMods } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
 import { Input } from '@/shared/ui/Input';
@@ -73,7 +73,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
         );
     }
 
-    const mods: Mods = {
+    const mods: TMods = {
         [cls.editing]: !readonly,
     };
 

@@ -1,11 +1,11 @@
 import { createContext, ReactNode, useContext, useEffect, useMemo, useRef, useState } from 'react';
 
-type SpringType = typeof import('@react-spring/web');
-type GestureType = typeof import('@use-gesture/react');
+type TSpringType = typeof import('@react-spring/web');
+type TGestureType = typeof import('@use-gesture/react');
 
 interface IAnimationContextPayload {
-    Gesture?: GestureType;
-    Spring?: SpringType;
+    Gesture?: TGestureType;
+    Spring?: TSpringType;
     isLoaded?: boolean;
 }
 
@@ -23,8 +23,8 @@ const getAsyncAnimationModules = () =>
 
 export const AnimationProvider = (props: IAnimationProviderProps) => {
     const { children } = props;
-    const SpringRef = useRef<SpringType>();
-    const GestureRef = useRef<GestureType>();
+    const SpringRef = useRef<TSpringType>();
+    const GestureRef = useRef<TGestureType>();
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {

@@ -1,9 +1,9 @@
 import { useCallback, useRef } from 'react';
 
-type Timer = ReturnType<typeof setTimeout>;
+type TTimer = ReturnType<typeof setTimeout>;
 
 export const useDebounce = (callback: (...args: any[]) => void, delay: number) => {
-    const timer = useRef<Timer>();
+    const timer = useRef<TTimer>();
 
     return useCallback(
         (...args: any[]) => {

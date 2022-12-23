@@ -2,15 +2,15 @@ import { memo, useMemo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { ISelectOption, Select } from '@/shared/ui/Select';
-import { SortOrder } from '@/shared/types';
+import { TSortOrder } from '@/shared/types';
 import { ArticleSortField } from '../../model/consts/articleConsts';
 import cls from './ArticleSortSelector.module.scss';
 
 interface IArticleSortSelectorProps {
     className?: string;
     sort: ArticleSortField;
-    order: SortOrder;
-    onChangeOrder: (newOrder: SortOrder) => void;
+    order: TSortOrder;
+    onChangeOrder: (newOrder: TSortOrder) => void;
     onChangeSort: (newSort: ArticleSortField) => void;
 }
 
@@ -27,7 +27,7 @@ export const ArticleSortSelector = memo((props: IArticleSortSelectorProps) => {
         [t],
     );
 
-    const orderOptions = useMemo<ISelectOption<SortOrder>[]>(
+    const orderOptions = useMemo<ISelectOption<TSortOrder>[]>(
         () => [
             { value: 'asc', content: t('SortDirectionAsc') },
             { value: 'desc', content: t('SortDirectionDesc') },
@@ -45,7 +45,7 @@ export const ArticleSortSelector = memo((props: IArticleSortSelectorProps) => {
                 onChange={onChangeSort}
                 labelNoWidth
             />
-            <Select<SortOrder>
+            <Select<TSortOrder>
                 className={cls.order}
                 label={t('SortDirectionLabel')}
                 options={orderOptions}

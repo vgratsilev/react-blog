@@ -31,7 +31,7 @@ componentsDirs?.forEach((directory) => {
     // console.log(directory.getBaseName());
     const indexFilePath = `${directory.getPath()}/index.ts`;
     const indexFile = directory.getSourceFile(indexFilePath);
-    console.log(indexFile?.getBaseName());
+    // console.log(indexFile?.getBaseName());
 
     if (!indexFile) {
         const sourceCode = `export * from './${directory.getBaseName()}';

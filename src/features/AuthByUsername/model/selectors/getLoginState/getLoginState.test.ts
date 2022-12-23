@@ -3,7 +3,7 @@ import { getLoginState } from './getLoginState';
 
 describe('getLoginState', () => {
     test('should return loginForm object', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             loginForm: {
                 isLoading: false,
                 username: 'test',
@@ -20,7 +20,7 @@ describe('getLoginState', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getLoginState(state as IStateSchema)).toEqual({
             isLoading: false,
             username: '',

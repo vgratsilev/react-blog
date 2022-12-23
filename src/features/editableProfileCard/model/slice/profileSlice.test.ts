@@ -18,14 +18,14 @@ const data: IProfile = {
 
 describe('profileSlice.test', () => {
     test('test set readonly', () => {
-        const state: DeepPartial<IProfileSchema> = {};
+        const state: TDeepPartial<IProfileSchema> = {};
         expect(profileReducer(state as IProfileSchema, profileActions.setReadonly(true))).toEqual({
             readonly: true,
         });
     });
 
     test('test cancel edit', () => {
-        const state: DeepPartial<IProfileSchema> = {
+        const state: TDeepPartial<IProfileSchema> = {
             data,
             form: { username: '' },
             readonly: false,
@@ -39,7 +39,7 @@ describe('profileSlice.test', () => {
     });
 
     test('test update profile', () => {
-        const state: DeepPartial<IProfileSchema> = {
+        const state: TDeepPartial<IProfileSchema> = {
             form: { username: 'test' },
         };
         expect(
@@ -53,7 +53,7 @@ describe('profileSlice.test', () => {
     });
 
     test('test update profile service pending', () => {
-        const state: DeepPartial<IProfileSchema> = {
+        const state: TDeepPartial<IProfileSchema> = {
             isLoading: false,
             validateErrors: [ValidateProfileError.SERVER_ERROR],
         };
@@ -64,7 +64,7 @@ describe('profileSlice.test', () => {
     });
 
     test('test update profile service fulfilled', () => {
-        const state: DeepPartial<IProfileSchema> = {
+        const state: TDeepPartial<IProfileSchema> = {
             isLoading: true,
         };
         expect(

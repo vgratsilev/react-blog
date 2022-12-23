@@ -9,9 +9,9 @@ import { UserRole } from '@/entities/User';
 import { ForbiddenPage } from '@/pages/ForbiddenPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
 import { AppRoutes, RoutePath } from '@/shared/const/router';
-import { AppRouteProps } from '@/shared/types/router';
+import { TAppRouteProps } from '@/shared/types/router';
 
-export const routeConfig: Record<AppRoutes, AppRouteProps> = {
+export const routeConfig: Record<AppRoutes, TAppRouteProps> = {
     [AppRoutes.MAIN]: {
         path: RoutePath.main,
         element: <MainPage />,

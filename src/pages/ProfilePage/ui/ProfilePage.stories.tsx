@@ -18,7 +18,7 @@ export default {
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
 
-const state: DeepPartial<IStateSchema> = {
+const state: TDeepPartial<IStateSchema> = {
     profile: {
         form: {
             username: 'admin',

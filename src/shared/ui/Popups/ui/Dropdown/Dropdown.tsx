@@ -1,6 +1,6 @@
 import { Fragment, memo, ReactNode } from 'react';
 import { Menu } from '@headlessui/react';
-import { DropDownDirection } from '@/shared/types/ui';
+import { TDropDownDirection } from '@/shared/types/ui';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink } from '../../../AppLink/AppLink';
 import cls from './Dropdown.module.scss';
@@ -19,7 +19,7 @@ interface IDropdownProps {
     className?: string;
     items: IDropdownItem[];
     trigger: ReactNode;
-    direction?: DropDownDirection;
+    direction?: TDropDownDirection;
 }
 
 export const Dropdown = memo((props: IDropdownProps) => {

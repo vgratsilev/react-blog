@@ -1,5 +1,5 @@
-export type BuildMode = 'development' | 'production';
-type AnalyzerMode = 'server' | 'static' | 'json' | 'disabled';
+export type TBuildMode = 'development' | 'production';
+type TAnalyzerMode = 'server' | 'static' | 'json' | 'disabled';
 
 export interface IBuildPath {
     entry: string;
@@ -12,18 +12,18 @@ export interface IBuildPath {
 }
 
 export interface IBuildEnv {
-    mode: BuildMode;
+    mode: TBuildMode;
     port: number;
-    analyzerMode: AnalyzerMode;
+    analyzerMode: TAnalyzerMode;
     apiURL: string;
 }
 
 export interface IBuildOptions {
-    mode: BuildMode;
+    mode: TBuildMode;
     paths: IBuildPath;
     isDev: boolean;
     port: number;
-    analyzerMode: AnalyzerMode;
+    analyzerMode: TAnalyzerMode;
     apiURL: string;
     project: 'storybook' | 'frontend' | 'jest';
 }

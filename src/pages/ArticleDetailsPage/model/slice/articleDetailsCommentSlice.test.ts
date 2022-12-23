@@ -16,7 +16,7 @@ const data: IArticleDetailsCommentSchema = {
 
 describe('articleDetailsCommentSlice.test', () => {
     test('test fetchCommentsByArticleId pending', () => {
-        const state: DeepPartial<IArticleDetailsCommentSchema> = {
+        const state: TDeepPartial<IArticleDetailsCommentSchema> = {
             isLoading: false,
             error: undefined,
         };
@@ -32,7 +32,7 @@ describe('articleDetailsCommentSlice.test', () => {
     });
 
     test('test fetchCommentsByArticleId fulfilled', () => {
-        const state: DeepPartial<IArticleDetailsCommentSchema> = {
+        const state: TDeepPartial<IArticleDetailsCommentSchema> = {
             isLoading: true,
         };
 

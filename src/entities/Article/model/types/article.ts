@@ -24,7 +24,7 @@ export interface IArticleTextBlock extends IArticleBlockBase {
     paragraphs: string[];
 }
 
-export type ArticleBlock = IArticleTextBlock | IArticleImageBlock | IArticleCodeBlock;
+export type TArticleBlock = IArticleTextBlock | IArticleImageBlock | IArticleCodeBlock;
 
 export interface IArticle {
     id: string;
@@ -35,5 +35,5 @@ export interface IArticle {
     views: number;
     created_dt: string;
     type: ArticleType[];
-    blocks: ArticleBlock[];
+    blocks: TArticleBlock[];
 }

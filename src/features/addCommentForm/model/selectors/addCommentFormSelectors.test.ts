@@ -3,7 +3,7 @@ import { getAddCommentFormText, getAddCommentFormError } from './addCommentFormS
 
 describe('getAddCommentFormText', () => {
     test('should return addCommentForm object', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             addCommentForm: { text: 'test comment' },
         };
 
@@ -11,14 +11,14 @@ describe('getAddCommentFormText', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getAddCommentFormText(state as IStateSchema)).toEqual('');
     });
 });
 
 describe('getAddCommentFormError', () => {
     test('should return error', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             addCommentForm: { error: '123' },
         };
 
@@ -26,7 +26,7 @@ describe('getAddCommentFormError', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getAddCommentFormError(state as IStateSchema)).toEqual(undefined);
     });
 });

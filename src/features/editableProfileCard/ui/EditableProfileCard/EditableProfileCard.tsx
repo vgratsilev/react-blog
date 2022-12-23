@@ -10,7 +10,7 @@ import { Text, TextTheme } from '@/shared/ui/Text';
 import { ProfileCard } from '@/entities/Profile';
 import {
     DynamicModuleLoader,
-    ReducersList,
+    TReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { VStack } from '@/shared/ui/Stack';
 import { ValidateProfileError } from '../../model/consts/consts';
@@ -28,7 +28,7 @@ interface IEditableProfileCardProps {
     id: string;
 }
 
-const reducers: ReducersList = {
+const reducers: TReducersList = {
     profile: profileReducer,
 };
 

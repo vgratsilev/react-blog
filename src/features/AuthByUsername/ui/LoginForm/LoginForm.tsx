@@ -7,7 +7,7 @@ import { memo, useCallback } from 'react';
 import { Text, TextTheme } from '@/shared/ui/Text';
 import {
     DynamicModuleLoader,
-    ReducersList,
+    TReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
@@ -20,7 +20,7 @@ export interface ILoginFormProps {
     onSuccess: () => void;
 }
 
-const initialReducers: ReducersList = {
+const initialReducers: TReducersList = {
     loginForm: loginReducer,
 };
 

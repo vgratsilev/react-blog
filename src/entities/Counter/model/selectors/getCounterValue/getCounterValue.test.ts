@@ -3,7 +3,7 @@ import { getCounterValue } from './getCounterValue';
 
 describe('getCounterValue', () => {
     test('', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             counter: {
                 value: 10,
             },

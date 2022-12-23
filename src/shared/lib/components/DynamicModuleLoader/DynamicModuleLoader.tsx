@@ -1,15 +1,15 @@
 import { Reducer } from '@reduxjs/toolkit';
-import { IReduxStoreWithManager, StateSchemaKey } from '@/app/providers/StoreProvider';
+import { IReduxStoreWithManager, TStateSchemaKey } from '@/app/providers/StoreProvider';
 import { ReactNode, useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
 
-export type ReducersList = {
-    [name in StateSchemaKey]?: Reducer;
+export type TReducersList = {
+    [name in TStateSchemaKey]?: Reducer;
 };
 
 interface IDynamicModuleLoaderProps {
     children: ReactNode;
-    reducers: ReducersList;
+    reducers: TReducersList;
     removeAfterUnmount?: boolean;
 }
 
@@ -23,11 +23,11 @@ export const DynamicModuleLoader = (props: IDynamicModuleLoaderProps) => {
         const allReducers = store.reducerManager.getReducerMap();
 
         Object.entries(reducers).forEach(([name, reducer]) => {
-            const mounted = allReducers[name as StateSchemaKey];
+            const mounted = allReducers[name as TStateSchemaKey];
 
             // add
             if (!mounted) {
-                store.reducerManager.add(name as StateSchemaKey, reducer);
+                store.reducerManager.add(name as TStateSchemaKey, reducer);
                 dispatch({ type: `@INIT ${name} reducer` });
             }
         });
@@ -35,7 +35,7 @@ export const DynamicModuleLoader = (props: IDynamicModuleLoaderProps) => {
         return () => {
             if (removeAfterUnmount) {
                 Object.entries(reducers).forEach(([name]) => {
-                    store.reducerManager.remove(name as StateSchemaKey);
+                    store.reducerManager.remove(name as TStateSchemaKey);
                     dispatch({ type: `@DESTROY ${name} reducer` });
                 });
             }

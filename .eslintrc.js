@@ -102,6 +102,19 @@ module.exports = {
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'import/no-cycle': 'off',
+        // 'import/order': [
+        //     'error',
+        //     {
+        //         pathGroups: [
+        //             {
+        //                 pattern: '@/',
+        //                 group: 'internal',
+        //                 position: 'before',
+        //             },
+        //         ],
+        //         'newlines-between': 'always',
+        //     },
+        // ],
         'react/display-name': 'off',
         'react/prop-types': 'off',
         'prettier/prettier': [
@@ -118,6 +131,14 @@ module.exports = {
                 format: ['PascalCase'],
                 custom: {
                     regex: '^I[A-Z]',
+                    match: true,
+                },
+            },
+            {
+                selector: 'typeAlias',
+                format: ['PascalCase'],
+                custom: {
+                    regex: '^T[A-Z]',
                     match: true,
                 },
             },

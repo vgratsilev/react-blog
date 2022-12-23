@@ -3,7 +3,7 @@ import { addCommentFormReducer, addCommentFormActions } from './addCommentFormSl
 
 describe('loginSlice.test', () => {
     test('test set text', () => {
-        const state: DeepPartial<IAddCommentFormSchema> = { text: '123' };
+        const state: TDeepPartial<IAddCommentFormSchema> = { text: '123' };
         expect(
             addCommentFormReducer(
                 state as IAddCommentFormSchema,

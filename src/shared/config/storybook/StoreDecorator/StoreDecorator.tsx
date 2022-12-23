@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 import { Story } from '@storybook/react';
 import { IStateSchema, StoreProvider } from '@/app/providers/StoreProvider';
-import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { TReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { loginReducer } from '@/features/AuthByUsername/testing';
 import { articleDetailsReducer } from '@/entities/Article/testing';
 import { addCommentFormReducer } from '@/features/addCommentForm/testing';
@@ -10,7 +10,7 @@ import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing';
 import { profileReducer } from '@/features/editableProfileCard/testing';
 // import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/module/slice/articleDetailsCommentSlice';
 
-const defaultAsyncReducers: ReducersList = {
+const defaultAsyncReducers: TReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
@@ -21,7 +21,7 @@ const defaultAsyncReducers: ReducersList = {
 };
 
 export const StoreDecorator =
-    (state: DeepPartial<IStateSchema>, asyncReducers?: ReducersList) => (StoryComponent: Story) =>
+    (state: TDeepPartial<IStateSchema>, asyncReducers?: TReducersList) => (StoryComponent: Story) =>
         (
             <StoreProvider
                 initialState={state}

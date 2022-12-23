@@ -16,7 +16,7 @@ import {
 
 describe('getArticlesPageError', () => {
     test('should return error', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articlesPage: { error: '123' },
         };
 
@@ -24,14 +24,14 @@ describe('getArticlesPageError', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticlesPageError(state as IStateSchema)).toEqual(undefined);
     });
 });
 
 describe('getArticlesPageIsLoading', () => {
     test('should return isLoading', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articlesPage: { isLoading: true },
         };
 
@@ -39,14 +39,14 @@ describe('getArticlesPageIsLoading', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticlesPageIsLoading(state as IStateSchema)).toEqual(false);
     });
 });
 
 describe('getArticlesPageView', () => {
     test('should return view', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articlesPage: { view: ArticleView.LIST },
         };
 
@@ -54,14 +54,14 @@ describe('getArticlesPageView', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticlesPageView(state as IStateSchema)).toEqual(ArticleView.TILE);
     });
 });
 
 describe('getArticlesPageNum', () => {
     test('should return page number', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articlesPage: { page: 4 },
         };
 
@@ -69,14 +69,14 @@ describe('getArticlesPageNum', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticlesPageNum(state as IStateSchema)).toBe(1);
     });
 });
 
 describe('getArticlesPageHasMore', () => {
     test('should return hasMore', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articlesPage: { hasMore: false },
         };
 
@@ -84,14 +84,14 @@ describe('getArticlesPageHasMore', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticlesPageHasMore(state as IStateSchema)).toBeUndefined();
     });
 });
 
 describe('getArticlesPageLimit', () => {
     test('should return limit', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articlesPage: { limit: 5 },
         };
 
@@ -99,14 +99,14 @@ describe('getArticlesPageLimit', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticlesPageLimit(state as IStateSchema)).toBe(9);
     });
 });
 
 describe('getArticlesPageIsInited', () => {
     test('should return isInited', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articlesPage: { isInited: true },
         };
 
@@ -114,14 +114,14 @@ describe('getArticlesPageIsInited', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticlesPageIsInited(state as IStateSchema)).toBeFalsy();
     });
 });
 
 describe('getArticlesPageSort', () => {
     test('should return sort', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articlesPage: { sort: ArticleSortField.TITLE },
         };
 
@@ -129,14 +129,14 @@ describe('getArticlesPageSort', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticlesPageSort(state as IStateSchema)).toBe(ArticleSortField.CREATED);
     });
 });
 
 describe('getArticlesPageOrder', () => {
     test('should return order', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articlesPage: { order: 'desc' },
         };
 
@@ -144,14 +144,14 @@ describe('getArticlesPageOrder', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticlesPageOrder(state as IStateSchema)).toBe('asc');
     });
 });
 
 describe('getArticlesPageSearch', () => {
     test('should return search', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articlesPage: { search: 'test' },
         };
 
@@ -159,14 +159,14 @@ describe('getArticlesPageSearch', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticlesPageSearch(state as IStateSchema)).toBe('');
     });
 });
 
 describe('getArticlesPageType', () => {
     test('should return type', () => {
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             articlesPage: { type: ArticleType.FOOD },
         };
 
@@ -174,7 +174,7 @@ describe('getArticlesPageType', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getArticlesPageType(state as IStateSchema)).toBe(ArticleType.ALL);
     });
 });

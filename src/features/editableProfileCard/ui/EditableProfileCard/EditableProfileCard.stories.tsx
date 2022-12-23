@@ -18,7 +18,7 @@ export default {
     },
 } as ComponentMeta<typeof EditableProfileCard>;
 
-const state: DeepPartial<IStateSchema> = {
+const state: TDeepPartial<IStateSchema> = {
     profile: {
         form: {
             username: 'admin',

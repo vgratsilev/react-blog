@@ -16,7 +16,7 @@ describe('getProfileForm', () => {
             currency: Currency.USD,
         };
 
-        const state: DeepPartial<IStateSchema> = {
+        const state: TDeepPartial<IStateSchema> = {
             profile: { form: data },
         };
 
@@ -24,7 +24,7 @@ describe('getProfileForm', () => {
     });
 
     test('should work with empty state', () => {
-        const state: DeepPartial<IStateSchema> = {};
+        const state: TDeepPartial<IStateSchema> = {};
         expect(getProfileForm(state as IStateSchema)).toEqual(undefined);
     });
 });

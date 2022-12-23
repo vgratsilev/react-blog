@@ -21,7 +21,7 @@ export enum TextSize {
     XL = 'size_XL',
 }
 
-type TitleTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'p';
+type TTitleTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'p';
 
 interface ITextProps {
     className?: string;
@@ -30,7 +30,7 @@ interface ITextProps {
     theme?: TextTheme;
     align?: TextAlign;
     size?: TextSize;
-    TitleTag?: TitleTagType;
+    TitleTag?: TTitleTagType;
 
     'data-testid'?: string;
 }
