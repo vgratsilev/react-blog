@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
-import { Portal } from '../Portal/Portal';
-import { ModalLayout } from './ui/ModalLayout';
-import { useMount } from './lib/useMount';
+import { Portal } from '../../../Portal/Portal';
+import { ModalLayout } from '../ModalLayout/ModalLayout';
+import { useMount } from '../../lib/useMount';
 
 interface IModalProps {
     className?: string;

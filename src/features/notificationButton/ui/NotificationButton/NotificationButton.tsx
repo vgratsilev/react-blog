@@ -1,11 +1,11 @@
 import { memo, useCallback, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
-import { Icon } from '@/shared/ui/Icon/Icon';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Icon } from '@/shared/ui/Icon';
 import BellIcon from '@/shared/assets/icons/bell.svg';
 import { NotificationList } from '@/entities/Notification';
 import { Popover } from '@/shared/ui/Popups';
-import { Drawer } from '@/shared/ui/Drawer/Drawer';
+import { Drawer } from '@/shared/ui/Drawer';
 import { isMobileDevice } from '@/shared/lib/utils/isMobileDevice/isMobileDevice';
 import cls from './NotificationButton.module.scss';
 

@@ -5,7 +5,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import animationStyles from './animationStyles.module.scss';
 import cls from './ModalLayout.module.scss';
-import { ANIMATION_TIME } from '../config/ModalConfig';
+import { ANIMATION_TIME } from '../../config/ModalConfig';
 
 interface IModalLayoutProps {
     children: ReactNode;

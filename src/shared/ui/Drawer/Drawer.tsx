@@ -15,7 +15,7 @@ interface IDrawerProps {
 
 const height = window.innerHeight - 100;
 
-export const DrawerContent = memo((props: IDrawerProps) => {
+const DrawerContent = memo((props: IDrawerProps) => {
     const { className, children, isOpen, onClose } = props;
     const { theme } = useTheme();
 
