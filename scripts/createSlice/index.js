@@ -1,3 +1,8 @@
+/**
+ * run: with npm run generate:slice <layer> <slice>
+ * ex: npm run generate:slice features articleRecommendationsList
+ */
+
 const createTemplate = require('./templates/createTemplate');
 
 const layer = process.argv[2];
