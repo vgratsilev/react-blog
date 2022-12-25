@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_blog=self.webpackChunkreact_blog||[]).push([[541],{3541:function(e,n,c){c.r(n),c.d(n,{ForbiddenPage:function(){return u}});var r=c(5443),t=c(7294),o=c(8498),s=c(5893);const u=(0,t.memo)((()=>{const{t:e}=(0,r.$)("forbidden");return(0,s.jsx)(o.T,{children:e("NoAccessText")})}))}}]);

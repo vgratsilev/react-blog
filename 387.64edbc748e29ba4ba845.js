@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_blog=self.webpackChunkreact_blog||[]).push([[387],{5387:function(e){e.exports=JSON.parse('{"AdminPanelPage":"Админ панель"}')}}]);

@@ -2,6 +2,7 @@
   "AppName": "Blog App",
   "AboutPageLink": "О сайте",
   "ProfilePageLink": "Профиль",
+  "AdminPanelLink": "Админ панель",
   "MainPageLink": "Главная",
   "ArticlesPageLink": "Статьи",
   "MainPage": "Главная",
@@ -21,5 +22,12 @@
   "NoCommentsMessage": "Комментарии отсутствуют",
   "InputNewCommentLabel": "Введите текст комментария",
   "InputNewCommentSendBtn": "Отправить",
-  "CreateNewArticleLink": "Создать новую статью"
+  "CreateNewArticleLink": "Создать новую статью",
+  "SelectCountryDefaultValue": "Выбирете страну",
+  "SelectCurrencyDefaultValue": "Выбирете валюту",
+  "StarRatingEditBtnText": "Изменить,",
+  "FeedbackLabel": "Как вам статья?",
+  "FeedbackCloseBtnText": "Закрыть",
+  "FeedbackSendBtnText": "Отправить",
+  "FeedbackSetDefaultTitle": "Спасибо за оценку!"
 }

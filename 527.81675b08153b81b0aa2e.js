@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_blog=self.webpackChunkreact_blog||[]).push([[527],{4527:function(e){e.exports=JSON.parse('{"AboutPage":"О сайте"}')}}]);

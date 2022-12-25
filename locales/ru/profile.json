@@ -15,5 +15,6 @@
   "NoDataError": "Данные не указаны",
   "IncorrectCountryError": "Некорректный регион",
   "IncorrectAgeError": "Некорректный возраст",
-  "IncorrectUserDataError": "Имя и фамилия обязательны"
+  "IncorrectUserDataError": "Имя и фамилия обязательны",
+  "ProfileNotFoundErrorText": "Профиь не найден"
 }

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_blog=self.webpackChunkreact_blog||[]).push([[254],{9254:function(n,e,a){a.r(e),a.d(e,{AdminPanelPage:function(){return s}});var t=a(5443),c=a(7294),r=a(8498),l=a(5893);const s=(0,c.memo)((()=>{const{t:n}=(0,t.$)("adminPanel");return(0,l.jsx)(r.T,{children:n("AdminPanelPage")})}))}}]);

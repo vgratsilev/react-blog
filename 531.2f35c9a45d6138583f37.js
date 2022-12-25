@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkreact_blog=self.webpackChunkreact_blog||[]).push([[531],{3531:e=>{e.exports=JSON.parse('{"EditArticlePageTitle":"Edit article with id ","NewArticlePageTitle":"Create new article"}')}}]);

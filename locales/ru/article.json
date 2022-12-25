@@ -21,5 +21,7 @@
   "FoodTabItemText": "Еда",
   "NoArticlesFoundText": "Статьи не найдены",
   "RecommendationsBlockTitle": "Рекомендуем статьи",
-  "EditArticleBtn": "Редактировать"
+  "EditArticleBtn": "Редактировать",
+  "RateArticleTitle": "Оцените статью",
+  "FeedbackArticleTitle": "Оставьте свой отзыв о статье, это поможет улучшить качество будущих статей"
 }
