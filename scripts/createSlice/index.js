@@ -1,6 +1,7 @@
 /**
  * run: with npm run generate:slice <layer> <slice>
  * ex: npm run generate:slice features articleRecommendationsList
+ * ex: npm run generate:slice pages testPage
  */
 
 const createTemplate = require('./templates/createTemplate');
