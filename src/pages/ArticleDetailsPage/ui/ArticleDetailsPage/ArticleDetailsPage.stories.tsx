@@ -4,6 +4,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { ArticleType, IArticle, ArticleBlockType } from '@/entities/Article';
 import AvatarTest from '@/shared/assets/tests/storybookAvatar.png';
 import { Theme } from '@/shared/const/theme';
+import withMock from 'storybook-addon-mock';
 import { IArticleDetailsCommentSchema } from '../../model/types/IArticleDetailsCommentSchema';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
@@ -58,6 +59,22 @@ const article: IArticle = {
     ],
 };
 
+const articlesList: IArticle[] = [
+    { ...article },
+    {
+        ...article,
+        id: '2',
+        title: 'Python Title',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1200px-Python.svg.png',
+    },
+    {
+        ...article,
+        id: '3',
+        title: 'GO news',
+        img: 'https://what-about-technology.ru/wp-content/uploads/2021/08/golang.png',
+    },
+];
+
 const comments: IArticleDetailsCommentSchema = {
     isLoading: false,
     error: undefined,
@@ -78,8 +95,26 @@ const comments: IArticleDetailsCommentSchema = {
 };
 
 export const Light = Template.bind({});
+Light.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/articles?_limit=3`,
+            method: 'GET',
+            status: 200,
+            response: articlesList,
+        },
+        {
+            url: `${__API__}/articleRatings?userId=1&articleId=1`,
+            method: 'GET',
+            status: 200,
+            response: [{ rate: 4 }],
+        },
+    ],
+};
 Light.decorators = [
+    withMock,
     StoreDecorator({
+        user: { authData: { id: '1' } },
         articleDetails: {
             data: article,
         },
@@ -90,8 +125,26 @@ Light.decorators = [
 ];
 
 export const Dark = Template.bind({});
+Dark.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/articles?_limit=3`,
+            method: 'GET',
+            status: 200,
+            response: articlesList,
+        },
+        {
+            url: `${__API__}/articleRatings?userId=1&articleId=1`,
+            method: 'GET',
+            status: 200,
+            response: [{ rate: 4 }],
+        },
+    ],
+};
 Dark.decorators = [
+    withMock,
     StoreDecorator({
+        user: { authData: { id: '1' } },
         articleDetails: {
             data: article,
         },
