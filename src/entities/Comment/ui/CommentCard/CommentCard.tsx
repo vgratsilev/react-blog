@@ -5,7 +5,7 @@ import { Avatar } from '@/shared/ui/Avatar';
 import { Skeleton } from '@/shared/ui/Skeleton';
 import { AppLink } from '@/shared/ui/AppLink';
 import { VStack } from '@/shared/ui/Stack';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteProfile } from '@/shared/const/router';
 import { IComment } from '../../model/types/comment';
 import cls from './CommentCard.module.scss';
 
@@ -57,7 +57,7 @@ export const CommentCard = memo((props: ICommentCardProps) => {
             className={classNames(cls.commentCard, {}, [className])}
         >
             <AppLink
-                to={`${RoutePath.profile}${comment.user.id}`}
+                to={getRouteProfile(comment.user.id)}
                 className={cls.header}
             >
                 <Avatar

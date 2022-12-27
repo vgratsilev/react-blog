@@ -7,7 +7,7 @@ import { Text, TextSize, TextTheme } from '@/shared/ui/Text';
 import { Dropdown } from '@/shared/ui/Popups';
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/User';
 import { useDispatch, useSelector } from 'react-redux';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 import cls from './UserAvatarDropdown.module.scss';
 
 interface IUserAvatarDropdownProps {
@@ -36,14 +36,14 @@ export const UserAvatarDropdown = memo((props: IUserAvatarDropdownProps) => {
                           {
                               id: '1',
                               content: t('AdminPanelLink'),
-                              href: RoutePath.admin_panel,
+                              href: getRouteAdminPanel(),
                           },
                       ]
                     : []),
                 {
                     id: '2',
                     content: t('ProfilePageLink'),
-                    href: RoutePath.profile + authData.id,
+                    href: getRouteProfile(authData.id),
                 },
                 {
                     id: '3',

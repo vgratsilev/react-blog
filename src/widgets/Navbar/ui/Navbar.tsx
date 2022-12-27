@@ -10,7 +10,7 @@ import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { UserAvatarDropdown } from '@/features/userAvatarDropdown';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleCreate } from '@/shared/const/router';
 import cls from './Navbar.module.scss';
 
 interface INavbarProps {
@@ -40,7 +40,7 @@ export const Navbar = memo(({ className }: INavbarProps) => {
                     TitleTag={'h1'}
                 />
                 <AppLink
-                    to={RoutePath.article_create}
+                    to={getRouteArticleCreate()}
                     theme={AppLinkTheme.SECONDARY}
                 >
                     {t('CreateNewArticleLink')}

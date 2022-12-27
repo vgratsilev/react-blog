@@ -4,18 +4,23 @@ import MainIcon from '@/shared/assets/icons/main.svg';
 import AboutIcon from '@/shared/assets/icons/list.svg';
 import UserIcon from '@/shared/assets/icons/user.svg';
 import ArticleIcon from '@/shared/assets/icons/article.svg';
-import { RoutePath } from '@/shared/const/router';
+import {
+    getRouteAbout,
+    getRouteArticles,
+    getRouteMain,
+    getRouteProfile,
+} from '@/shared/const/router';
 import { ISidebarItem } from '../types/sidebar';
 
 export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
     const sidebarItemsList: ISidebarItem[] = [
         {
-            path: RoutePath.main,
+            path: getRouteMain(),
             text: 'MainPageLink',
             Icon: MainIcon,
         },
         {
-            path: RoutePath.about,
+            path: getRouteAbout(),
             text: 'AboutPageLink',
             Icon: AboutIcon,
         },
@@ -24,13 +29,13 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
     if (userData) {
         sidebarItemsList.push(
             {
-                path: RoutePath.profile + userData.id,
+                path: getRouteProfile(userData.id),
                 text: 'ProfilePageLink',
                 Icon: UserIcon,
                 authOnly: true,
             },
             {
-                path: RoutePath.articles,
+                path: getRouteArticles(),
                 text: 'ArticlesPageLink',
                 Icon: ArticleIcon,
                 authOnly: true,
