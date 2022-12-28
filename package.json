@@ -31,7 +31,8 @@
     "storybook:build": "build-storybook -c ./config/storybook",
     "start:storybook:static": "npx http-server ./storybook-static",
     "test:ui:static": "npx loki test --host 172.22.208.1 --port 8080",
-    "generate:slice": "node scripts/createSlice/index.js"
+    "generate:slice": "node ./scripts/createSlice/index.js",
+    "postinstall": "node ./scripts/clear-cache.js"
   },
   "keywords": [],
   "author": "vgratsilev",
