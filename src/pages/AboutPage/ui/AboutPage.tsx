@@ -3,7 +3,7 @@ import { Page } from '@/widgets/Page';
 
 const AboutPage = () => {
     const { t } = useTranslation('about');
-    return <Page>{t('AboutPage')}</Page>;
+    return <Page data-testid={'AboutPage'}>{t('AboutPage')}</Page>;
 };
 
 export default AboutPage;

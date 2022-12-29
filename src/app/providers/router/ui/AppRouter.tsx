@@ -5,7 +5,7 @@ import { TAppRouteProps } from '@/shared/types/router';
 import { RequireAuth } from './RequireAuth';
 import { routeConfig } from '../config/routeConfig';
 
-const AppRouter = () => {
+export const AppRouter = memo(() => {
     const renderWithWrapper = useCallback((route: TAppRouteProps) => {
         const element = <Suspense fallback={<PageLoader />}>{route.element}</Suspense>;
 
@@ -25,6 +25,4 @@ const AppRouter = () => {
     }, []);
 
     return <Routes>{Object.values(routeConfig).map(renderWithWrapper)}</Routes>;
-};
-
-export default memo(AppRouter);
+});

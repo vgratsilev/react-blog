@@ -24,7 +24,10 @@ const ProfilePage = (props: IProfilePageProps) => {
     }
 
     return (
-        <Page className={classNames('', {}, [className])}>
+        <Page
+            className={classNames('', {}, [className])}
+            data-testid={'ProfilePage'}
+        >
             <VStack
                 gap={'16'}
                 maxWidth
