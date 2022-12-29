@@ -9,6 +9,8 @@ import { Card } from '@/shared/ui/Card';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { AppLink } from '@/shared/ui/AppLink';
 import { getRouteArticleDetails } from '@/shared/const/router';
+import { AppImage } from '@/shared/ui/AppImage';
+import { Skeleton } from '@/shared/ui/Skeleton';
 import { ArticleBlockType, ArticleView } from '../../model/consts/articleConsts';
 import cls from './ArticleListItem.module.scss';
 import { IArticle, IArticleTextBlock } from '../../model/types/article';
@@ -74,10 +76,16 @@ export const ArticleListItem = memo((props: IArticleListItemProps) => {
                         TitleTag={'h3'}
                     />
                     {types}
-                    <img
+                    <AppImage
                         src={article.img}
                         alt={article.title}
                         className={cls.img}
+                        fallback={
+                            <Skeleton
+                                width={'100%'}
+                                height={250}
+                            />
+                        }
                     />
                     {textBlock && (
                         <ArticleTextBlockComponent
@@ -107,10 +115,16 @@ export const ArticleListItem = memo((props: IArticleListItemProps) => {
         >
             <Card>
                 <div className={cls.imageWrapper}>
-                    <img
+                    <AppImage
                         src={article.img}
                         alt={article.title}
                         className={cls.img}
+                        fallback={
+                            <Skeleton
+                                width={200}
+                                height={200}
+                            />
+                        }
                     />
                     <Text
                         text={article.created_dt}

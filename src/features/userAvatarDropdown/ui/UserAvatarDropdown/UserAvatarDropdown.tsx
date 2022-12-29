@@ -69,6 +69,7 @@ export const UserAvatarDropdown = memo((props: IUserAvatarDropdownProps) => {
                     <Avatar
                         size={30}
                         src={authData.avatar}
+                        fallbackInverted
                     />
                     <Text
                         theme={TextTheme.INVERTED}
