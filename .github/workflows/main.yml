@@ -1,4 +1,4 @@
-name: linting, testing, building, deploy
+name: linting, testing, building
 on:
   push:
     branches:
@@ -8,9 +8,18 @@ on:
       - main
 permissions:
   contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 jobs:
-  Build-Lint-Test-Deploy:
+  build-and-ui-testing:
     runs-on: ubuntu-latest
+    concurrency: ci-${{ github.ref }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     strategy:
       matrix:
         node-version: [ 16.x ]
@@ -29,18 +38,6 @@ jobs:
         run: npm run build:prod
         if: always()
 
-      - name: Linting typescript
-        run: npm run lint:ts
-        if: always()
-
-      - name: Linting css
-        run: npm run lint:scss
-        if: always()
-
-      - name: Unit testing
-        run: npm run test:unit
-        if: always()
-
       - name: Build storybook
         run: npm run storybook:build
         if: always()
@@ -49,7 +46,47 @@ jobs:
         run: npm run test:ui:ci
         if: always()
 
-      - name: Deploy to gh-pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Generate HTML report
+        run: npm run test:ui:report
+        if: always()
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+        if: always()
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        if: always()
         with:
-          folder: build
+          path: '.loki'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        if: always()
+        uses: actions/deploy-pages@v1
+
+  checks:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install modules
+        run: npm ci
+
+      - name: Linting typescript
+        run: npm run lint:ts
+        if: always()
+
+      - name: Linting css
+        run: npm run lint:scss
+
+      - name: unit testing
+        if: always()
+        run: npm run test:unit
