@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Staring Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -46,8 +46,16 @@ jobs:
         run: npm run test:ui:ci
         if: always()
 
+      - name: unit testing
+        run: npm run test:unit
+        if: always()
+
       - name: Generate HTML report
         run: npm run test:ui:report
+        if: always()
+
+      - name: move loki report
+        run: mv .loki reports/
         if: always()
 
       - name: Setup Pages
@@ -73,7 +81,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Staring Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -86,7 +94,8 @@ jobs:
 
       - name: Linting css
         run: npm run lint:scss
+        if: always()
 
       - name: unit testing
-        if: always()
         run: npm run test:unit
+        if: always()
