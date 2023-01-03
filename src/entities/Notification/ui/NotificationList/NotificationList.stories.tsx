@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import withMock from 'storybook-addon-mock';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Theme } from '@/shared/const/theme';
 import { NotificationList } from './NotificationList';
@@ -43,7 +42,7 @@ Light.parameters = {
         },
     ],
 };
-Light.decorators = [withMock, StoreDecorator({})];
+Light.decorators = [StoreDecorator({})];
 
 export const Dark = Template.bind({});
 Dark.args = {};
@@ -73,4 +72,4 @@ Dark.parameters = {
         },
     ],
 };
-Dark.decorators = [withMock, StoreDecorator({}), ThemeDecorator(Theme.DARK)];
+Dark.decorators = [StoreDecorator({}), ThemeDecorator(Theme.DARK)];

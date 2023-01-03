@@ -1,7 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import withMock from 'storybook-addon-mock';
 import { Theme } from '@/shared/const/theme';
 import { ArticleRating } from './ArticleRating';
 
@@ -12,7 +11,6 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-        withMock,
         StoreDecorator({
             user: { authData: { id: '1' } },
         }),

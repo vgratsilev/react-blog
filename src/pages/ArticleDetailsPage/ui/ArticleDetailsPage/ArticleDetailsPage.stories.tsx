@@ -4,7 +4,6 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { ArticleType, IArticle, ArticleBlockType } from '@/entities/Article';
 import AvatarTest from '@/shared/assets/tests/storybookAvatar.png';
 import { Theme } from '@/shared/const/theme';
-import withMock from 'storybook-addon-mock';
 import { IArticleDetailsCommentSchema } from '../../model/types/IArticleDetailsCommentSchema';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
@@ -112,7 +111,6 @@ Light.parameters = {
     ],
 };
 Light.decorators = [
-    withMock,
     StoreDecorator({
         user: { authData: { id: '1' } },
         articleDetails: {
@@ -142,7 +140,6 @@ Dark.parameters = {
     ],
 };
 Dark.decorators = [
-    withMock,
     StoreDecorator({
         user: { authData: { id: '1' } },
         articleDetails: {
