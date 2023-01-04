@@ -1,0 +1,19 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": [
+      "es5",
+      "dom"
+    ],
+    "types": [
+      "cypress",
+      "node"
+    ],
+    "allowJs": true,
+    "isolatedModules": false,
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
