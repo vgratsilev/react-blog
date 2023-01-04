@@ -12,6 +12,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:i18next/recommended',
         'plugin:storybook/recommended',
+        'plugin:cypress/recommended',
         'prettier',
     ],
     plugins: [

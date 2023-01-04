@@ -48,6 +48,7 @@ const ArticlesPage = (props: IArticlePageProps) => {
             <Page
                 className={classNames(cls.articlePage, {}, [className])}
                 onScrollEnd={onLoadNextPart}
+                data-testid={'ArticlesPage'}
             >
                 {t('ArticlesPage')}
                 <ArticlesPageFilters />
