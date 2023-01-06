@@ -53,6 +53,7 @@ export const Flex = (props: IFlexProps) => {
         align = 'center',
         direction = 'row',
         Tag = 'div',
+        ...otherProps
     } = props;
 
     const classes = [
@@ -67,5 +68,12 @@ export const Flex = (props: IFlexProps) => {
         [cls.maxWidth]: maxWidth,
     };
 
-    return <Tag className={classNames(cls.flex, mods, classes)}>{children}</Tag>;
+    return (
+        <Tag
+            className={classNames(cls.flex, mods, classes)}
+            {...otherProps}
+        >
+            {children}
+        </Tag>
+    );
 };

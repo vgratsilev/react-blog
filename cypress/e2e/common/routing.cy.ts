@@ -1,20 +1,18 @@
-import { selectByTestId } from '../../helpers/selectByTestId';
-
 describe('Routing', () => {
     describe('User not authorized', () => {
         it('Route to Main page', () => {
             cy.visit('/');
-            cy.get(selectByTestId('MainPage')).should('exist');
+            cy.getByTestId('MainPage').should('exist');
         });
 
         it('Route open Profile Page', () => {
             cy.visit('/profile/1');
-            cy.get(selectByTestId('MainPage')).should('exist');
+            cy.getByTestId('MainPage').should('exist');
         });
 
         it('Route open not existed page', () => {
             cy.visit('/aaasssddd');
-            cy.get(selectByTestId('NotFoundPage')).should('exist');
+            cy.getByTestId('NotFoundPage').should('exist');
         });
     });
 
@@ -25,12 +23,12 @@ describe('Routing', () => {
 
         it('Route open Profile Page', () => {
             cy.visit('/profile/1');
-            cy.get(selectByTestId('ProfilePage')).should('exist');
+            cy.getByTestId('ProfilePage').should('exist');
         });
 
         it('Route open Articles Page', () => {
             cy.visit('/articles');
-            cy.get(selectByTestId('ArticlesPage')).should('exist');
+            cy.getByTestId('ArticlesPage').should('exist');
         });
     });
 });

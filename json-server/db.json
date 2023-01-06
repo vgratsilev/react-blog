@@ -325,6 +325,62 @@
           "code": "put some code here"
         }
       ]
+    },
+    {
+      "title": "Title 1",
+      "subtitle": "Subtitle 1",
+      "img": "https://cdn2.hexlet.io/store/derivatives/4aa834c7741fe4045ae3e5ecf6179654/fill_webp-850-400.webp",
+      "userId": "1",
+      "views": 420,
+      "created_dt": "31.10.2022",
+      "type": [
+        "IT",
+        "JS"
+      ],
+      "blocks": [],
+      "id": "USaogAA"
+    },
+    {
+      "title": "Cypress Testing Article",
+      "subtitle": "Subtitle 1",
+      "img": "https://cdn2.hexlet.io/store/derivatives/4aa834c7741fe4045ae3e5ecf6179654/fill_webp-850-400.webp",
+      "userId": "1",
+      "views": 420,
+      "created_dt": "31.10.2022",
+      "type": [
+        "IT",
+        "JS"
+      ],
+      "blocks": [],
+      "id": "ctItUx3"
+    },
+    {
+      "title": "Cypress Testing Article",
+      "subtitle": "Subtitle 1",
+      "img": "https://cdn2.hexlet.io/store/derivatives/4aa834c7741fe4045ae3e5ecf6179654/fill_webp-850-400.webp",
+      "userId": "1",
+      "views": 420,
+      "created_dt": "31.10.2022",
+      "type": [
+        "IT",
+        "JS"
+      ],
+      "blocks": [],
+      "id": "4ICtRxO"
+    },
+    {
+      "title": "Cypress Testing Article",
+      "subtitle": "Subtitle 1",
+      "img": "https://cdn2.hexlet.io/store/derivatives/4aa834c7741fe4045ae3e5ecf6179654/fill_webp-850-400.webp",
+      "userId": "1",
+      "views": 420,
+      "created_dt": "31.10.2022",
+      "type": [
+        "IT",
+        "JS"
+      ],
+      "blocks": [],
+      "id": "uJoxpcC"
     }
   ],
   "comments": [
@@ -407,6 +463,24 @@
       "avatar": "",
       "country": "USA",
       "age": 23
+    },
+    {
+      "id": "3",
+      "firstname": "Vadim",
+      "lastname": "Gratsilev",
+      "username": "admin",
+      "avatar": "https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png",
+      "country": "Russia",
+      "age": 30
+    },
+    {
+      "id": "4",
+      "firstname": "test",
+      "lastname": "user",
+      "username": "testuser",
+      "avatar": "https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png",
+      "country": "Russia",
+      "age": 30
     }
   ],
   "articleRatings": [

@@ -195,6 +195,13 @@ module.exports = {
                 'no-console': 'off',
             },
         },
+        {
+            files: ['**/cypress/**/commands/*.ts'],
+            rules: {
+                '@typescript-eslint/no-namespace': 'off',
+                '@typescript-eslint/naming-convention': 'off',
+            },
+        },
     ],
     globals: {
         __IS_DEV__: true,

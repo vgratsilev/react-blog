@@ -25,6 +25,7 @@ export const ArticleRecommendationsList = memo((props: IArticleRecommendationsLi
             gap={'8'}
             maxWidth
             className={classNames('', {}, [className])}
+            data-testid={'ArticleRecommendationsList'}
         >
             <Text
                 size={TextSize.L}

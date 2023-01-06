@@ -39,13 +39,13 @@ export const AddCommentForm = memo((props: IAddCommentFormProps) => {
 
     const onCommentTextChange = useCallback(
         (value: string) => {
-            dispatch(addCommentFormActions.setText(value.trim()));
+            dispatch(addCommentFormActions.setText(value));
         },
         [dispatch],
     );
 
     const onSendHandler = useCallback(() => {
-        onSendComment(text || '');
+        onSendComment(text.trim() || '');
         onCommentTextChange('');
     }, [onCommentTextChange, onSendComment, text]);
 
@@ -56,14 +56,21 @@ export const AddCommentForm = memo((props: IAddCommentFormProps) => {
                 justify={'between'}
                 align={'center'}
                 className={classNames(cls.addCommentForm, {}, [className])}
+                data-testid={'AddCommentForm'}
             >
                 <Input
                     className={cls.input}
                     label={t('InputNewCommentLabel')}
                     value={text}
                     onChange={onCommentTextChange}
+                    data-testid={'AddCommentForm.Input'}
                 />
-                <Button onClick={onSendHandler}>{t('InputNewCommentSendBtn')}</Button>
+                <Button
+                    onClick={onSendHandler}
+                    data-testid={'AddCommentForm.Button'}
+                >
+                    {t('InputNewCommentSendBtn')}
+                </Button>
             </HStack>
         </DynamicModuleLoader>
     );

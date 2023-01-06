@@ -65,6 +65,7 @@ export const RatingCard = memo((props: IRatingCardProps) => {
                 label={t('FeedbackLabel')}
                 className={cls.feedbackInput}
                 onChange={setFeedback}
+                data-testid={'RatingCard.Input'}
             />
         </>
     );
@@ -73,6 +74,7 @@ export const RatingCard = memo((props: IRatingCardProps) => {
         <Card
             className={classNames('', {}, [className])}
             maxWidth
+            data-testid={'RatingCard'}
         >
             <VStack
                 align={'center'}
@@ -127,10 +129,14 @@ export const RatingCard = memo((props: IRatingCardProps) => {
                                     <Button
                                         theme={ButtonTheme.OUTLINE_RED}
                                         onClick={closeHandler}
+                                        data-testid={'RatingCard.Close'}
                                     >
                                         {t('FeedbackCloseBtnText')}
                                     </Button>
-                                    <Button onClick={acceptHandler}>
+                                    <Button
+                                        onClick={acceptHandler}
+                                        data-testid={'RatingCard.Send'}
+                                    >
                                         {t('FeedbackSendBtnText')}
                                     </Button>
                                 </HStack>

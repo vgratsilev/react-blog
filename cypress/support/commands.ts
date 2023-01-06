@@ -1,15 +1,14 @@
-/* eslint-disable @typescript-eslint/naming-convention,@typescript-eslint/no-namespace */
-
-import { login } from './commands/login';
+import { login, getByTestId } from './commands/common';
+import * as profileCommands from './commands/profile';
+import * as articleCommands from './commands/article';
+import { addComment } from './commands/comments';
+import { setRate } from './commands/rating';
 
 Cypress.Commands.add('login', login);
-
-declare global {
-    namespace Cypress {
-        interface Chainable {
-            login(username?: string, password?: string): Chainable<void>;
-        }
-    }
-}
+Cypress.Commands.add('getByTestId', getByTestId);
+Cypress.Commands.addAll(profileCommands);
+Cypress.Commands.addAll(articleCommands);
+Cypress.Commands.add('addComment', addComment);
+Cypress.Commands.add('setRate', setRate);
 
 export {};
