@@ -10,6 +10,11 @@ describe('User enter the article details page', () => {
         });
     });
 
+    afterEach(() => {
+        cy.removeArticle(currentArticleId);
+    });
+
+    // describe('Work with API', () => {});
     it('User see articles details', () => {
         cy.getByTestId('ArticleDetails.Info').should('exist');
     });
@@ -32,7 +37,12 @@ describe('User enter the article details page', () => {
         cy.get('[data-selected=true]').should('have.length', 4);
     });
 
-    afterEach(() => {
-        cy.removeArticle(currentArticleId);
+    it('User set rating to article (with stubs on fixtures)', () => {
+        cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' });
+
+        cy.getByTestId('ArticleDetails.Info');
+        cy.getByTestId('RatingCard').scrollIntoView();
+        cy.setRate(4, 'feedback text');
+        cy.get('[data-selected=true]').should('have.length', 4);
     });
 });

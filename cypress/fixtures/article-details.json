@@ -1,0 +1,28 @@
+{
+  "id": "6",
+  "title": "Shawerma as lifegoal",
+  "subtitle": "Taste em all!",
+  "img": "https://eda.yandex/images/3806315/497c18402b05eb6c73d5248d22ab7eb9-1100x825.jpg",
+  "userId": "1",
+  "views": 666,
+  "created_dt": "12.11.2020",
+  "type": [
+    "FOOD"
+  ],
+  "blocks": [
+    {
+      "id": "1",
+      "type": "code",
+      "code": "put some code here"
+    }
+  ],
+  "user": {
+    "id": "1",
+    "username": "admin",
+    "password": "123",
+    "roles": [
+      "admin"
+    ],
+    "avatar": "https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png"
+  }
+}
