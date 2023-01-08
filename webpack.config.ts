@@ -14,11 +14,11 @@ const paths: IBuildPath = {
 };
 
 export default (env: IBuildEnv) => {
-    const mode = env.mode || 'development';
+    const mode = env?.mode || 'development';
     const isDev = mode === 'development';
-    const PORT = env.port || 3000;
-    const analyzerMode = env.analyzerMode || 'disabled';
-    const apiURL = env.apiURL || 'http://localhost:8000';
+    const PORT = env?.port || 3000;
+    const analyzerMode = env?.analyzerMode || 'disabled';
+    const apiURL = env?.apiURL || 'http://localhost:8000';
 
     const config: webpack.Configuration = buildWebpackConfig({
         mode,

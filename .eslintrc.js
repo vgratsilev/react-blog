@@ -196,7 +196,7 @@ module.exports = {
             },
         },
         {
-            files: ['**/cypress/**/commands/*.ts'],
+            files: ['**/cypress/support/**/*.ts'],
             rules: {
                 '@typescript-eslint/no-namespace': 'off',
                 '@typescript-eslint/naming-convention': 'off',
