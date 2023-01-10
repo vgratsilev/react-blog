@@ -1,3 +1,7 @@
+## React blog project
+
+It's sandbox to try new technologies, tools, etc.
+
 ### Architectural design methodology
 
 Project developed with [Feature-Sliced Design](https://feature-sliced.design/) methodology.
@@ -8,6 +12,8 @@ Project developed with [Feature-Sliced Design](https://feature-sliced.design/) m
 * Different article types, comments, filters, search
 * Different custom UI controls, Skeletons
 * Private routing
+
+#### [List of Entities](/docs/Entities.md)
 
 ### Features
 
