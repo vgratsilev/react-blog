@@ -51,7 +51,7 @@ In project used 4 types of tests:
 * Unit tests with [Jest](https://jestjs.io/) - `npm run test:unit`
 * Component tests with [React Testing Library](https://testing-library.com/) - `npm run test:unit`
 * Screenshot testing with [Loki](https://github.com/oblador/loki) - `npm run test:ui`
-* e2e testing with [Cypress](https://www.cypress.io/) - `npm run test:e2e`
+* Integration e2e testing with [Cypress](https://www.cypress.io/) - `npm run test:e2e`
 
 ---
 
@@ -73,9 +73,23 @@ rules:
 ### CI pipeline and pre-commit hooks
 
 Config for GitHub Actions is stored in `.githib/workflows`. CI used to run linters, tests, build
-project and storybook, upload to GitHub Pages.
+project and storybook, upload unit & screenshot reports to GitHub Pages.
 
 Pre-commit hooks used to check code with linters, create build. Config is stored in `/.husky`.
+
+---
+
+### Work with data
+
+Tool used to work with data is [redux toolkit](https://redux-toolkit.js.org/). If it is possible,
+re-usable entities should be normalized
+with [EntityAdaptor](https://redux-toolkit.js.org/api/createEntityAdapter).
+
+Server queries with [RTK query](https://redux-toolkit.js.org/rtk-query/overview)
+
+For adding async reducers
+used [DynamicModuleLoader](/src/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader.tsx) (
+the reason is to not add them to main bundle).
 
 ---
 
