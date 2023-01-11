@@ -9,7 +9,6 @@ Translations used in entity stored in `public/locales/{lang}/article.json`.
 - Components
   - `ArticleList` - list of articles.
   - `ArticleDetails` - info about article.
-  -
 
 - Types
   - `IArticle` - type to describe article.
