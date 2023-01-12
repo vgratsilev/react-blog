@@ -15,7 +15,9 @@ if (!container) {
 
 const root = createRoot(container);
 root.render(
-    <BrowserRouter basename={__IS_DEV__ ? '/' : '/react-blog'}>
+    <BrowserRouter
+    // basename={__IS_DEV__ ? '/' : '/react-blog'}
+    >
         <StoreProvider>
             <ErrorBoundary>
                 <ThemeProvider>

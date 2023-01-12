@@ -3,9 +3,9 @@ import path from 'path';
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
 import { IBuildEnv, IBuildPath, TBuildMode } from './config/build/types/config';
 
-function getApiUrl(mode: TBuildMode, apiUrl?: string) {
-    if (apiUrl) {
-        return apiUrl;
+function getApiUrl(mode: TBuildMode, apiURL?: string) {
+    if (apiURL) {
+        return apiURL;
     }
     if (mode === 'production') {
         return '/'; // /api
