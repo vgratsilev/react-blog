@@ -8,7 +8,7 @@ function getApiUrl(mode: TBuildMode, apiURL?: string) {
         return apiURL;
     }
     if (mode === 'production') {
-        return '/'; // /api
+        return '/api';
     }
 
     return 'http://localhost:8000';
