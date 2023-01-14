@@ -1,6 +1,18 @@
 ## React blog project
 
-It's sandbox to try new technologies, tools, etc.
+It's my sandbox to try new technologies, tools, etc.
+
+Project available on https://reactblog.ru/. Published to [selectel](https://selectel.ru/en/), but
+it's expensive, and I'll change the hosting provider to a cheaper one later.
+
+Project report about unit and screenshot testing are published
+to [github pages](https://vgratsilev.github.io/react-blog/).
+
+You can use different users with different roles (and permissions) to login:
+
+- Admin role: username `admin`, pass `123`.
+- User role: username `user`, pass `456`.
+- Manager role: username `manager`, pass: `789`.
 
 ### Architectural design methodology
 
@@ -14,6 +26,8 @@ Project developed with [Feature-Sliced Design](https://feature-sliced.design/) m
 * Private routing
 
 #### [List of Entities](/docs/Entities.md)
+
+#### [List of Features](/docs/Features.md)
 
 ### Features
 
@@ -57,7 +71,9 @@ In project used 4 types of tests:
 * Unit tests with [Jest](https://jestjs.io/) - `npm run test:unit`
 * Component tests with [React Testing Library](https://testing-library.com/) - `npm run test:unit`
 * Screenshot testing with [Loki](https://github.com/oblador/loki) - `npm run test:ui`
-* Integration e2e testing with [Cypress](https://www.cypress.io/) - `npm run test:e2e`
+* e2e testing with [Cypress](https://www.cypress.io/) - `npm run test:e2e`
+
+More about tests - [documentation](/docs/Tests.md).
 
 ---
 
@@ -156,6 +172,7 @@ npm run start:dev or npm run start:dev:vite - starts server + frontend
 * `npm run test:ui:report` - generate full report for screenshot testing
 * `npm run test:ui:json` - generate json report for screenshot testing
 * `npm run test:ui:html` - generate HTML report for screenshot testing
+* `npm run test:e2e` - run e2e tests with Cypress
 
 #### Tools
 
@@ -203,5 +220,6 @@ npm run start:dev or npm run start:dev:vite - starts server + frontend
 ### Backend:
 
 * Server: imitation with [json-server](https://github.com/typicode/json-server)
-* Uploaded to Vercel (some features are not work when project run not on local machine, ex: edit
-  profile)
+* ~~Uploaded to Vercel (some features are not work when project run not on local machine, ex: edit
+  profile)~~
+* Uploaded to [selectel](https://selectel.ru/en/) can be reached by https://reactblog.ru.
